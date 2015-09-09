@@ -1,0 +1,587 @@
+c:\users\yaser\documents\visual studio 2013\Projects\DSRI\DSRI\bin\DSRI.dll.config
+c:\users\yaser\documents\visual studio 2013\Projects\DSRI\DSRI\bin\DSRI.dll
+c:\users\yaser\documents\visual studio 2013\Projects\DSRI\DSRI\bin\DSRI.pdb
+c:\users\yaser\documents\visual studio 2013\Projects\DSRI\DSRI\bin\Antlr3.Runtime.dll
+c:\users\yaser\documents\visual studio 2013\Projects\DSRI\DSRI\bin\Microsoft.Web.Infrastructure.dll
+c:\users\yaser\documents\visual studio 2013\Projects\DSRI\DSRI\bin\Newtonsoft.Json.dll
+c:\users\yaser\documents\visual studio 2013\Projects\DSRI\DSRI\bin\System.Web.Helpers.dll
+c:\users\yaser\documents\visual studio 2013\Projects\DSRI\DSRI\bin\System.Web.Mvc.dll
+c:\users\yaser\documents\visual studio 2013\Projects\DSRI\DSRI\bin\System.Web.Optimization.dll
+c:\users\yaser\documents\visual studio 2013\Projects\DSRI\DSRI\bin\System.Web.Razor.dll
+c:\users\yaser\documents\visual studio 2013\Projects\DSRI\DSRI\bin\System.Web.WebPages.Deployment.dll
+c:\users\yaser\documents\visual studio 2013\Projects\DSRI\DSRI\bin\System.Web.WebPages.dll
+c:\users\yaser\documents\visual studio 2013\Projects\DSRI\DSRI\bin\System.Web.WebPages.Razor.dll
+c:\users\yaser\documents\visual studio 2013\Projects\DSRI\DSRI\bin\WebGrease.dll
+c:\users\yaser\documents\visual studio 2013\Projects\DSRI\DSRI\bin\System.Web.Helpers.xml
+c:\users\yaser\documents\visual studio 2013\Projects\DSRI\DSRI\bin\System.Web.Mvc.xml
+c:\users\yaser\documents\visual studio 2013\Projects\DSRI\DSRI\bin\System.Web.Optimization.xml
+c:\users\yaser\documents\visual studio 2013\Projects\DSRI\DSRI\bin\System.Web.Razor.xml
+c:\users\yaser\documents\visual studio 2013\Projects\DSRI\DSRI\bin\System.Web.WebPages.xml
+c:\users\yaser\documents\visual studio 2013\Projects\DSRI\DSRI\bin\System.Web.WebPages.Deployment.xml
+c:\users\yaser\documents\visual studio 2013\Projects\DSRI\DSRI\bin\System.Web.WebPages.Razor.xml
+c:\users\yaser\documents\visual studio 2013\Projects\DSRI\DSRI\bin\Newtonsoft.Json.xml
+c:\users\yaser\documents\visual studio 2013\Projects\DSRI\DSRI\bin\Antlr3.Runtime.pdb
+c:\users\yaser\documents\visual studio 2013\Projects\DSRI\DSRI\bin\es\System.Web.Helpers.resources.dll
+c:\users\yaser\documents\visual studio 2013\Projects\DSRI\DSRI\bin\es\System.Web.Mvc.resources.dll
+c:\users\yaser\documents\visual studio 2013\Projects\DSRI\DSRI\bin\es\System.Web.Optimization.resources.dll
+c:\users\yaser\documents\visual studio 2013\Projects\DSRI\DSRI\bin\es\System.Web.Razor.resources.dll
+c:\users\yaser\documents\visual studio 2013\Projects\DSRI\DSRI\bin\es\System.Web.WebPages.resources.dll
+c:\users\yaser\documents\visual studio 2013\Projects\DSRI\DSRI\bin\es\System.Web.WebPages.Deployment.resources.dll
+c:\users\yaser\documents\visual studio 2013\Projects\DSRI\DSRI\bin\es\System.Web.WebPages.Razor.resources.dll
+c:\users\yaser\documents\visual studio 2013\Projects\DSRI\DSRI\obj\Debug\DSRI.dll
+c:\users\yaser\documents\visual studio 2013\Projects\DSRI\DSRI\obj\Debug\DSRI.pdb
+c:\users\yaser\documents\visual studio 2013\Projects\DSRI\DSRI\bin\EntityFramework.dll
+c:\users\yaser\documents\visual studio 2013\Projects\DSRI\DSRI\bin\EntityFramework.SqlServer.dll
+c:\users\yaser\documents\visual studio 2013\Projects\DSRI\DSRI\bin\EntityFramework.xml
+c:\users\yaser\documents\visual studio 2013\Projects\DSRI\DSRI\bin\EntityFramework.SqlServer.xml
+C:\Users\Yaser\documents\visual studio 2013\Projects\DSRI\DSRI\obj\Debug\DSRI.csprojResolveAssemblyReference.cache
+C:\Users\Yaser\documents\visual studio 2013\Projects\DSRI\DSRI\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\Yaser\documents\visual studio 2013\Projects\DSRI\DSRI\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\Yaser\documents\visual studio 2013\Projects\DSRI\DSRI\bin\Microsoft.Owin.dll
+C:\Users\Yaser\documents\visual studio 2013\Projects\DSRI\DSRI\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\Yaser\documents\visual studio 2013\Projects\DSRI\DSRI\bin\Microsoft.Owin.Security.dll
+C:\Users\Yaser\documents\visual studio 2013\Projects\DSRI\DSRI\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\Yaser\documents\visual studio 2013\Projects\DSRI\DSRI\bin\Owin.dll
+C:\Users\Yaser\documents\visual studio 2013\Projects\DSRI\DSRI\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\Yaser\documents\visual studio 2013\Projects\DSRI\DSRI\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\Yaser\documents\visual studio 2013\Projects\DSRI\DSRI\bin\Microsoft.Owin.xml
+C:\Users\Yaser\documents\visual studio 2013\Projects\DSRI\DSRI\bin\Microsoft.Owin.Security.xml
+C:\Users\Yaser\documents\visual studio 2013\Projects\DSRI\DSRI\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\Yaser\documents\visual studio 2013\Projects\DSRI\DSRI\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\ycastillo\Documents\Visual Studio 2013\Projects\DSRI\DSRI\obj\Debug\DSRI.csprojResolveAssemblyReference.cache
+C:\Users\ycastillo\Documents\Visual Studio 2013\Projects\DSRI\DSRI\bin\DSRI.dll.config
+C:\Users\ycastillo\Documents\Visual Studio 2013\Projects\DSRI\DSRI\bin\DSRI.dll
+C:\Users\ycastillo\Documents\Visual Studio 2013\Projects\DSRI\DSRI\bin\DSRI.pdb
+C:\Users\ycastillo\Documents\Visual Studio 2013\Projects\DSRI\DSRI\bin\Antlr3.Runtime.dll
+C:\Users\ycastillo\Documents\Visual Studio 2013\Projects\DSRI\DSRI\bin\EntityFramework.dll
+C:\Users\ycastillo\Documents\Visual Studio 2013\Projects\DSRI\DSRI\bin\EntityFramework.SqlServer.dll
+C:\Users\ycastillo\Documents\Visual Studio 2013\Projects\DSRI\DSRI\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\ycastillo\Documents\Visual Studio 2013\Projects\DSRI\DSRI\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\ycastillo\Documents\Visual Studio 2013\Projects\DSRI\DSRI\bin\Microsoft.Owin.dll
+C:\Users\ycastillo\Documents\Visual Studio 2013\Projects\DSRI\DSRI\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\ycastillo\Documents\Visual Studio 2013\Projects\DSRI\DSRI\bin\Microsoft.Owin.Security.dll
+C:\Users\ycastillo\Documents\Visual Studio 2013\Projects\DSRI\DSRI\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\ycastillo\Documents\Visual Studio 2013\Projects\DSRI\DSRI\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\ycastillo\Documents\Visual Studio 2013\Projects\DSRI\DSRI\bin\MVC Foolproof Validation.dll
+C:\Users\ycastillo\Documents\Visual Studio 2013\Projects\DSRI\DSRI\bin\Newtonsoft.Json.dll
+C:\Users\ycastillo\Documents\Visual Studio 2013\Projects\DSRI\DSRI\bin\Owin.dll
+C:\Users\ycastillo\Documents\Visual Studio 2013\Projects\DSRI\DSRI\bin\System.Json.dll
+C:\Users\ycastillo\Documents\Visual Studio 2013\Projects\DSRI\DSRI\bin\System.Web.Helpers.dll
+C:\Users\ycastillo\Documents\Visual Studio 2013\Projects\DSRI\DSRI\bin\System.Web.Mvc.dll
+C:\Users\ycastillo\Documents\Visual Studio 2013\Projects\DSRI\DSRI\bin\System.Web.Optimization.dll
+C:\Users\ycastillo\Documents\Visual Studio 2013\Projects\DSRI\DSRI\bin\System.Web.Razor.dll
+C:\Users\ycastillo\Documents\Visual Studio 2013\Projects\DSRI\DSRI\bin\System.Web.WebPages.Deployment.dll
+C:\Users\ycastillo\Documents\Visual Studio 2013\Projects\DSRI\DSRI\bin\System.Web.WebPages.dll
+C:\Users\ycastillo\Documents\Visual Studio 2013\Projects\DSRI\DSRI\bin\System.Web.WebPages.Razor.dll
+C:\Users\ycastillo\Documents\Visual Studio 2013\Projects\DSRI\DSRI\bin\WebGrease.dll
+C:\Users\ycastillo\Documents\Visual Studio 2013\Projects\DSRI\DSRI\bin\EntityFramework.xml
+C:\Users\ycastillo\Documents\Visual Studio 2013\Projects\DSRI\DSRI\bin\EntityFramework.SqlServer.xml
+C:\Users\ycastillo\Documents\Visual Studio 2013\Projects\DSRI\DSRI\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\ycastillo\Documents\Visual Studio 2013\Projects\DSRI\DSRI\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\ycastillo\Documents\Visual Studio 2013\Projects\DSRI\DSRI\bin\Microsoft.Owin.xml
+C:\Users\ycastillo\Documents\Visual Studio 2013\Projects\DSRI\DSRI\bin\Microsoft.Owin.Security.xml
+C:\Users\ycastillo\Documents\Visual Studio 2013\Projects\DSRI\DSRI\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\ycastillo\Documents\Visual Studio 2013\Projects\DSRI\DSRI\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\ycastillo\Documents\Visual Studio 2013\Projects\DSRI\DSRI\bin\System.Json.xml
+C:\Users\ycastillo\Documents\Visual Studio 2013\Projects\DSRI\DSRI\bin\System.Web.Helpers.xml
+C:\Users\ycastillo\Documents\Visual Studio 2013\Projects\DSRI\DSRI\bin\System.Web.Mvc.xml
+C:\Users\ycastillo\Documents\Visual Studio 2013\Projects\DSRI\DSRI\bin\System.Web.Optimization.xml
+C:\Users\ycastillo\Documents\Visual Studio 2013\Projects\DSRI\DSRI\bin\System.Web.Razor.xml
+C:\Users\ycastillo\Documents\Visual Studio 2013\Projects\DSRI\DSRI\bin\System.Web.WebPages.xml
+C:\Users\ycastillo\Documents\Visual Studio 2013\Projects\DSRI\DSRI\bin\System.Web.WebPages.Deployment.xml
+C:\Users\ycastillo\Documents\Visual Studio 2013\Projects\DSRI\DSRI\bin\System.Web.WebPages.Razor.xml
+C:\Users\ycastillo\Documents\Visual Studio 2013\Projects\DSRI\DSRI\bin\Newtonsoft.Json.xml
+C:\Users\ycastillo\Documents\Visual Studio 2013\Projects\DSRI\DSRI\bin\Antlr3.Runtime.pdb
+C:\Users\ycastillo\Documents\Visual Studio 2013\Projects\DSRI\DSRI\bin\es\System.Web.Helpers.resources.dll
+C:\Users\ycastillo\Documents\Visual Studio 2013\Projects\DSRI\DSRI\bin\es\System.Web.Mvc.resources.dll
+C:\Users\ycastillo\Documents\Visual Studio 2013\Projects\DSRI\DSRI\bin\es\System.Web.Optimization.resources.dll
+C:\Users\ycastillo\Documents\Visual Studio 2013\Projects\DSRI\DSRI\bin\es\System.Web.Razor.resources.dll
+C:\Users\ycastillo\Documents\Visual Studio 2013\Projects\DSRI\DSRI\bin\es\System.Web.WebPages.resources.dll
+C:\Users\ycastillo\Documents\Visual Studio 2013\Projects\DSRI\DSRI\bin\es\System.Web.WebPages.Deployment.resources.dll
+C:\Users\ycastillo\Documents\Visual Studio 2013\Projects\DSRI\DSRI\bin\es\System.Web.WebPages.Razor.resources.dll
+C:\Users\ycastillo\Documents\Visual Studio 2013\Projects\DSRI\DSRI\obj\Debug\DSRI.dll
+C:\Users\ycastillo\Documents\Visual Studio 2013\Projects\DSRI\DSRI\obj\Debug\DSRI.pdb
+C:\Users\Administrador\Documents\Visual Studio 2013\Projects\DSRI\DSRI\bin\DSRI.dll.config
+C:\Users\Administrador\Documents\Visual Studio 2013\Projects\DSRI\DSRI\bin\DSRI.dll
+C:\Users\Administrador\Documents\Visual Studio 2013\Projects\DSRI\DSRI\bin\DSRI.pdb
+C:\Users\Administrador\Documents\Visual Studio 2013\Projects\DSRI\DSRI\bin\Antlr3.Runtime.dll
+C:\Users\Administrador\Documents\Visual Studio 2013\Projects\DSRI\DSRI\bin\EntityFramework.dll
+C:\Users\Administrador\Documents\Visual Studio 2013\Projects\DSRI\DSRI\bin\EntityFramework.SqlServer.dll
+C:\Users\Administrador\Documents\Visual Studio 2013\Projects\DSRI\DSRI\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\Administrador\Documents\Visual Studio 2013\Projects\DSRI\DSRI\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\Administrador\Documents\Visual Studio 2013\Projects\DSRI\DSRI\bin\Microsoft.Owin.dll
+C:\Users\Administrador\Documents\Visual Studio 2013\Projects\DSRI\DSRI\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\Administrador\Documents\Visual Studio 2013\Projects\DSRI\DSRI\bin\Microsoft.Owin.Security.dll
+C:\Users\Administrador\Documents\Visual Studio 2013\Projects\DSRI\DSRI\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\Administrador\Documents\Visual Studio 2013\Projects\DSRI\DSRI\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Administrador\Documents\Visual Studio 2013\Projects\DSRI\DSRI\bin\MVC Foolproof Validation.dll
+C:\Users\Administrador\Documents\Visual Studio 2013\Projects\DSRI\DSRI\bin\Newtonsoft.Json.dll
+C:\Users\Administrador\Documents\Visual Studio 2013\Projects\DSRI\DSRI\bin\Owin.dll
+C:\Users\Administrador\Documents\Visual Studio 2013\Projects\DSRI\DSRI\bin\System.Json.dll
+C:\Users\Administrador\Documents\Visual Studio 2013\Projects\DSRI\DSRI\bin\System.Web.Helpers.dll
+C:\Users\Administrador\Documents\Visual Studio 2013\Projects\DSRI\DSRI\bin\System.Web.Mvc.dll
+C:\Users\Administrador\Documents\Visual Studio 2013\Projects\DSRI\DSRI\bin\System.Web.Optimization.dll
+C:\Users\Administrador\Documents\Visual Studio 2013\Projects\DSRI\DSRI\bin\System.Web.Razor.dll
+C:\Users\Administrador\Documents\Visual Studio 2013\Projects\DSRI\DSRI\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Administrador\Documents\Visual Studio 2013\Projects\DSRI\DSRI\bin\System.Web.WebPages.dll
+C:\Users\Administrador\Documents\Visual Studio 2013\Projects\DSRI\DSRI\bin\System.Web.WebPages.Razor.dll
+C:\Users\Administrador\Documents\Visual Studio 2013\Projects\DSRI\DSRI\bin\WebGrease.dll
+C:\Users\Administrador\Documents\Visual Studio 2013\Projects\DSRI\DSRI\bin\EntityFramework.xml
+C:\Users\Administrador\Documents\Visual Studio 2013\Projects\DSRI\DSRI\bin\EntityFramework.SqlServer.xml
+C:\Users\Administrador\Documents\Visual Studio 2013\Projects\DSRI\DSRI\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\Administrador\Documents\Visual Studio 2013\Projects\DSRI\DSRI\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\Administrador\Documents\Visual Studio 2013\Projects\DSRI\DSRI\bin\Microsoft.Owin.xml
+C:\Users\Administrador\Documents\Visual Studio 2013\Projects\DSRI\DSRI\bin\Microsoft.Owin.Security.xml
+C:\Users\Administrador\Documents\Visual Studio 2013\Projects\DSRI\DSRI\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\Administrador\Documents\Visual Studio 2013\Projects\DSRI\DSRI\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\Administrador\Documents\Visual Studio 2013\Projects\DSRI\DSRI\bin\System.Json.xml
+C:\Users\Administrador\Documents\Visual Studio 2013\Projects\DSRI\DSRI\bin\System.Web.Helpers.xml
+C:\Users\Administrador\Documents\Visual Studio 2013\Projects\DSRI\DSRI\bin\System.Web.Mvc.xml
+C:\Users\Administrador\Documents\Visual Studio 2013\Projects\DSRI\DSRI\bin\System.Web.Optimization.xml
+C:\Users\Administrador\Documents\Visual Studio 2013\Projects\DSRI\DSRI\bin\System.Web.Razor.xml
+C:\Users\Administrador\Documents\Visual Studio 2013\Projects\DSRI\DSRI\bin\System.Web.WebPages.xml
+C:\Users\Administrador\Documents\Visual Studio 2013\Projects\DSRI\DSRI\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Administrador\Documents\Visual Studio 2013\Projects\DSRI\DSRI\bin\System.Web.WebPages.Razor.xml
+C:\Users\Administrador\Documents\Visual Studio 2013\Projects\DSRI\DSRI\bin\Newtonsoft.Json.xml
+C:\Users\Administrador\Documents\Visual Studio 2013\Projects\DSRI\DSRI\bin\Antlr3.Runtime.pdb
+C:\Users\Administrador\Documents\Visual Studio 2013\Projects\DSRI\DSRI\bin\es\System.Web.Helpers.resources.dll
+C:\Users\Administrador\Documents\Visual Studio 2013\Projects\DSRI\DSRI\bin\es\System.Web.Mvc.resources.dll
+C:\Users\Administrador\Documents\Visual Studio 2013\Projects\DSRI\DSRI\bin\es\System.Web.Optimization.resources.dll
+C:\Users\Administrador\Documents\Visual Studio 2013\Projects\DSRI\DSRI\bin\es\System.Web.Razor.resources.dll
+C:\Users\Administrador\Documents\Visual Studio 2013\Projects\DSRI\DSRI\bin\es\System.Web.WebPages.resources.dll
+C:\Users\Administrador\Documents\Visual Studio 2013\Projects\DSRI\DSRI\bin\es\System.Web.WebPages.Deployment.resources.dll
+C:\Users\Administrador\Documents\Visual Studio 2013\Projects\DSRI\DSRI\bin\es\System.Web.WebPages.Razor.resources.dll
+C:\Users\Administrador\Documents\Visual Studio 2013\Projects\DSRI\DSRI\obj\Debug\DSRI.csprojResolveAssemblyReference.cache
+C:\Users\Administrador\Documents\Visual Studio 2013\Projects\DSRI\DSRI\obj\Debug\DSRI.dll
+C:\Users\Administrador\Documents\Visual Studio 2013\Projects\DSRI\DSRI\obj\Debug\DSRI.pdb
+C:\Users\Christiam Andres\Desktop\compartidos\DSRI\DSRI\bin\DSRI.dll
+C:\Users\Christiam Andres\Desktop\compartidos\DSRI\DSRI\bin\DSRI.pdb
+C:\Users\Christiam Andres\Desktop\compartidos\DSRI\DSRI\bin\Antlr3.Runtime.dll
+C:\Users\Christiam Andres\Desktop\compartidos\DSRI\DSRI\bin\EntityFramework.dll
+C:\Users\Christiam Andres\Desktop\compartidos\DSRI\DSRI\bin\EntityFramework.SqlServer.dll
+C:\Users\Christiam Andres\Desktop\compartidos\DSRI\DSRI\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\Christiam Andres\Desktop\compartidos\DSRI\DSRI\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\Christiam Andres\Desktop\compartidos\DSRI\DSRI\bin\Microsoft.Owin.dll
+C:\Users\Christiam Andres\Desktop\compartidos\DSRI\DSRI\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\Christiam Andres\Desktop\compartidos\DSRI\DSRI\bin\Microsoft.Owin.Security.dll
+C:\Users\Christiam Andres\Desktop\compartidos\DSRI\DSRI\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\Christiam Andres\Desktop\compartidos\DSRI\DSRI\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Christiam Andres\Desktop\compartidos\DSRI\DSRI\bin\MVC Foolproof Validation.dll
+C:\Users\Christiam Andres\Desktop\compartidos\DSRI\DSRI\bin\Newtonsoft.Json.dll
+C:\Users\Christiam Andres\Desktop\compartidos\DSRI\DSRI\bin\Owin.dll
+C:\Users\Christiam Andres\Desktop\compartidos\DSRI\DSRI\bin\System.Json.dll
+C:\Users\Christiam Andres\Desktop\compartidos\DSRI\DSRI\bin\System.Web.Helpers.dll
+C:\Users\Christiam Andres\Desktop\compartidos\DSRI\DSRI\bin\System.Web.Mvc.dll
+C:\Users\Christiam Andres\Desktop\compartidos\DSRI\DSRI\bin\System.Web.Optimization.dll
+C:\Users\Christiam Andres\Desktop\compartidos\DSRI\DSRI\bin\System.Web.Razor.dll
+C:\Users\Christiam Andres\Desktop\compartidos\DSRI\DSRI\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Christiam Andres\Desktop\compartidos\DSRI\DSRI\bin\System.Web.WebPages.dll
+C:\Users\Christiam Andres\Desktop\compartidos\DSRI\DSRI\bin\System.Web.WebPages.Razor.dll
+C:\Users\Christiam Andres\Desktop\compartidos\DSRI\DSRI\bin\WebGrease.dll
+C:\Users\Christiam Andres\Desktop\compartidos\DSRI\DSRI\bin\EntityFramework.xml
+C:\Users\Christiam Andres\Desktop\compartidos\DSRI\DSRI\bin\EntityFramework.SqlServer.xml
+C:\Users\Christiam Andres\Desktop\compartidos\DSRI\DSRI\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\Christiam Andres\Desktop\compartidos\DSRI\DSRI\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\Christiam Andres\Desktop\compartidos\DSRI\DSRI\bin\Microsoft.Owin.xml
+C:\Users\Christiam Andres\Desktop\compartidos\DSRI\DSRI\bin\Microsoft.Owin.Security.xml
+C:\Users\Christiam Andres\Desktop\compartidos\DSRI\DSRI\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\Christiam Andres\Desktop\compartidos\DSRI\DSRI\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\Christiam Andres\Desktop\compartidos\DSRI\DSRI\bin\System.Json.xml
+C:\Users\Christiam Andres\Desktop\compartidos\DSRI\DSRI\bin\System.Web.Helpers.xml
+C:\Users\Christiam Andres\Desktop\compartidos\DSRI\DSRI\bin\System.Web.Mvc.xml
+C:\Users\Christiam Andres\Desktop\compartidos\DSRI\DSRI\bin\System.Web.Optimization.xml
+C:\Users\Christiam Andres\Desktop\compartidos\DSRI\DSRI\bin\System.Web.Razor.xml
+C:\Users\Christiam Andres\Desktop\compartidos\DSRI\DSRI\bin\System.Web.WebPages.xml
+C:\Users\Christiam Andres\Desktop\compartidos\DSRI\DSRI\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Christiam Andres\Desktop\compartidos\DSRI\DSRI\bin\System.Web.WebPages.Razor.xml
+C:\Users\Christiam Andres\Desktop\compartidos\DSRI\DSRI\bin\Newtonsoft.Json.xml
+C:\Users\Christiam Andres\Desktop\compartidos\DSRI\DSRI\bin\Antlr3.Runtime.pdb
+C:\Users\Christiam Andres\Desktop\compartidos\DSRI\DSRI\bin\es\System.Web.Helpers.resources.dll
+C:\Users\Christiam Andres\Desktop\compartidos\DSRI\DSRI\bin\es\System.Web.Mvc.resources.dll
+C:\Users\Christiam Andres\Desktop\compartidos\DSRI\DSRI\bin\es\System.Web.Optimization.resources.dll
+C:\Users\Christiam Andres\Desktop\compartidos\DSRI\DSRI\bin\es\System.Web.Razor.resources.dll
+C:\Users\Christiam Andres\Desktop\compartidos\DSRI\DSRI\bin\es\System.Web.WebPages.resources.dll
+C:\Users\Christiam Andres\Desktop\compartidos\DSRI\DSRI\bin\es\System.Web.WebPages.Deployment.resources.dll
+C:\Users\Christiam Andres\Desktop\compartidos\DSRI\DSRI\bin\es\System.Web.WebPages.Razor.resources.dll
+C:\Users\Christiam Andres\Desktop\compartidos\DSRI\DSRI\obj\Debug\DSRI.csprojResolveAssemblyReference.cache
+C:\Users\Christiam Andres\Desktop\compartidos\DSRI\DSRI\obj\Debug\DSRI.dll
+C:\Users\Christiam Andres\Desktop\compartidos\DSRI\DSRI\obj\Debug\DSRI.pdb
+C:\Users\Christiam Andres\Desktop\compartidos\actualizacion20112014\DSRI\DSRI\bin\DSRI.dll
+C:\Users\Christiam Andres\Desktop\compartidos\actualizacion20112014\DSRI\DSRI\bin\DSRI.pdb
+C:\Users\Christiam Andres\Desktop\compartidos\actualizacion20112014\DSRI\DSRI\bin\Antlr3.Runtime.dll
+C:\Users\Christiam Andres\Desktop\compartidos\actualizacion20112014\DSRI\DSRI\bin\EntityFramework.dll
+C:\Users\Christiam Andres\Desktop\compartidos\actualizacion20112014\DSRI\DSRI\bin\EntityFramework.SqlServer.dll
+C:\Users\Christiam Andres\Desktop\compartidos\actualizacion20112014\DSRI\DSRI\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\Christiam Andres\Desktop\compartidos\actualizacion20112014\DSRI\DSRI\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\Christiam Andres\Desktop\compartidos\actualizacion20112014\DSRI\DSRI\bin\Microsoft.Owin.dll
+C:\Users\Christiam Andres\Desktop\compartidos\actualizacion20112014\DSRI\DSRI\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\Christiam Andres\Desktop\compartidos\actualizacion20112014\DSRI\DSRI\bin\Microsoft.Owin.Security.dll
+C:\Users\Christiam Andres\Desktop\compartidos\actualizacion20112014\DSRI\DSRI\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\Christiam Andres\Desktop\compartidos\actualizacion20112014\DSRI\DSRI\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Christiam Andres\Desktop\compartidos\actualizacion20112014\DSRI\DSRI\bin\MVC Foolproof Validation.dll
+C:\Users\Christiam Andres\Desktop\compartidos\actualizacion20112014\DSRI\DSRI\bin\Newtonsoft.Json.dll
+C:\Users\Christiam Andres\Desktop\compartidos\actualizacion20112014\DSRI\DSRI\bin\Owin.dll
+C:\Users\Christiam Andres\Desktop\compartidos\actualizacion20112014\DSRI\DSRI\bin\System.Json.dll
+C:\Users\Christiam Andres\Desktop\compartidos\actualizacion20112014\DSRI\DSRI\bin\System.Web.Helpers.dll
+C:\Users\Christiam Andres\Desktop\compartidos\actualizacion20112014\DSRI\DSRI\bin\System.Web.Mvc.dll
+C:\Users\Christiam Andres\Desktop\compartidos\actualizacion20112014\DSRI\DSRI\bin\System.Web.Optimization.dll
+C:\Users\Christiam Andres\Desktop\compartidos\actualizacion20112014\DSRI\DSRI\bin\System.Web.Razor.dll
+C:\Users\Christiam Andres\Desktop\compartidos\actualizacion20112014\DSRI\DSRI\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Christiam Andres\Desktop\compartidos\actualizacion20112014\DSRI\DSRI\bin\System.Web.WebPages.dll
+C:\Users\Christiam Andres\Desktop\compartidos\actualizacion20112014\DSRI\DSRI\bin\System.Web.WebPages.Razor.dll
+C:\Users\Christiam Andres\Desktop\compartidos\actualizacion20112014\DSRI\DSRI\bin\WebGrease.dll
+C:\Users\Christiam Andres\Desktop\compartidos\actualizacion20112014\DSRI\DSRI\bin\EntityFramework.xml
+C:\Users\Christiam Andres\Desktop\compartidos\actualizacion20112014\DSRI\DSRI\bin\EntityFramework.SqlServer.xml
+C:\Users\Christiam Andres\Desktop\compartidos\actualizacion20112014\DSRI\DSRI\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\Christiam Andres\Desktop\compartidos\actualizacion20112014\DSRI\DSRI\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\Christiam Andres\Desktop\compartidos\actualizacion20112014\DSRI\DSRI\bin\Microsoft.Owin.xml
+C:\Users\Christiam Andres\Desktop\compartidos\actualizacion20112014\DSRI\DSRI\bin\Microsoft.Owin.Security.xml
+C:\Users\Christiam Andres\Desktop\compartidos\actualizacion20112014\DSRI\DSRI\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\Christiam Andres\Desktop\compartidos\actualizacion20112014\DSRI\DSRI\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\Christiam Andres\Desktop\compartidos\actualizacion20112014\DSRI\DSRI\bin\System.Json.xml
+C:\Users\Christiam Andres\Desktop\compartidos\actualizacion20112014\DSRI\DSRI\bin\System.Web.Helpers.xml
+C:\Users\Christiam Andres\Desktop\compartidos\actualizacion20112014\DSRI\DSRI\bin\System.Web.Mvc.xml
+C:\Users\Christiam Andres\Desktop\compartidos\actualizacion20112014\DSRI\DSRI\bin\System.Web.Optimization.xml
+C:\Users\Christiam Andres\Desktop\compartidos\actualizacion20112014\DSRI\DSRI\bin\System.Web.Razor.xml
+C:\Users\Christiam Andres\Desktop\compartidos\actualizacion20112014\DSRI\DSRI\bin\System.Web.WebPages.xml
+C:\Users\Christiam Andres\Desktop\compartidos\actualizacion20112014\DSRI\DSRI\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Christiam Andres\Desktop\compartidos\actualizacion20112014\DSRI\DSRI\bin\System.Web.WebPages.Razor.xml
+C:\Users\Christiam Andres\Desktop\compartidos\actualizacion20112014\DSRI\DSRI\bin\Newtonsoft.Json.xml
+C:\Users\Christiam Andres\Desktop\compartidos\actualizacion20112014\DSRI\DSRI\bin\Antlr3.Runtime.pdb
+C:\Users\Christiam Andres\Desktop\compartidos\actualizacion20112014\DSRI\DSRI\bin\es\System.Web.Helpers.resources.dll
+C:\Users\Christiam Andres\Desktop\compartidos\actualizacion20112014\DSRI\DSRI\bin\es\System.Web.Mvc.resources.dll
+C:\Users\Christiam Andres\Desktop\compartidos\actualizacion20112014\DSRI\DSRI\bin\es\System.Web.Optimization.resources.dll
+C:\Users\Christiam Andres\Desktop\compartidos\actualizacion20112014\DSRI\DSRI\bin\es\System.Web.Razor.resources.dll
+C:\Users\Christiam Andres\Desktop\compartidos\actualizacion20112014\DSRI\DSRI\bin\es\System.Web.WebPages.resources.dll
+C:\Users\Christiam Andres\Desktop\compartidos\actualizacion20112014\DSRI\DSRI\bin\es\System.Web.WebPages.Deployment.resources.dll
+C:\Users\Christiam Andres\Desktop\compartidos\actualizacion20112014\DSRI\DSRI\bin\es\System.Web.WebPages.Razor.resources.dll
+C:\Users\Christiam Andres\Desktop\compartidos\actualizacion20112014\DSRI\DSRI\obj\Debug\DSRI.dll
+C:\Users\Christiam Andres\Desktop\compartidos\actualizacion20112014\DSRI\DSRI\obj\Debug\DSRI.pdb
+C:\Users\Christiam Andres\Desktop\compartidos\actualizacion20112014\DSRI\DSRI\obj\Debug\DSRI.csprojResolveAssemblyReference.cache
+C:\Users\Christiam Andres\Desktop\compartidos\actualizacion25112014\DSRI\DSRI\bin\DSRI.dll
+C:\Users\Christiam Andres\Desktop\compartidos\actualizacion25112014\DSRI\DSRI\bin\DSRI.pdb
+C:\Users\Christiam Andres\Desktop\compartidos\actualizacion25112014\DSRI\DSRI\bin\Antlr3.Runtime.dll
+C:\Users\Christiam Andres\Desktop\compartidos\actualizacion25112014\DSRI\DSRI\bin\EntityFramework.dll
+C:\Users\Christiam Andres\Desktop\compartidos\actualizacion25112014\DSRI\DSRI\bin\EntityFramework.SqlServer.dll
+C:\Users\Christiam Andres\Desktop\compartidos\actualizacion25112014\DSRI\DSRI\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\Christiam Andres\Desktop\compartidos\actualizacion25112014\DSRI\DSRI\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\Christiam Andres\Desktop\compartidos\actualizacion25112014\DSRI\DSRI\bin\Microsoft.Owin.dll
+C:\Users\Christiam Andres\Desktop\compartidos\actualizacion25112014\DSRI\DSRI\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\Christiam Andres\Desktop\compartidos\actualizacion25112014\DSRI\DSRI\bin\Microsoft.Owin.Security.dll
+C:\Users\Christiam Andres\Desktop\compartidos\actualizacion25112014\DSRI\DSRI\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\Christiam Andres\Desktop\compartidos\actualizacion25112014\DSRI\DSRI\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Christiam Andres\Desktop\compartidos\actualizacion25112014\DSRI\DSRI\bin\MVC Foolproof Validation.dll
+C:\Users\Christiam Andres\Desktop\compartidos\actualizacion25112014\DSRI\DSRI\bin\Newtonsoft.Json.dll
+C:\Users\Christiam Andres\Desktop\compartidos\actualizacion25112014\DSRI\DSRI\bin\Owin.dll
+C:\Users\Christiam Andres\Desktop\compartidos\actualizacion25112014\DSRI\DSRI\bin\System.Json.dll
+C:\Users\Christiam Andres\Desktop\compartidos\actualizacion25112014\DSRI\DSRI\bin\System.Web.Helpers.dll
+C:\Users\Christiam Andres\Desktop\compartidos\actualizacion25112014\DSRI\DSRI\bin\System.Web.Mvc.dll
+C:\Users\Christiam Andres\Desktop\compartidos\actualizacion25112014\DSRI\DSRI\bin\System.Web.Optimization.dll
+C:\Users\Christiam Andres\Desktop\compartidos\actualizacion25112014\DSRI\DSRI\bin\System.Web.Razor.dll
+C:\Users\Christiam Andres\Desktop\compartidos\actualizacion25112014\DSRI\DSRI\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Christiam Andres\Desktop\compartidos\actualizacion25112014\DSRI\DSRI\bin\System.Web.WebPages.dll
+C:\Users\Christiam Andres\Desktop\compartidos\actualizacion25112014\DSRI\DSRI\bin\System.Web.WebPages.Razor.dll
+C:\Users\Christiam Andres\Desktop\compartidos\actualizacion25112014\DSRI\DSRI\bin\WebGrease.dll
+C:\Users\Christiam Andres\Desktop\compartidos\actualizacion25112014\DSRI\DSRI\bin\EntityFramework.xml
+C:\Users\Christiam Andres\Desktop\compartidos\actualizacion25112014\DSRI\DSRI\bin\EntityFramework.SqlServer.xml
+C:\Users\Christiam Andres\Desktop\compartidos\actualizacion25112014\DSRI\DSRI\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\Christiam Andres\Desktop\compartidos\actualizacion25112014\DSRI\DSRI\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\Christiam Andres\Desktop\compartidos\actualizacion25112014\DSRI\DSRI\bin\Microsoft.Owin.xml
+C:\Users\Christiam Andres\Desktop\compartidos\actualizacion25112014\DSRI\DSRI\bin\Microsoft.Owin.Security.xml
+C:\Users\Christiam Andres\Desktop\compartidos\actualizacion25112014\DSRI\DSRI\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\Christiam Andres\Desktop\compartidos\actualizacion25112014\DSRI\DSRI\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\Christiam Andres\Desktop\compartidos\actualizacion25112014\DSRI\DSRI\bin\System.Json.xml
+C:\Users\Christiam Andres\Desktop\compartidos\actualizacion25112014\DSRI\DSRI\bin\System.Web.Helpers.xml
+C:\Users\Christiam Andres\Desktop\compartidos\actualizacion25112014\DSRI\DSRI\bin\System.Web.Mvc.xml
+C:\Users\Christiam Andres\Desktop\compartidos\actualizacion25112014\DSRI\DSRI\bin\System.Web.Optimization.xml
+C:\Users\Christiam Andres\Desktop\compartidos\actualizacion25112014\DSRI\DSRI\bin\System.Web.Razor.xml
+C:\Users\Christiam Andres\Desktop\compartidos\actualizacion25112014\DSRI\DSRI\bin\System.Web.WebPages.xml
+C:\Users\Christiam Andres\Desktop\compartidos\actualizacion25112014\DSRI\DSRI\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Christiam Andres\Desktop\compartidos\actualizacion25112014\DSRI\DSRI\bin\System.Web.WebPages.Razor.xml
+C:\Users\Christiam Andres\Desktop\compartidos\actualizacion25112014\DSRI\DSRI\bin\Newtonsoft.Json.xml
+C:\Users\Christiam Andres\Desktop\compartidos\actualizacion25112014\DSRI\DSRI\bin\Antlr3.Runtime.pdb
+C:\Users\Christiam Andres\Desktop\compartidos\actualizacion25112014\DSRI\DSRI\bin\es\System.Web.Helpers.resources.dll
+C:\Users\Christiam Andres\Desktop\compartidos\actualizacion25112014\DSRI\DSRI\bin\es\System.Web.Mvc.resources.dll
+C:\Users\Christiam Andres\Desktop\compartidos\actualizacion25112014\DSRI\DSRI\bin\es\System.Web.Optimization.resources.dll
+C:\Users\Christiam Andres\Desktop\compartidos\actualizacion25112014\DSRI\DSRI\bin\es\System.Web.Razor.resources.dll
+C:\Users\Christiam Andres\Desktop\compartidos\actualizacion25112014\DSRI\DSRI\bin\es\System.Web.WebPages.resources.dll
+C:\Users\Christiam Andres\Desktop\compartidos\actualizacion25112014\DSRI\DSRI\bin\es\System.Web.WebPages.Deployment.resources.dll
+C:\Users\Christiam Andres\Desktop\compartidos\actualizacion25112014\DSRI\DSRI\bin\es\System.Web.WebPages.Razor.resources.dll
+C:\Users\Christiam Andres\Desktop\compartidos\actualizacion25112014\DSRI\DSRI\obj\Debug\DSRI.dll
+C:\Users\Christiam Andres\Desktop\compartidos\actualizacion25112014\DSRI\DSRI\obj\Debug\DSRI.pdb
+C:\Users\Christiam Andres\Desktop\compartidos\actualizacion25112014\DSRI\DSRI\obj\Debug\DSRI.csprojResolveAssemblyReference.cache
+C:\Users\Christiam Andres\Desktop\compartidos\actualizacion05122014\DSRI\DSRI\bin\DSRI.dll
+C:\Users\Christiam Andres\Desktop\compartidos\actualizacion05122014\DSRI\DSRI\bin\DSRI.pdb
+C:\Users\Christiam Andres\Desktop\compartidos\actualizacion05122014\DSRI\DSRI\bin\Antlr3.Runtime.dll
+C:\Users\Christiam Andres\Desktop\compartidos\actualizacion05122014\DSRI\DSRI\bin\EntityFramework.dll
+C:\Users\Christiam Andres\Desktop\compartidos\actualizacion05122014\DSRI\DSRI\bin\EntityFramework.SqlServer.dll
+C:\Users\Christiam Andres\Desktop\compartidos\actualizacion05122014\DSRI\DSRI\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\Christiam Andres\Desktop\compartidos\actualizacion05122014\DSRI\DSRI\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\Christiam Andres\Desktop\compartidos\actualizacion05122014\DSRI\DSRI\bin\Microsoft.Owin.dll
+C:\Users\Christiam Andres\Desktop\compartidos\actualizacion05122014\DSRI\DSRI\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\Christiam Andres\Desktop\compartidos\actualizacion05122014\DSRI\DSRI\bin\Microsoft.Owin.Security.dll
+C:\Users\Christiam Andres\Desktop\compartidos\actualizacion05122014\DSRI\DSRI\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\Christiam Andres\Desktop\compartidos\actualizacion05122014\DSRI\DSRI\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Christiam Andres\Desktop\compartidos\actualizacion05122014\DSRI\DSRI\bin\MVC Foolproof Validation.dll
+C:\Users\Christiam Andres\Desktop\compartidos\actualizacion05122014\DSRI\DSRI\bin\Newtonsoft.Json.dll
+C:\Users\Christiam Andres\Desktop\compartidos\actualizacion05122014\DSRI\DSRI\bin\Owin.dll
+C:\Users\Christiam Andres\Desktop\compartidos\actualizacion05122014\DSRI\DSRI\bin\System.Json.dll
+C:\Users\Christiam Andres\Desktop\compartidos\actualizacion05122014\DSRI\DSRI\bin\System.Web.Helpers.dll
+C:\Users\Christiam Andres\Desktop\compartidos\actualizacion05122014\DSRI\DSRI\bin\System.Web.Mvc.dll
+C:\Users\Christiam Andres\Desktop\compartidos\actualizacion05122014\DSRI\DSRI\bin\System.Web.Optimization.dll
+C:\Users\Christiam Andres\Desktop\compartidos\actualizacion05122014\DSRI\DSRI\bin\System.Web.Razor.dll
+C:\Users\Christiam Andres\Desktop\compartidos\actualizacion05122014\DSRI\DSRI\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Christiam Andres\Desktop\compartidos\actualizacion05122014\DSRI\DSRI\bin\System.Web.WebPages.dll
+C:\Users\Christiam Andres\Desktop\compartidos\actualizacion05122014\DSRI\DSRI\bin\System.Web.WebPages.Razor.dll
+C:\Users\Christiam Andres\Desktop\compartidos\actualizacion05122014\DSRI\DSRI\bin\WebGrease.dll
+C:\Users\Christiam Andres\Desktop\compartidos\actualizacion05122014\DSRI\DSRI\bin\EntityFramework.xml
+C:\Users\Christiam Andres\Desktop\compartidos\actualizacion05122014\DSRI\DSRI\bin\EntityFramework.SqlServer.xml
+C:\Users\Christiam Andres\Desktop\compartidos\actualizacion05122014\DSRI\DSRI\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\Christiam Andres\Desktop\compartidos\actualizacion05122014\DSRI\DSRI\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\Christiam Andres\Desktop\compartidos\actualizacion05122014\DSRI\DSRI\bin\Microsoft.Owin.xml
+C:\Users\Christiam Andres\Desktop\compartidos\actualizacion05122014\DSRI\DSRI\bin\Microsoft.Owin.Security.xml
+C:\Users\Christiam Andres\Desktop\compartidos\actualizacion05122014\DSRI\DSRI\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\Christiam Andres\Desktop\compartidos\actualizacion05122014\DSRI\DSRI\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\Christiam Andres\Desktop\compartidos\actualizacion05122014\DSRI\DSRI\bin\System.Json.xml
+C:\Users\Christiam Andres\Desktop\compartidos\actualizacion05122014\DSRI\DSRI\bin\System.Web.Helpers.xml
+C:\Users\Christiam Andres\Desktop\compartidos\actualizacion05122014\DSRI\DSRI\bin\System.Web.Mvc.xml
+C:\Users\Christiam Andres\Desktop\compartidos\actualizacion05122014\DSRI\DSRI\bin\System.Web.Optimization.xml
+C:\Users\Christiam Andres\Desktop\compartidos\actualizacion05122014\DSRI\DSRI\bin\System.Web.Razor.xml
+C:\Users\Christiam Andres\Desktop\compartidos\actualizacion05122014\DSRI\DSRI\bin\System.Web.WebPages.xml
+C:\Users\Christiam Andres\Desktop\compartidos\actualizacion05122014\DSRI\DSRI\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Christiam Andres\Desktop\compartidos\actualizacion05122014\DSRI\DSRI\bin\System.Web.WebPages.Razor.xml
+C:\Users\Christiam Andres\Desktop\compartidos\actualizacion05122014\DSRI\DSRI\bin\Newtonsoft.Json.xml
+C:\Users\Christiam Andres\Desktop\compartidos\actualizacion05122014\DSRI\DSRI\bin\Antlr3.Runtime.pdb
+C:\Users\Christiam Andres\Desktop\compartidos\actualizacion05122014\DSRI\DSRI\bin\es\System.Web.Helpers.resources.dll
+C:\Users\Christiam Andres\Desktop\compartidos\actualizacion05122014\DSRI\DSRI\bin\es\System.Web.Mvc.resources.dll
+C:\Users\Christiam Andres\Desktop\compartidos\actualizacion05122014\DSRI\DSRI\bin\es\System.Web.Optimization.resources.dll
+C:\Users\Christiam Andres\Desktop\compartidos\actualizacion05122014\DSRI\DSRI\bin\es\System.Web.Razor.resources.dll
+C:\Users\Christiam Andres\Desktop\compartidos\actualizacion05122014\DSRI\DSRI\bin\es\System.Web.WebPages.resources.dll
+C:\Users\Christiam Andres\Desktop\compartidos\actualizacion05122014\DSRI\DSRI\bin\es\System.Web.WebPages.Deployment.resources.dll
+C:\Users\Christiam Andres\Desktop\compartidos\actualizacion05122014\DSRI\DSRI\bin\es\System.Web.WebPages.Razor.resources.dll
+C:\Users\Christiam Andres\Desktop\compartidos\actualizacion05122014\DSRI\DSRI\obj\Debug\DSRI.dll
+C:\Users\Christiam Andres\Desktop\compartidos\actualizacion05122014\DSRI\DSRI\obj\Debug\DSRI.pdb
+C:\Users\Christiam Andres\Desktop\compartidos\actualizacion05122014\DSRI\DSRI\obj\Debug\DSRI.csprojResolveAssemblyReference.cache
+C:\Users\Christiam Andres\Desktop\compartidos\actualizacion05122014\DSRI\DSRI\bin\itextsharp.dll
+C:\Users\Christiam Andres\Desktop\compartidos\actualizacion05122014\DSRI\DSRI\bin\RazorPDF.dll
+C:\Users\Christiam Andres\Desktop\compartidos\actualizacion10022015\DSRI\DSRI\bin\DSRI.dll
+C:\Users\Christiam Andres\Desktop\compartidos\actualizacion10022015\DSRI\DSRI\bin\DSRI.pdb
+C:\Users\Christiam Andres\Desktop\compartidos\actualizacion10022015\DSRI\DSRI\bin\Antlr3.Runtime.dll
+C:\Users\Christiam Andres\Desktop\compartidos\actualizacion10022015\DSRI\DSRI\bin\EntityFramework.dll
+C:\Users\Christiam Andres\Desktop\compartidos\actualizacion10022015\DSRI\DSRI\bin\EntityFramework.SqlServer.dll
+C:\Users\Christiam Andres\Desktop\compartidos\actualizacion10022015\DSRI\DSRI\bin\itextsharp.dll
+C:\Users\Christiam Andres\Desktop\compartidos\actualizacion10022015\DSRI\DSRI\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\Christiam Andres\Desktop\compartidos\actualizacion10022015\DSRI\DSRI\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\Christiam Andres\Desktop\compartidos\actualizacion10022015\DSRI\DSRI\bin\Microsoft.Owin.dll
+C:\Users\Christiam Andres\Desktop\compartidos\actualizacion10022015\DSRI\DSRI\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\Christiam Andres\Desktop\compartidos\actualizacion10022015\DSRI\DSRI\bin\Microsoft.Owin.Security.dll
+C:\Users\Christiam Andres\Desktop\compartidos\actualizacion10022015\DSRI\DSRI\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\Christiam Andres\Desktop\compartidos\actualizacion10022015\DSRI\DSRI\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Christiam Andres\Desktop\compartidos\actualizacion10022015\DSRI\DSRI\bin\MVC Foolproof Validation.dll
+C:\Users\Christiam Andres\Desktop\compartidos\actualizacion10022015\DSRI\DSRI\bin\Newtonsoft.Json.dll
+C:\Users\Christiam Andres\Desktop\compartidos\actualizacion10022015\DSRI\DSRI\bin\Owin.dll
+C:\Users\Christiam Andres\Desktop\compartidos\actualizacion10022015\DSRI\DSRI\bin\RazorPDF.dll
+C:\Users\Christiam Andres\Desktop\compartidos\actualizacion10022015\DSRI\DSRI\bin\System.Json.dll
+C:\Users\Christiam Andres\Desktop\compartidos\actualizacion10022015\DSRI\DSRI\bin\System.Web.Helpers.dll
+C:\Users\Christiam Andres\Desktop\compartidos\actualizacion10022015\DSRI\DSRI\bin\System.Web.Mvc.dll
+C:\Users\Christiam Andres\Desktop\compartidos\actualizacion10022015\DSRI\DSRI\bin\System.Web.Optimization.dll
+C:\Users\Christiam Andres\Desktop\compartidos\actualizacion10022015\DSRI\DSRI\bin\System.Web.Razor.dll
+C:\Users\Christiam Andres\Desktop\compartidos\actualizacion10022015\DSRI\DSRI\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Christiam Andres\Desktop\compartidos\actualizacion10022015\DSRI\DSRI\bin\System.Web.WebPages.dll
+C:\Users\Christiam Andres\Desktop\compartidos\actualizacion10022015\DSRI\DSRI\bin\System.Web.WebPages.Razor.dll
+C:\Users\Christiam Andres\Desktop\compartidos\actualizacion10022015\DSRI\DSRI\bin\WebGrease.dll
+C:\Users\Christiam Andres\Desktop\compartidos\actualizacion10022015\DSRI\DSRI\bin\EntityFramework.xml
+C:\Users\Christiam Andres\Desktop\compartidos\actualizacion10022015\DSRI\DSRI\bin\EntityFramework.SqlServer.xml
+C:\Users\Christiam Andres\Desktop\compartidos\actualizacion10022015\DSRI\DSRI\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\Christiam Andres\Desktop\compartidos\actualizacion10022015\DSRI\DSRI\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\Christiam Andres\Desktop\compartidos\actualizacion10022015\DSRI\DSRI\bin\Microsoft.Owin.xml
+C:\Users\Christiam Andres\Desktop\compartidos\actualizacion10022015\DSRI\DSRI\bin\Microsoft.Owin.Security.xml
+C:\Users\Christiam Andres\Desktop\compartidos\actualizacion10022015\DSRI\DSRI\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\Christiam Andres\Desktop\compartidos\actualizacion10022015\DSRI\DSRI\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\Christiam Andres\Desktop\compartidos\actualizacion10022015\DSRI\DSRI\bin\System.Json.xml
+C:\Users\Christiam Andres\Desktop\compartidos\actualizacion10022015\DSRI\DSRI\bin\System.Web.Helpers.xml
+C:\Users\Christiam Andres\Desktop\compartidos\actualizacion10022015\DSRI\DSRI\bin\System.Web.Mvc.xml
+C:\Users\Christiam Andres\Desktop\compartidos\actualizacion10022015\DSRI\DSRI\bin\System.Web.Optimization.xml
+C:\Users\Christiam Andres\Desktop\compartidos\actualizacion10022015\DSRI\DSRI\bin\System.Web.Razor.xml
+C:\Users\Christiam Andres\Desktop\compartidos\actualizacion10022015\DSRI\DSRI\bin\System.Web.WebPages.xml
+C:\Users\Christiam Andres\Desktop\compartidos\actualizacion10022015\DSRI\DSRI\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Christiam Andres\Desktop\compartidos\actualizacion10022015\DSRI\DSRI\bin\System.Web.WebPages.Razor.xml
+C:\Users\Christiam Andres\Desktop\compartidos\actualizacion10022015\DSRI\DSRI\bin\Newtonsoft.Json.xml
+C:\Users\Christiam Andres\Desktop\compartidos\actualizacion10022015\DSRI\DSRI\bin\Antlr3.Runtime.pdb
+C:\Users\Christiam Andres\Desktop\compartidos\actualizacion10022015\DSRI\DSRI\bin\es\System.Web.Helpers.resources.dll
+C:\Users\Christiam Andres\Desktop\compartidos\actualizacion10022015\DSRI\DSRI\bin\es\System.Web.Mvc.resources.dll
+C:\Users\Christiam Andres\Desktop\compartidos\actualizacion10022015\DSRI\DSRI\bin\es\System.Web.Optimization.resources.dll
+C:\Users\Christiam Andres\Desktop\compartidos\actualizacion10022015\DSRI\DSRI\bin\es\System.Web.Razor.resources.dll
+C:\Users\Christiam Andres\Desktop\compartidos\actualizacion10022015\DSRI\DSRI\bin\es\System.Web.WebPages.resources.dll
+C:\Users\Christiam Andres\Desktop\compartidos\actualizacion10022015\DSRI\DSRI\bin\es\System.Web.WebPages.Deployment.resources.dll
+C:\Users\Christiam Andres\Desktop\compartidos\actualizacion10022015\DSRI\DSRI\bin\es\System.Web.WebPages.Razor.resources.dll
+C:\Users\Christiam Andres\Desktop\compartidos\actualizacion10022015\DSRI\DSRI\obj\Debug\DSRI.csprojResolveAssemblyReference.cache
+C:\Users\Christiam Andres\Desktop\compartidos\actualizacion10022015\DSRI\DSRI\obj\Debug\DSRI.dll
+C:\Users\Christiam Andres\Desktop\compartidos\actualizacion10022015\DSRI\DSRI\obj\Debug\DSRI.pdb
+C:\Users\Christiam Andres\Desktop\compartidos\actualizacion10022015\DSRI\DSRI\bin\itextsharp.xml
+C:\Users\Christiam Andres\Desktop\20022015\DSRI\DSRI\bin\DSRI.dll
+C:\Users\Christiam Andres\Desktop\20022015\DSRI\DSRI\bin\DSRI.pdb
+C:\Users\Christiam Andres\Desktop\20022015\DSRI\DSRI\bin\Antlr3.Runtime.dll
+C:\Users\Christiam Andres\Desktop\20022015\DSRI\DSRI\bin\EntityFramework.dll
+C:\Users\Christiam Andres\Desktop\20022015\DSRI\DSRI\bin\EntityFramework.SqlServer.dll
+C:\Users\Christiam Andres\Desktop\20022015\DSRI\DSRI\bin\itextsharp.dll
+C:\Users\Christiam Andres\Desktop\20022015\DSRI\DSRI\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\Christiam Andres\Desktop\20022015\DSRI\DSRI\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\Christiam Andres\Desktop\20022015\DSRI\DSRI\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\Christiam Andres\Desktop\20022015\DSRI\DSRI\bin\Microsoft.Owin.dll
+C:\Users\Christiam Andres\Desktop\20022015\DSRI\DSRI\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\Christiam Andres\Desktop\20022015\DSRI\DSRI\bin\Microsoft.Owin.Security.dll
+C:\Users\Christiam Andres\Desktop\20022015\DSRI\DSRI\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\Christiam Andres\Desktop\20022015\DSRI\DSRI\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Christiam Andres\Desktop\20022015\DSRI\DSRI\bin\MVC Foolproof Validation.dll
+C:\Users\Christiam Andres\Desktop\20022015\DSRI\DSRI\bin\Newtonsoft.Json.dll
+C:\Users\Christiam Andres\Desktop\20022015\DSRI\DSRI\bin\Owin.dll
+C:\Users\Christiam Andres\Desktop\20022015\DSRI\DSRI\bin\RazorPDF.dll
+C:\Users\Christiam Andres\Desktop\20022015\DSRI\DSRI\bin\System.Json.dll
+C:\Users\Christiam Andres\Desktop\20022015\DSRI\DSRI\bin\System.Web.Helpers.dll
+C:\Users\Christiam Andres\Desktop\20022015\DSRI\DSRI\bin\System.Web.Mvc.dll
+C:\Users\Christiam Andres\Desktop\20022015\DSRI\DSRI\bin\System.Web.Optimization.dll
+C:\Users\Christiam Andres\Desktop\20022015\DSRI\DSRI\bin\System.Web.Razor.dll
+C:\Users\Christiam Andres\Desktop\20022015\DSRI\DSRI\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Christiam Andres\Desktop\20022015\DSRI\DSRI\bin\System.Web.WebPages.dll
+C:\Users\Christiam Andres\Desktop\20022015\DSRI\DSRI\bin\System.Web.WebPages.Razor.dll
+C:\Users\Christiam Andres\Desktop\20022015\DSRI\DSRI\bin\WebGrease.dll
+C:\Users\Christiam Andres\Desktop\20022015\DSRI\DSRI\bin\Antlr3.Runtime.pdb
+C:\Users\Christiam Andres\Desktop\20022015\DSRI\DSRI\bin\EntityFramework.xml
+C:\Users\Christiam Andres\Desktop\20022015\DSRI\DSRI\bin\EntityFramework.SqlServer.xml
+C:\Users\Christiam Andres\Desktop\20022015\DSRI\DSRI\bin\itextsharp.xml
+C:\Users\Christiam Andres\Desktop\20022015\DSRI\DSRI\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\Christiam Andres\Desktop\20022015\DSRI\DSRI\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\Christiam Andres\Desktop\20022015\DSRI\DSRI\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\Christiam Andres\Desktop\20022015\DSRI\DSRI\bin\Microsoft.Owin.xml
+C:\Users\Christiam Andres\Desktop\20022015\DSRI\DSRI\bin\Microsoft.Owin.Security.xml
+C:\Users\Christiam Andres\Desktop\20022015\DSRI\DSRI\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\Christiam Andres\Desktop\20022015\DSRI\DSRI\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\Christiam Andres\Desktop\20022015\DSRI\DSRI\bin\Newtonsoft.Json.xml
+C:\Users\Christiam Andres\Desktop\20022015\DSRI\DSRI\bin\System.Json.xml
+C:\Users\Christiam Andres\Desktop\20022015\DSRI\DSRI\bin\System.Web.Helpers.xml
+C:\Users\Christiam Andres\Desktop\20022015\DSRI\DSRI\bin\System.Web.Razor.xml
+C:\Users\Christiam Andres\Desktop\20022015\DSRI\DSRI\bin\System.Web.WebPages.xml
+C:\Users\Christiam Andres\Desktop\20022015\DSRI\DSRI\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Christiam Andres\Desktop\20022015\DSRI\DSRI\bin\System.Web.WebPages.Razor.xml
+C:\Users\Christiam Andres\Desktop\20022015\DSRI\DSRI\bin\System.Web.Mvc.xml
+C:\Users\Christiam Andres\Desktop\20022015\DSRI\DSRI\bin\System.Web.Optimization.xml
+C:\Users\Christiam Andres\Desktop\20022015\DSRI\DSRI\bin\es\System.Web.Helpers.resources.dll
+C:\Users\Christiam Andres\Desktop\20022015\DSRI\DSRI\bin\es\System.Web.Razor.resources.dll
+C:\Users\Christiam Andres\Desktop\20022015\DSRI\DSRI\bin\es\System.Web.WebPages.resources.dll
+C:\Users\Christiam Andres\Desktop\20022015\DSRI\DSRI\bin\es\System.Web.WebPages.Deployment.resources.dll
+C:\Users\Christiam Andres\Desktop\20022015\DSRI\DSRI\bin\es\System.Web.WebPages.Razor.resources.dll
+C:\Users\Christiam Andres\Desktop\20022015\DSRI\DSRI\bin\es\System.Web.Mvc.resources.dll
+C:\Users\Christiam Andres\Desktop\20022015\DSRI\DSRI\bin\es\System.Web.Optimization.resources.dll
+C:\Users\Christiam Andres\Desktop\20022015\DSRI\DSRI\obj\Debug\DSRI.csprojResolveAssemblyReference.cache
+C:\Users\Christiam Andres\Desktop\20022015\DSRI\DSRI\obj\Debug\DSRI.dll
+C:\Users\Christiam Andres\Desktop\20022015\DSRI\DSRI\obj\Debug\DSRI.pdb
+C:\Users\Christiam Andres\Desktop\20022015\DSRI\DSRI\bin\AeroWizard.dll
+C:\Users\Christiam Andres\Desktop\20022015\DSRI\DSRI\bin\CubicOrange.Windows.Forms.ActiveDirectory.dll
+C:\Users\Christiam Andres\Desktop\20022015\DSRI\DSRI\bin\GroupControls.dll
+C:\Users\Christiam Andres\Desktop\20022015\DSRI\DSRI\bin\Microsoft.Win32.TaskScheduler.dll
+C:\Users\Christiam Andres\Desktop\20022015\DSRI\DSRI\bin\Microsoft.Win32.TaskSchedulerEditor.dll
+C:\Users\Christiam Andres\Desktop\20022015\DSRI\DSRI\bin\TimeSpan2.dll
+C:\Users\Christiam Andres\Desktop\20022015\DSRI\DSRI\bin\AeroWizard.xml
+C:\Users\Christiam Andres\Desktop\20022015\DSRI\DSRI\bin\GroupControls.xml
+C:\Users\Christiam Andres\Desktop\20022015\DSRI\DSRI\bin\Microsoft.Win32.TaskScheduler.xml
+C:\Users\Christiam Andres\Desktop\20022015\DSRI\DSRI\bin\Microsoft.Win32.TaskSchedulerEditor.xml
+C:\Users\Christiam Andres\Desktop\20022015\DSRI\DSRI\bin\TimeSpan2.xml
+C:\Users\Christiam Andres\Desktop\20022015\DSRI\DSRI\bin\de-DE\Microsoft.Win32.TaskScheduler.resources.dll
+C:\Users\Christiam Andres\Desktop\20022015\DSRI\DSRI\bin\fr\Microsoft.Win32.TaskScheduler.resources.dll
+C:\Users\Christiam Andres\Desktop\20022015\DSRI\DSRI\bin\it\Microsoft.Win32.TaskScheduler.resources.dll
+C:\Users\Christiam Andres\Desktop\20022015\DSRI\DSRI\bin\zh-CN\Microsoft.Win32.TaskScheduler.resources.dll
+C:\Users\Christiam Andres\Desktop\20022015\DSRI\DSRI\bin\de-DE\Microsoft.Win32.TaskSchedulerEditor.resources.dll
+C:\Users\Christiam Andres\Desktop\20022015\DSRI\DSRI\bin\fr\Microsoft.Win32.TaskSchedulerEditor.resources.dll
+C:\Users\Christiam Andres\Desktop\20022015\DSRI\DSRI\bin\it\Microsoft.Win32.TaskSchedulerEditor.resources.dll
+C:\Users\Christiam Andres\Desktop\20022015\DSRI\DSRI\bin\zh-CN\Microsoft.Win32.TaskSchedulerEditor.resources.dll
+C:\Users\Christiam Andres\Desktop\20022015\DSRI\DSRI\bin\de\TimeSpan2.resources.dll
+C:\Users\Christiam Andres\Desktop\20022015\DSRI\DSRI\bin\es\TimeSpan2.resources.dll
+C:\Users\Christiam Andres\Desktop\20022015\DSRI\DSRI\bin\fr\TimeSpan2.resources.dll
+C:\Users\Christiam Andres\Desktop\20022015\DSRI\DSRI\bin\it\TimeSpan2.resources.dll
+C:\Users\Christiam Andres\Desktop\20022015\DSRI\DSRI\bin\pt\TimeSpan2.resources.dll
+C:\Users\Christiam Andres\Desktop\20022015\DSRI\DSRI\bin\ru\TimeSpan2.resources.dll
+C:\Users\Christiam Andres\Desktop\20022015\DSRI\DSRI\bin\zh-CN\TimeSpan2.resources.dll
+C:\Users\Christiam Andres\Desktop\ACTUALIZACIONMARZO03\DSRI\DSRI\bin\DSRI.dll
+C:\Users\Christiam Andres\Desktop\ACTUALIZACIONMARZO03\DSRI\DSRI\bin\DSRI.pdb
+C:\Users\Christiam Andres\Desktop\ACTUALIZACIONMARZO03\DSRI\DSRI\bin\AeroWizard.dll
+C:\Users\Christiam Andres\Desktop\ACTUALIZACIONMARZO03\DSRI\DSRI\bin\Antlr3.Runtime.dll
+C:\Users\Christiam Andres\Desktop\ACTUALIZACIONMARZO03\DSRI\DSRI\bin\CubicOrange.Windows.Forms.ActiveDirectory.dll
+C:\Users\Christiam Andres\Desktop\ACTUALIZACIONMARZO03\DSRI\DSRI\bin\EntityFramework.dll
+C:\Users\Christiam Andres\Desktop\ACTUALIZACIONMARZO03\DSRI\DSRI\bin\EntityFramework.SqlServer.dll
+C:\Users\Christiam Andres\Desktop\ACTUALIZACIONMARZO03\DSRI\DSRI\bin\GroupControls.dll
+C:\Users\Christiam Andres\Desktop\ACTUALIZACIONMARZO03\DSRI\DSRI\bin\itextsharp.dll
+C:\Users\Christiam Andres\Desktop\ACTUALIZACIONMARZO03\DSRI\DSRI\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\Christiam Andres\Desktop\ACTUALIZACIONMARZO03\DSRI\DSRI\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\Christiam Andres\Desktop\ACTUALIZACIONMARZO03\DSRI\DSRI\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\Christiam Andres\Desktop\ACTUALIZACIONMARZO03\DSRI\DSRI\bin\Microsoft.Owin.dll
+C:\Users\Christiam Andres\Desktop\ACTUALIZACIONMARZO03\DSRI\DSRI\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\Christiam Andres\Desktop\ACTUALIZACIONMARZO03\DSRI\DSRI\bin\Microsoft.Owin.Security.dll
+C:\Users\Christiam Andres\Desktop\ACTUALIZACIONMARZO03\DSRI\DSRI\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\Christiam Andres\Desktop\ACTUALIZACIONMARZO03\DSRI\DSRI\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Christiam Andres\Desktop\ACTUALIZACIONMARZO03\DSRI\DSRI\bin\Microsoft.Win32.TaskScheduler.dll
+C:\Users\Christiam Andres\Desktop\ACTUALIZACIONMARZO03\DSRI\DSRI\bin\Microsoft.Win32.TaskSchedulerEditor.dll
+C:\Users\Christiam Andres\Desktop\ACTUALIZACIONMARZO03\DSRI\DSRI\bin\MVC Foolproof Validation.dll
+C:\Users\Christiam Andres\Desktop\ACTUALIZACIONMARZO03\DSRI\DSRI\bin\Newtonsoft.Json.dll
+C:\Users\Christiam Andres\Desktop\ACTUALIZACIONMARZO03\DSRI\DSRI\bin\Owin.dll
+C:\Users\Christiam Andres\Desktop\ACTUALIZACIONMARZO03\DSRI\DSRI\bin\RazorPDF.dll
+C:\Users\Christiam Andres\Desktop\ACTUALIZACIONMARZO03\DSRI\DSRI\bin\System.Json.dll
+C:\Users\Christiam Andres\Desktop\ACTUALIZACIONMARZO03\DSRI\DSRI\bin\System.Web.Helpers.dll
+C:\Users\Christiam Andres\Desktop\ACTUALIZACIONMARZO03\DSRI\DSRI\bin\System.Web.Mvc.dll
+C:\Users\Christiam Andres\Desktop\ACTUALIZACIONMARZO03\DSRI\DSRI\bin\System.Web.Optimization.dll
+C:\Users\Christiam Andres\Desktop\ACTUALIZACIONMARZO03\DSRI\DSRI\bin\System.Web.Razor.dll
+C:\Users\Christiam Andres\Desktop\ACTUALIZACIONMARZO03\DSRI\DSRI\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Christiam Andres\Desktop\ACTUALIZACIONMARZO03\DSRI\DSRI\bin\System.Web.WebPages.dll
+C:\Users\Christiam Andres\Desktop\ACTUALIZACIONMARZO03\DSRI\DSRI\bin\System.Web.WebPages.Razor.dll
+C:\Users\Christiam Andres\Desktop\ACTUALIZACIONMARZO03\DSRI\DSRI\bin\TimeSpan2.dll
+C:\Users\Christiam Andres\Desktop\ACTUALIZACIONMARZO03\DSRI\DSRI\bin\WebGrease.dll
+C:\Users\Christiam Andres\Desktop\ACTUALIZACIONMARZO03\DSRI\DSRI\bin\AeroWizard.xml
+C:\Users\Christiam Andres\Desktop\ACTUALIZACIONMARZO03\DSRI\DSRI\bin\Antlr3.Runtime.pdb
+C:\Users\Christiam Andres\Desktop\ACTUALIZACIONMARZO03\DSRI\DSRI\bin\EntityFramework.xml
+C:\Users\Christiam Andres\Desktop\ACTUALIZACIONMARZO03\DSRI\DSRI\bin\EntityFramework.SqlServer.xml
+C:\Users\Christiam Andres\Desktop\ACTUALIZACIONMARZO03\DSRI\DSRI\bin\GroupControls.xml
+C:\Users\Christiam Andres\Desktop\ACTUALIZACIONMARZO03\DSRI\DSRI\bin\itextsharp.xml
+C:\Users\Christiam Andres\Desktop\ACTUALIZACIONMARZO03\DSRI\DSRI\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\Christiam Andres\Desktop\ACTUALIZACIONMARZO03\DSRI\DSRI\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\Christiam Andres\Desktop\ACTUALIZACIONMARZO03\DSRI\DSRI\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\Christiam Andres\Desktop\ACTUALIZACIONMARZO03\DSRI\DSRI\bin\Microsoft.Owin.xml
+C:\Users\Christiam Andres\Desktop\ACTUALIZACIONMARZO03\DSRI\DSRI\bin\Microsoft.Owin.Security.xml
+C:\Users\Christiam Andres\Desktop\ACTUALIZACIONMARZO03\DSRI\DSRI\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\Christiam Andres\Desktop\ACTUALIZACIONMARZO03\DSRI\DSRI\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\Christiam Andres\Desktop\ACTUALIZACIONMARZO03\DSRI\DSRI\bin\Microsoft.Win32.TaskScheduler.xml
+C:\Users\Christiam Andres\Desktop\ACTUALIZACIONMARZO03\DSRI\DSRI\bin\Microsoft.Win32.TaskSchedulerEditor.xml
+C:\Users\Christiam Andres\Desktop\ACTUALIZACIONMARZO03\DSRI\DSRI\bin\Newtonsoft.Json.xml
+C:\Users\Christiam Andres\Desktop\ACTUALIZACIONMARZO03\DSRI\DSRI\bin\System.Json.xml
+C:\Users\Christiam Andres\Desktop\ACTUALIZACIONMARZO03\DSRI\DSRI\bin\System.Web.Helpers.xml
+C:\Users\Christiam Andres\Desktop\ACTUALIZACIONMARZO03\DSRI\DSRI\bin\System.Web.Mvc.xml
+C:\Users\Christiam Andres\Desktop\ACTUALIZACIONMARZO03\DSRI\DSRI\bin\System.Web.Razor.xml
+C:\Users\Christiam Andres\Desktop\ACTUALIZACIONMARZO03\DSRI\DSRI\bin\System.Web.WebPages.xml
+C:\Users\Christiam Andres\Desktop\ACTUALIZACIONMARZO03\DSRI\DSRI\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Christiam Andres\Desktop\ACTUALIZACIONMARZO03\DSRI\DSRI\bin\System.Web.WebPages.Razor.xml
+C:\Users\Christiam Andres\Desktop\ACTUALIZACIONMARZO03\DSRI\DSRI\bin\System.Web.Optimization.xml
+C:\Users\Christiam Andres\Desktop\ACTUALIZACIONMARZO03\DSRI\DSRI\bin\TimeSpan2.xml
+C:\Users\Christiam Andres\Desktop\ACTUALIZACIONMARZO03\DSRI\DSRI\bin\de-DE\Microsoft.Win32.TaskScheduler.resources.dll
+C:\Users\Christiam Andres\Desktop\ACTUALIZACIONMARZO03\DSRI\DSRI\bin\fr\Microsoft.Win32.TaskScheduler.resources.dll
+C:\Users\Christiam Andres\Desktop\ACTUALIZACIONMARZO03\DSRI\DSRI\bin\it\Microsoft.Win32.TaskScheduler.resources.dll
+C:\Users\Christiam Andres\Desktop\ACTUALIZACIONMARZO03\DSRI\DSRI\bin\zh-CN\Microsoft.Win32.TaskScheduler.resources.dll
+C:\Users\Christiam Andres\Desktop\ACTUALIZACIONMARZO03\DSRI\DSRI\bin\de-DE\Microsoft.Win32.TaskSchedulerEditor.resources.dll
+C:\Users\Christiam Andres\Desktop\ACTUALIZACIONMARZO03\DSRI\DSRI\bin\fr\Microsoft.Win32.TaskSchedulerEditor.resources.dll
+C:\Users\Christiam Andres\Desktop\ACTUALIZACIONMARZO03\DSRI\DSRI\bin\it\Microsoft.Win32.TaskSchedulerEditor.resources.dll
+C:\Users\Christiam Andres\Desktop\ACTUALIZACIONMARZO03\DSRI\DSRI\bin\zh-CN\Microsoft.Win32.TaskSchedulerEditor.resources.dll
+C:\Users\Christiam Andres\Desktop\ACTUALIZACIONMARZO03\DSRI\DSRI\bin\es\System.Web.Helpers.resources.dll
+C:\Users\Christiam Andres\Desktop\ACTUALIZACIONMARZO03\DSRI\DSRI\bin\es\System.Web.Mvc.resources.dll
+C:\Users\Christiam Andres\Desktop\ACTUALIZACIONMARZO03\DSRI\DSRI\bin\es\System.Web.Razor.resources.dll
+C:\Users\Christiam Andres\Desktop\ACTUALIZACIONMARZO03\DSRI\DSRI\bin\es\System.Web.WebPages.resources.dll
+C:\Users\Christiam Andres\Desktop\ACTUALIZACIONMARZO03\DSRI\DSRI\bin\es\System.Web.WebPages.Deployment.resources.dll
+C:\Users\Christiam Andres\Desktop\ACTUALIZACIONMARZO03\DSRI\DSRI\bin\es\System.Web.WebPages.Razor.resources.dll
+C:\Users\Christiam Andres\Desktop\ACTUALIZACIONMARZO03\DSRI\DSRI\bin\es\System.Web.Optimization.resources.dll
+C:\Users\Christiam Andres\Desktop\ACTUALIZACIONMARZO03\DSRI\DSRI\bin\de\TimeSpan2.resources.dll
+C:\Users\Christiam Andres\Desktop\ACTUALIZACIONMARZO03\DSRI\DSRI\bin\es\TimeSpan2.resources.dll
+C:\Users\Christiam Andres\Desktop\ACTUALIZACIONMARZO03\DSRI\DSRI\bin\fr\TimeSpan2.resources.dll
+C:\Users\Christiam Andres\Desktop\ACTUALIZACIONMARZO03\DSRI\DSRI\bin\it\TimeSpan2.resources.dll
+C:\Users\Christiam Andres\Desktop\ACTUALIZACIONMARZO03\DSRI\DSRI\bin\pt\TimeSpan2.resources.dll
+C:\Users\Christiam Andres\Desktop\ACTUALIZACIONMARZO03\DSRI\DSRI\bin\ru\TimeSpan2.resources.dll
+C:\Users\Christiam Andres\Desktop\ACTUALIZACIONMARZO03\DSRI\DSRI\bin\zh-CN\TimeSpan2.resources.dll
+C:\Users\Christiam Andres\Desktop\ACTUALIZACIONMARZO03\DSRI\DSRI\obj\Debug\DSRI.csprojResolveAssemblyReference.cache
+C:\Users\Christiam Andres\Desktop\ACTUALIZACIONMARZO03\DSRI\DSRI\obj\Debug\DSRI.dll
+C:\Users\Christiam Andres\Desktop\ACTUALIZACIONMARZO03\DSRI\DSRI\obj\Debug\DSRI.pdb

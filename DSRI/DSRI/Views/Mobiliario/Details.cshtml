@@ -1,0 +1,75 @@
+﻿@model Datos.DSRIFMOBILIARIO
+
+@{
+    ViewBag.Title = "Detalles";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<aside class="right-side">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+        <h1>Detalles Mobiliario
+                        <small>Información</small>
+        </h1>
+        <ol class="breadcrumb">
+            <li><a href="#"><i class="glyphicon glyphicon-cog"></i>Configuración del Sistema</a></li>
+            <li><a href="#">Administrar Mobiliarios</a></li>
+            <li><a href="#">Detalles Mobiliario</a></li>
+        </ol>
+    </section>
+
+    <section class="content">
+        <div class="row">
+            <!-- right column -->
+            <div class="col-md-6">
+                <!-- general form elements disabled -->
+                <div class="box box-primary">
+                    <div class="box-header">
+                        <h3 class="box-title">Datos de Mobiliario</h3>
+                    </div>
+                    <!-- /.box-header -->
+                    <div class="box-body">
+                        <h2>@Model.NOM_MOBILIARIO</h2>
+                        <div>
+                            <hr />
+                            <dl class="dl-horizontal">
+                                <dt>
+                                    @Html.DisplayNameFor(model => model.NOM_MOBILIARIO)
+                                </dt>
+
+                                <dd>
+                                    @Html.DisplayFor(model => model.NOM_MOBILIARIO)
+                                </dd>
+
+                                <dt>
+                                    @Html.DisplayNameFor(model => model.CAN_MOBILIARIO)
+                                </dt>
+
+                                <dd>
+                                    @Html.DisplayFor(model => model.CAN_MOBILIARIO)
+                                </dd>
+
+                                <dt>
+                                    @Html.DisplayNameFor(model => model.DSRIFTIPOMOBILIARIO.NOM_TIPOMOBILIARIO)
+                                </dt>
+
+                                <dd>
+                                    @Html.DisplayFor(model => model.DSRIFTIPOMOBILIARIO.NOM_TIPOMOBILIARIO)
+                                </dd>
+
+                            </dl>
+                        </div>
+                        <p>
+                            @Html.ActionLink("Editar", "Edit", new { id = Model.ID_MOBILIARIO }, new { @class = "btn btn-primary" }) |
+    @Html.ActionLink("Regresar al contenido principal", "Index", null, new { @class = "btn btn-default" })
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</aside>
+
+@Scripts.Render("~/bundles/endpage")

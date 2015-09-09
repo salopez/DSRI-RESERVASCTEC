@@ -1,0 +1,377 @@
+﻿@model IEnumerable<Datos.DSRIFRESERVACION>
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+}
+@*<link href="~/Content/daterangepicker/daterangepicker-bs3.css" rel="stylesheet" />*@
+<link href="~/Content/Reserva/loadings.css" rel="stylesheet" />
+
+<aside class="right-side">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+        <h1>
+            Sistema Reservas
+
+            <small>Hoy</small>
+        </h1>
+        <ol class="breadcrumb">
+            <li><a href="#"><i class="glyphicon glyphicon-home"></i>Inicio</a></li>
+            <li class="active">Línea de Tiempo</li>
+        </ol>
+    </section>
+    @{bool cantidad = true;}
+    <!-- Main content -->
+    <section class="content">
+        <!-- row -->
+        <div class="row">
+            <div class="col-md-12">
+                <!-- The time line -->
+                <ul class="timeline">
+                    @foreach (var reserva in Model)
+                    {
+                        DateTime horaI = new DateTime();
+                        horaI = DateTime.Today.Add(reserva.HOR_INICIO);
+                        DateTime HoraF = new DateTime();
+                        HoraF = DateTime.Today.Add(reserva.HOR_FINAL);
+                        string hor_inicio = horaI.ToString("h:mm ");
+                        string hor_final = HoraF.ToString("h:mm ");
+                        if (reserva.HOR_INICIO.Hours <= 11)
+                        {
+                            hor_inicio = hor_inicio + "AM";
+                        }
+                        else
+                        {
+                            hor_inicio = hor_inicio + "PM";
+                        }
+                        if (reserva.HOR_FINAL.Hours <= 11)
+                        {
+                            hor_final = hor_final + "AM";
+                        }
+                        else
+                        {
+                            hor_final = hor_final + "PM";
+                        }
+
+
+                        cantidad = false;
+                        <li class="time-label">
+                            <span class="bg-green">
+                                @DateTime.Now.ToShortDateString()
+                            </span>
+                        </li>
+                        <li>
+                            <i class="fa fa-th-large bg-blue"></i>
+                            <div class="timeline-item">
+                                @if ((horaI > @DateTime.Now || horaI < @DateTime.Now) && HoraF < @DateTime.Now)
+                                {
+                                    <div class="spinnerR icon-spinnerR-5" aria-hidden="true" style="color: rgb(221, 45, 85); "></div>
+                                    <span class="time" style="color:rgb(221, 45, 85)"><i class="fa fa-clock-o"></i> Inicio: @hor_inicio (Finalizó)</span>
+
+                                }
+                                else if (HoraF > @DateTime.Now && horaI < @DateTime.Now)
+                                {
+                                    <div class="spinnerV icon-spinnerV-5" style="color: #00A67E;" aria-hidden="true"></div>
+                                    <span class=" time" style="color:rgb(0, 166, 90)"><i class="fa fa-clock-o"></i> Inicio: @hor_inicio (En Proceso)</span>
+    
+                                }
+                                else if (HoraF > @DateTime.Now && (horaI > @DateTime.Now))
+                                {
+                                    <div class="spinnerA icon-spinnerA-5" style="color: rgb(60, 141, 188);" aria-hidden="true"></div>
+                                    <span class="time" style="color:rgb(60, 141, 188);"><i class="fa fa-clock-o"></i> Inicio: @hor_inicio (No Iniciada)</span>
+                                }
+                                <h3 class="timeline-header"><a href="#">@reserva.DSRIFINMUEBLE.NOM_INMUEBLE</a></h3>
+                                <div class="timeline-body">
+                                    @if (@reserva.ID_INMUEBLE == 1)
+                                    {
+                                        <img src="~/Content/Images/imSlider/Auditorio.jpg" class="img-circle" style="width: 150px; height: 100px" />
+                                    }
+                                    @if (@reserva.ID_INMUEBLE == 2)
+                                    {
+                                        <img src="~/Content/Images/imSlider/TecnoAula1.jpg" class="img-circle" style="width: 150px; height: 100px" />
+                                    }
+                                    @if (@reserva.ID_INMUEBLE == 3)
+                                    {
+                                        <img src="~/Content/Images/imSlider/TecnoAula2.jpg" class="img-circle" style="width: 150px; height: 100px" />
+                                    }
+                                    @if (@reserva.ID_INMUEBLE == 4)
+                                    {
+                                        <img src="~/Content/Images/imSlider/SalaReuniones.jpg" class="img-circle" style="width: 150px; height: 100px" />
+                                    }
+                                    @if (@reserva.ID_INMUEBLE == 1010)
+                                    {
+                                        <img src="~/Content/Images/imSlider/SalaReuniones.jpg" class="img-circle" style="width: 150px; height: 100px" />
+                                    }
+                                    @if (@reserva.ID_INMUEBLE == 1009)
+                                    {
+                                        <img src="~/Content/Images/imSlider/Vestibulo.jpg" class="img-circle" style="width: 150px; height: 100px" />
+                                    }
+                                    @if (@reserva.ID_INMUEBLE == 1008)
+                                    {
+                                        <img src="~/Content/Images/imSlider/Jacaranda.jpg" class="img-circle" style="width: 150px; height: 100px" />
+                                    }
+                                    @if (@reserva.ID_INMUEBLE == 1011)
+                                    {
+                                        <img src="~/Content/Images/imSlider/Bromelia.jpg" class="img-circle" style="width: 150px; height: 100px" />
+                                    }
+                                    @if (@reserva.ID_INMUEBLE == 1006)
+                                    {
+                                        <img src="~/Content/Images/imSlider/Bromelia1.png" class="img-circle" style="width: 150px; height: 100px" />
+                                    }
+                                    @if (@reserva.ID_INMUEBLE == 1007)
+                                    {
+                                        <img src="~/Content/Images/imSlider/Bromelia2.png" class="img-circle" style="width: 150px; height: 100px" />
+                                    }
+                                    <strong style="color:rgb(142, 142, 142)">@reserva.NOM_ACTIVIDAD </strong>, esta actividad dará comienzo a las @hor_inicio y finalizará a las @hor_final.
+                                </div>
+                               
+                            </div>
+                        </li>
+                    }
+                    <!-- END timeline item -->
+                    
+                </ul>
+                @if (cantidad)
+                {
+                    <div class="col-md-12" style="margin-top: -30px">
+                       
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-3 col-xs-6">
+                            <!-- small box -->
+                            <div class="small-box bg-blue" style="border-radius: 12px">
+                                <div class="inner" style="background-color: rgb(13, 68, 111); border-radius: 12px 0px 0px 0px;">
+                                    <h3>
+                                        335 <sup style="font-size: 10px">Personas</sup>
+                                    </h3>
+                                    <p>
+                                        Auditorio CTEC
+                                    </p>
+                                </div>
+                                <div class="icon">
+                                    <i class="fa fa-plus-square-o"></i>
+                                </div>
+                                <a style="border-radius: 0px 0px 12px 12px;" href="@Url.Action("Create", "Reservacion")" class="small-box-footer">
+                                    Solicitar <i class="glyphicon glyphicon-share-alt"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <!-- ./col -->
+                        <div class="col-lg-3 col-xs-6">
+                            <!-- small box -->
+                            <div class="small-box bg-blue" style="border-radius: 12px">
+                                <div class="inner" style="background-color: rgb(13, 68, 111); border-radius: 12px 0px 0px 0px;">
+                                    <h3>
+                                        300 <sup style="font-size: 10px">Personas</sup>
+                                    </h3>
+                                    <p>
+                                        Vestíbulo CTEC
+                                    </p>
+                                </div>
+                                <div class="icon">
+                                    <i class="fa fa-plus-square-o"></i>
+                                </div>
+                                <a style="border-radius: 0px 0px 12px 12px;" href="@Url.Action("Create", "Reservacion")" class="small-box-footer">
+                                    Solicitar <i class="glyphicon glyphicon-share-alt"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <!-- ./col -->
+
+
+                        <div class="col-lg-3 col-xs-6">
+                            <!-- small box -->
+                            <div class="small-box bg-blue" style="border-radius: 12px">
+                                <div class="inner" style="background-color: rgb(13, 68, 111); border-radius: 12px 0px 0px 0px;">
+                                    <h3>
+                                        195 <sup style="font-size: 10px">Personas</sup>
+                                    </h3>
+                                    <p>
+                                        Bromelia Completo
+                                    </p>
+                                </div>
+                                <div class="icon">
+                                    <i class="fa fa-plus-square-o"></i>
+                                </div>
+                                <a style="border-radius: 0px 0px 12px 12px;" href="@Url.Action("Create", "Reservacion")" class="small-box-footer">
+                                    Solicitar <i class="glyphicon glyphicon-share-alt"></i>
+                                </a>
+                            </div>
+                        </div>
+
+
+                        <div class="col-lg-3 col-xs-6">
+                            <!-- small box -->
+                            <div class="small-box bg-blue" style="border-radius: 12px">
+                                <div class="inner" style="background-color: rgb(13, 68, 111); border-radius: 12px 0px 0px 0px;">
+                                    <h3>
+                                        145 <sup style="font-size: 10px">Personas</sup>
+                                    </h3>
+                                    <p>
+                                        Bromelia 1
+                                    </p>
+                                </div>
+                                <div class="icon">
+                                    <i class="fa fa-plus-square-o"></i>
+                                </div>
+                                <a style="border-radius: 0px 0px 12px 12px;" href="@Url.Action("Create", "Reservacion")" class="small-box-footer">
+                                    Solicitar <i class="glyphicon glyphicon-share-alt"></i>
+                                </a>
+                            </div>
+                        </div>
+
+
+                        <!-- ./col -->
+                    </div>
+
+
+                    <!-- Small boxes (Stat box) -->
+                    <div class="row">
+
+
+                        <!-- ./col -->
+                        <div class="col-lg-3 col-xs-6">
+                            <!-- small box -->
+                            <div class="small-box bg-blue" style="border-radius: 12px">
+                                <div class="inner" style="background-color: rgb(13, 68, 111); border-radius: 12px 0px 0px 0px;">
+                                    <h3>
+                                        115<sup style="font-size: 10px"> Personas</sup>
+                                    </h3>
+                                    <p>
+                                        Auditorio Jacaranda
+                                    </p>
+                                </div>
+                                <div class="icon">
+                                    <i class="fa fa-plus-square-o"></i>
+                                </div>
+                                <a style="border-radius: 0px 0px 12px 12px;" href="@Url.Action("Create", "Reservacion")" class="small-box-footer">
+                                    Solicitar <i class="glyphicon glyphicon-share-alt"></i>
+                                </a>
+                            </div>
+                        </div>
+
+
+
+
+                        <div class="col-lg-3 col-xs-6">
+                            <!-- small box -->
+                            <div class="small-box bg-blue" style="border-radius: 12px">
+                                <div class="inner" style="background-color: rgb(13, 68, 111); border-radius: 12px 0px 0px 0px;">
+                                    <h3>
+                                        50 <sup style="font-size: 10px">Personas</sup>
+                                    </h3>
+                                    <p>
+                                        Bromelia 2
+                                    </p>
+                                </div>
+                                <div class="icon">
+                                    <i class="fa fa-plus-square-o"></i>
+                                </div>
+                                <a style="border-radius: 0px 0px 12px 12px;" href="@Url.Action("Create", "Reservacion")" class="small-box-footer">
+                                    Solicitar <i class="glyphicon glyphicon-share-alt"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- ./col -->
+                        <div class="col-lg-3 col-xs-6">
+                            <!-- small box -->
+                            <div class="small-box bg-blue" style="border-radius: 12px">
+                                <div class="inner" style="background-color: rgb(13, 68, 111); border-radius: 12px 0px 0px 0px;">
+                                    <h3>
+                                        25 <sup style="font-size: 10px">Personas</sup>
+                                    </h3>
+                                    <p>
+                                        Aula Tecnológica 2
+                                    </p>
+                                </div>
+                                <div class="icon">
+                                    <i class="fa fa-plus-square-o"></i>
+                                </div>
+                                <a style="border-radius: 0px 0px 12px 12px;" href="@Url.Action("Create", "Reservacion")" class="small-box-footer">
+                                    Solicitar <i class="glyphicon glyphicon-share-alt"></i>
+                                </a>
+                            </div>
+                        </div>
+
+
+                        <!-- ./col -->
+
+                        <div class="col-lg-3 col-xs-6">
+                            <!-- small box -->
+                            <div class="small-box bg-blue" style="border-radius: 12px">
+                                <div class="inner" style="background-color: rgb(13, 68, 111); border-radius: 12px 0px 0px 0px;">
+                                    <h3>
+                                        21 <sup style="font-size: 10px">Personas</sup>
+                                    </h3>
+                                    <p>
+                                        Aula Tecnológica 1
+                                    </p>
+                                </div>
+                                <div class="icon">
+                                    <i class="fa fa-plus-square-o"></i>
+                                </div>
+                                <a style="border-radius: 0px 0px 12px 12px;" href="@Url.Action("Create", "Reservacion")" class="small-box-footer">
+                                    Solicitar <i class="glyphicon glyphicon-share-alt"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- ./col -->
+                    </div>
+                    <!-- /.row -->
+                    <div class="row">
+
+                        <div class="col-lg-3 col-xs-6">
+                            <!-- small box -->
+                            <div class="small-box bg-blue" style="border-radius: 12px">
+                                <div class="inner" style="background-color: rgb(13, 68, 111); border-radius: 12px 0px 0px 0px;">
+                                    <h3>
+                                        10 <sup style="font-size: 10px">Personas</sup>
+                                    </h3>
+                                    <p>
+                                        Sala de Reuniones 1
+                                    </p>
+                                </div>
+                                <div class="icon">
+                                    <i class="fa fa-plus-square-o"></i>
+                                </div>
+                                <a style="border-radius: 0px 0px 12px 12px;" href="@Url.Action("Create", "Reservacion")" class="small-box-footer">
+                                    Solicitar <i class="glyphicon glyphicon-share-alt"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <!-- ./col -->
+                        <div class="col-lg-3 col-xs-6">
+                            <!-- small box -->
+                            <div class="small-box bg-blue" style="border-radius: 12px">
+                                <div class="inner" style="background-color: rgb(13, 68, 111); border-radius: 12px 0px 0px 0px;">
+                                    <h3>
+                                        10<sup style="font-size: 10px"> Personas</sup>
+                                    </h3>
+                                    <p>
+                                        Sala de Reuniones 2
+                                    </p>
+                                </div>
+                                <div class="icon">
+                                    <i class="fa fa-plus-square-o"></i>
+                                </div>
+                                <a style="border-radius: 0px 0px 12px 12px;" href="@Url.Action("Create", "Reservacion")" class="small-box-footer">
+                                    Solicitar <i class="glyphicon glyphicon-share-alt"></i>
+                                </a>
+                            </div>
+                        </div>
+
+
+
+                    </div>
+                }
+            </div>
+            <!-- /.col -->
+        </div>
+        <!-- /.row -->
+    </section>
+    <!-- /.content -->
+</aside>
+<!-- /.right-side -->
+@Scripts.Render("~/bundles/endpage")
+

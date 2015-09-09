@@ -1,0 +1,20 @@
+C:\Users\Andres\Desktop\DSRI Version 2.2 Final\DSRI\Datos\bin\Release\Datos.dll.config
+C:\Users\Andres\Desktop\DSRI Version 2.2 Final\DSRI\Datos\bin\Release\Datos.dll
+C:\Users\Andres\Desktop\DSRI Version 2.2 Final\DSRI\Datos\bin\Release\Datos.pdb
+C:\Users\Andres\Desktop\DSRI Version 2.2 Final\DSRI\Datos\bin\Release\EntityFramework.dll
+C:\Users\Andres\Desktop\DSRI Version 2.2 Final\DSRI\Datos\bin\Release\EntityFramework.SqlServer.dll
+C:\Users\Andres\Desktop\DSRI Version 2.2 Final\DSRI\Datos\bin\Release\EntityFramework.xml
+C:\Users\Andres\Desktop\DSRI Version 2.2 Final\DSRI\Datos\bin\Release\EntityFramework.SqlServer.xml
+C:\Users\Andres\Desktop\DSRI Version 2.2 Final\DSRI\Datos\obj\Release\Datos.dll
+C:\Users\Andres\Desktop\DSRI Version 2.2 Final\DSRI\Datos\obj\Release\Datos.pdb
+C:\Users\Andres\Desktop\DSRI Version 2.2 Final\DSRI\Datos\obj\Release\Datos.csprojResolveAssemblyReference.cache
+D:\Usuarios\ctec\Desktop\DSRI 3.0 Final\DSRI\Datos\bin\Release\Datos.dll.config
+D:\Usuarios\ctec\Desktop\DSRI 3.0 Final\DSRI\Datos\bin\Release\Datos.dll
+D:\Usuarios\ctec\Desktop\DSRI 3.0 Final\DSRI\Datos\bin\Release\Datos.pdb
+D:\Usuarios\ctec\Desktop\DSRI 3.0 Final\DSRI\Datos\bin\Release\EntityFramework.dll
+D:\Usuarios\ctec\Desktop\DSRI 3.0 Final\DSRI\Datos\bin\Release\EntityFramework.SqlServer.dll
+D:\Usuarios\ctec\Desktop\DSRI 3.0 Final\DSRI\Datos\bin\Release\EntityFramework.xml
+D:\Usuarios\ctec\Desktop\DSRI 3.0 Final\DSRI\Datos\bin\Release\EntityFramework.SqlServer.xml
+D:\Usuarios\ctec\Desktop\DSRI 3.0 Final\DSRI\Datos\obj\Release\Datos.csprojResolveAssemblyReference.cache
+D:\Usuarios\ctec\Desktop\DSRI 3.0 Final\DSRI\Datos\obj\Release\Datos.dll
+D:\Usuarios\ctec\Desktop\DSRI 3.0 Final\DSRI\Datos\obj\Release\Datos.pdb

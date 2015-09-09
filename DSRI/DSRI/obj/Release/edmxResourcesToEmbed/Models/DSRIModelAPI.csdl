@@ -1,0 +1,291 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DSRIModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="DSRIFCLASIFINMUEBLE">
+    <Key>
+      <PropertyRef Name="COD_CLASIFINMUEBLE" />
+    </Key>
+    <Property Name="ID_CLASIFINMUEBLE" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="COD_CLASIFINMUEBLE" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="NOM_CLASIFINMUEBLE" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="DSRIFINMUEBLE" Relationship="Self.fk_ClasifInmueble_ID" FromRole="DSRIFCLASIFINMUEBLE" ToRole="DSRIFINMUEBLE" />
+  </EntityType>
+  <EntityType Name="DSRIFINMUEBLE">
+    <Key>
+      <PropertyRef Name="ID_INMUEBLE" />
+    </Key>
+    <Property Name="ID_INMUEBLE" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="COD_INMUEBLE" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="COD_CLASIFICACION" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="NOM_INMUEBLE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CAN_CAPACIDAD" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="DSRIFCLASIFINMUEBLE" Relationship="Self.fk_ClasifInmueble_ID" FromRole="DSRIFINMUEBLE" ToRole="DSRIFCLASIFINMUEBLE" />
+    <NavigationProperty Name="DSRIFRESERVACION" Relationship="Self.fk_Inmueble_ID" FromRole="DSRIFINMUEBLE" ToRole="DSRIFRESERVACION" />
+    <Property Name="COS_INMUEBLE" Type="Int32" />
+  </EntityType>
+  <EntityType Name="DSRIFMOBILIARIO">
+    <Key>
+      <PropertyRef Name="ID_MOBILIARIO" />
+    </Key>
+    <Property Name="ID_MOBILIARIO" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="COD_TIPOMOBILIARIO" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="NOM_MOBILIARIO" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CAN_MOBILIARIO" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="DSRITMOBILIARIORESERVACION" Relationship="Self.fk_Mobiliario_ID" FromRole="DSRIFMOBILIARIO" ToRole="DSRITMOBILIARIORESERVACION" />
+    <NavigationProperty Name="DSRIFTIPOMOBILIARIO" Relationship="Self.fk_TipoMobiliario_COD" FromRole="DSRIFMOBILIARIO" ToRole="DSRIFTIPOMOBILIARIO" />
+  </EntityType>
+  <EntityType Name="DSRIFRESERVACION">
+    <Key>
+      <PropertyRef Name="ID_RESERVACION" />
+    </Key>
+    <Property Name="ID_RESERVACION" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ID_INMUEBLE" Type="Int32" Nullable="false" />
+    <Property Name="NOM_ACTIVIDAD" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="FEC_INICIALRESERVACION" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="FEC_FINALRESERVACION" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="HOR_INICIO" Type="Time" Nullable="false" Precision="7" />
+    <Property Name="HOR_FINAL" Type="Time" Nullable="false" Precision="7" />
+    <Property Name="ID_TIPOACTIVIDAD" Type="Int32" Nullable="false" />
+    <Property Name="ID_PERSONA" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="TXT_ESTADO" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CAN_AFORO" Type="Int32" Nullable="false" />
+    <Property Name="TXT_TELEFONO" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="TXT_EXTRA" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="OBJETIVO" Type="String" MaxLength="256" FixedLength="false" Unicode="false" />
+    <Property Name="CAN_AFORODIA" Type="Int32" />
+    <Property Name="ORGANIZADOR" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="DESCRIPCION" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="DSRIFINMUEBLE" Relationship="Self.fk_Inmueble_ID" FromRole="DSRIFRESERVACION" ToRole="DSRIFINMUEBLE" />
+    <NavigationProperty Name="DSRITMOBILIARIORESERVACION" Relationship="Self.fk_Reservacion_ID" FromRole="DSRIFRESERVACION" ToRole="DSRITMOBILIARIORESERVACION" />
+    <NavigationProperty Name="DSRIFTIPOSACTIVIDAD" Relationship="Self.fk_TipoActividad_ID" FromRole="DSRIFRESERVACION" ToRole="DSRIFTIPOSACTIVIDAD" />
+  </EntityType>
+  <EntityType Name="DSRIFTIPOMOBILIARIO">
+    <Key>
+      <PropertyRef Name="COD_TIPOMOBILIARIO" />
+    </Key>
+    <Property Name="COD_TIPOMOBILIARIO" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="NOM_TIPOMOBILIARIO" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="DSRIFMOBILIARIO" Relationship="Self.fk_TipoMobiliario_COD" FromRole="DSRIFTIPOMOBILIARIO" ToRole="DSRIFMOBILIARIO" />
+  </EntityType>
+  <EntityType Name="DSRIFTIPOSACTIVIDAD">
+    <Key>
+      <PropertyRef Name="ID_TIPOACTIVIDAD" />
+    </Key>
+    <Property Name="ID_TIPOACTIVIDAD" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NOM_TIPOACTIVIDAD" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="TXT_DESCRIPCIONACTIVIDAD" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="DSRIFRESERVACION" Relationship="Self.fk_TipoActividad_ID" FromRole="DSRIFTIPOSACTIVIDAD" ToRole="DSRIFRESERVACION" />
+  </EntityType>
+  <EntityType Name="DSRIFUSUARIOS">
+    <Key>
+      <PropertyRef Name="ID_USUARIO" />
+    </Key>
+    <Property Name="ID_USUARIO" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NOM_USUARIO" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="TXT_CONTRASEÑA" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="TXT_ROL" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="TXT_CORREO" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="FEC_EXPIRACION" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="DSRITMOBILIARIORESERVACION">
+    <Key>
+      <PropertyRef Name="ID_MOBILIARIORESERVACION" />
+    </Key>
+    <Property Name="ID_MOBILIARIORESERVACION" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ID_MOBILIARIO" Type="Int32" Nullable="false" />
+    <Property Name="ID_RESERVACION" Type="Int32" Nullable="false" />
+    <Property Name="CAN_DISPONIBILIDAD" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="DSRIFMOBILIARIO" Relationship="Self.fk_Mobiliario_ID" FromRole="DSRITMOBILIARIORESERVACION" ToRole="DSRIFMOBILIARIO" />
+    <NavigationProperty Name="DSRIFRESERVACION" Relationship="Self.fk_Reservacion_ID" FromRole="DSRITMOBILIARIORESERVACION" ToRole="DSRIFRESERVACION" />
+  </EntityType>
+  <Association Name="fk_ClasifInmueble_ID">
+    <End Role="DSRIFCLASIFINMUEBLE" Type="Self.DSRIFCLASIFINMUEBLE" Multiplicity="1" />
+    <End Role="DSRIFINMUEBLE" Type="Self.DSRIFINMUEBLE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DSRIFCLASIFINMUEBLE">
+        <PropertyRef Name="COD_CLASIFINMUEBLE" />
+      </Principal>
+      <Dependent Role="DSRIFINMUEBLE">
+        <PropertyRef Name="COD_CLASIFICACION" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_Inmueble_ID">
+    <End Role="DSRIFINMUEBLE" Type="Self.DSRIFINMUEBLE" Multiplicity="1" />
+    <End Role="DSRIFRESERVACION" Type="Self.DSRIFRESERVACION" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DSRIFINMUEBLE">
+        <PropertyRef Name="ID_INMUEBLE" />
+      </Principal>
+      <Dependent Role="DSRIFRESERVACION">
+        <PropertyRef Name="ID_INMUEBLE" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_Mobiliario_ID">
+    <End Role="DSRIFMOBILIARIO" Type="Self.DSRIFMOBILIARIO" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="DSRITMOBILIARIORESERVACION" Type="Self.DSRITMOBILIARIORESERVACION" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DSRIFMOBILIARIO">
+        <PropertyRef Name="ID_MOBILIARIO" />
+      </Principal>
+      <Dependent Role="DSRITMOBILIARIORESERVACION">
+        <PropertyRef Name="ID_MOBILIARIO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_TipoMobiliario_COD">
+    <End Role="DSRIFTIPOMOBILIARIO" Type="Self.DSRIFTIPOMOBILIARIO" Multiplicity="1" />
+    <End Role="DSRIFMOBILIARIO" Type="Self.DSRIFMOBILIARIO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DSRIFTIPOMOBILIARIO">
+        <PropertyRef Name="COD_TIPOMOBILIARIO" />
+      </Principal>
+      <Dependent Role="DSRIFMOBILIARIO">
+        <PropertyRef Name="COD_TIPOMOBILIARIO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_Reservacion_ID">
+    <End Role="DSRIFRESERVACION" Type="Self.DSRIFRESERVACION" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="DSRITMOBILIARIORESERVACION" Type="Self.DSRITMOBILIARIORESERVACION" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DSRIFRESERVACION">
+        <PropertyRef Name="ID_RESERVACION" />
+      </Principal>
+      <Dependent Role="DSRITMOBILIARIORESERVACION">
+        <PropertyRef Name="ID_RESERVACION" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_TipoActividad_ID">
+    <End Role="DSRIFTIPOSACTIVIDAD" Type="Self.DSRIFTIPOSACTIVIDAD" Multiplicity="1" />
+    <End Role="DSRIFRESERVACION" Type="Self.DSRIFRESERVACION" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DSRIFTIPOSACTIVIDAD">
+        <PropertyRef Name="ID_TIPOACTIVIDAD" />
+      </Principal>
+      <Dependent Role="DSRIFRESERVACION">
+        <PropertyRef Name="ID_TIPOACTIVIDAD" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="DSRIEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="DSRIFCLASIFINMUEBLE" EntityType="Self.DSRIFCLASIFINMUEBLE" />
+    <EntitySet Name="DSRIFINMUEBLE" EntityType="Self.DSRIFINMUEBLE" />
+    <EntitySet Name="DSRIFMOBILIARIO" EntityType="Self.DSRIFMOBILIARIO" />
+    <EntitySet Name="DSRIFRESERVACION" EntityType="Self.DSRIFRESERVACION" />
+    <EntitySet Name="DSRIFTIPOMOBILIARIO" EntityType="Self.DSRIFTIPOMOBILIARIO" />
+    <EntitySet Name="DSRIFTIPOSACTIVIDAD" EntityType="Self.DSRIFTIPOSACTIVIDAD" />
+    <EntitySet Name="DSRIFUSUARIOS" EntityType="Self.DSRIFUSUARIOS" />
+    <EntitySet Name="DSRITMOBILIARIORESERVACION" EntityType="Self.DSRITMOBILIARIORESERVACION" />
+    <AssociationSet Name="fk_ClasifInmueble_ID" Association="Self.fk_ClasifInmueble_ID">
+      <End Role="DSRIFCLASIFINMUEBLE" EntitySet="DSRIFCLASIFINMUEBLE" />
+      <End Role="DSRIFINMUEBLE" EntitySet="DSRIFINMUEBLE" />
+    </AssociationSet>
+    <AssociationSet Name="fk_Inmueble_ID" Association="Self.fk_Inmueble_ID">
+      <End Role="DSRIFINMUEBLE" EntitySet="DSRIFINMUEBLE" />
+      <End Role="DSRIFRESERVACION" EntitySet="DSRIFRESERVACION" />
+    </AssociationSet>
+    <AssociationSet Name="fk_Mobiliario_ID" Association="Self.fk_Mobiliario_ID">
+      <End Role="DSRIFMOBILIARIO" EntitySet="DSRIFMOBILIARIO" />
+      <End Role="DSRITMOBILIARIORESERVACION" EntitySet="DSRITMOBILIARIORESERVACION" />
+    </AssociationSet>
+    <AssociationSet Name="fk_TipoMobiliario_COD" Association="Self.fk_TipoMobiliario_COD">
+      <End Role="DSRIFTIPOMOBILIARIO" EntitySet="DSRIFTIPOMOBILIARIO" />
+      <End Role="DSRIFMOBILIARIO" EntitySet="DSRIFMOBILIARIO" />
+    </AssociationSet>
+    <AssociationSet Name="fk_Reservacion_ID" Association="Self.fk_Reservacion_ID">
+      <End Role="DSRIFRESERVACION" EntitySet="DSRIFRESERVACION" />
+      <End Role="DSRITMOBILIARIORESERVACION" EntitySet="DSRITMOBILIARIORESERVACION" />
+    </AssociationSet>
+    <AssociationSet Name="fk_TipoActividad_ID" Association="Self.fk_TipoActividad_ID">
+      <End Role="DSRIFTIPOSACTIVIDAD" EntitySet="DSRIFTIPOSACTIVIDAD" />
+      <End Role="DSRIFRESERVACION" EntitySet="DSRIFRESERVACION" />
+    </AssociationSet>
+    <FunctionImport Name="actualizarUsuarios" />
+    <FunctionImport Name="inmublesDisponibles" ReturnType="Collection(DSRIModel.inmublesDisponibles_Result)">
+      <Parameter Name="var_fecini" Mode="In" Type="DateTime" />
+      <Parameter Name="var_fecfin" Mode="In" Type="DateTime" />
+      <Parameter Name="var_horaini" Mode="In" Type="Time" />
+      <Parameter Name="var_horafin" Mode="In" Type="Time" />
+    </FunctionImport>
+    <FunctionImport Name="reservasUnicas" ReturnType="Collection(DSRIModel.reservasUnicas_Result)" />
+    <FunctionImport Name="f_crearReserva">
+      <Parameter Name="ID_INMUEBLER" Mode="In" Type="Int32" />
+      <Parameter Name="NOM_ACTIVIDADR" Mode="In" Type="String" />
+      <Parameter Name="FEC_INICIALRESERVACIONR" Mode="In" Type="DateTime" />
+      <Parameter Name="FEC_FINALRESERVACIONR" Mode="In" Type="DateTime" />
+      <Parameter Name="HOR_INICIOR" Mode="In" Type="Time" />
+      <Parameter Name="HOR_FINALR" Mode="In" Type="Time" />
+      <Parameter Name="ID_TIPOACTIVIDADR" Mode="In" Type="String" />
+      <Parameter Name="ID_PERSONAR" Mode="In" Type="String" />
+      <Parameter Name="TXT_ESTADOR" Mode="In" Type="String" />
+      <Parameter Name="CAN_AFOROR" Mode="In" Type="Int32" />
+      <Parameter Name="TXT_TELEFONOR" Mode="In" Type="String" />
+      <Parameter Name="TXT_EXTRAR" Mode="In" Type="String" />
+      <Parameter Name="OBJETIVOR" Mode="In" Type="String" />
+      <Parameter Name="CAN_AFORODIAR" Mode="In" Type="Int32" />
+      <Parameter Name="ORGANIZADORR" Mode="In" Type="String" />
+      <Parameter Name="DESCRIPCIONR" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="f_eliminarReservas">
+      <Parameter Name="NOM_ACTIVIDADR" Mode="In" Type="String" />
+      <Parameter Name="HOR_INICIOR" Mode="In" Type="Time" />
+      <Parameter Name="HOR_FINALR" Mode="In" Type="Time" />
+      <Parameter Name="ID_TIPOACTIVIDADR" Mode="In" Type="String" />
+      <Parameter Name="ID_PERSONAR" Mode="In" Type="String" />
+      <Parameter Name="TXT_ESTADOR" Mode="In" Type="String" />
+      <Parameter Name="TXT_TELEFONOR" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="crearReserva">
+      <Parameter Name="ID_INMUEBLER" Mode="In" Type="Int32" />
+      <Parameter Name="NOM_ACTIVIDADR" Mode="In" Type="String" />
+      <Parameter Name="FEC_INICIALRESERVACIONR" Mode="In" Type="DateTime" />
+      <Parameter Name="FEC_FINALRESERVACIONR" Mode="In" Type="DateTime" />
+      <Parameter Name="HOR_INICIOR" Mode="In" Type="Time" />
+      <Parameter Name="HOR_FINALR" Mode="In" Type="Time" />
+      <Parameter Name="ID_TIPOACTIVIDADR" Mode="In" Type="String" />
+      <Parameter Name="ID_PERSONAR" Mode="In" Type="String" />
+      <Parameter Name="TXT_ESTADOR" Mode="In" Type="String" />
+      <Parameter Name="CAN_AFOROR" Mode="In" Type="Int32" />
+      <Parameter Name="TXT_TELEFONOR" Mode="In" Type="String" />
+      <Parameter Name="TXT_EXTRAR" Mode="In" Type="String" />
+      <Parameter Name="OBJETIVOR" Mode="In" Type="String" />
+      <Parameter Name="CAN_AFORODIAR" Mode="In" Type="Int32" />
+      <Parameter Name="ORGANIZADORR" Mode="In" Type="String" />
+      <Parameter Name="DESCRIPCIONR" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="eliminarReservas">
+      <Parameter Name="NOM_ACTIVIDADR" Mode="In" Type="String" />
+      <Parameter Name="HOR_INICIOR" Mode="In" Type="Time" />
+      <Parameter Name="HOR_FINALR" Mode="In" Type="Time" />
+      <Parameter Name="ID_TIPOACTIVIDADR" Mode="In" Type="String" />
+      <Parameter Name="ID_PERSONAR" Mode="In" Type="String" />
+      <Parameter Name="TXT_ESTADOR" Mode="In" Type="String" />
+      <Parameter Name="TXT_TELEFONOR" Mode="In" Type="String" />
+    </FunctionImport>
+  </EntityContainer>
+  <ComplexType Name="inmublesDisponibles_Result">
+    <Property Type="Int32" Name="ID_INMUEBLE" Nullable="false" />
+    <Property Type="String" Name="NOM_INMUEBLE" Nullable="false" MaxLength="255" />
+  </ComplexType>
+  <ComplexType Name="reservasUnicas_Result">
+    <Property Type="Int32" Name="ID_RESERVACION" Nullable="true" />
+    <Property Type="Int32" Name="ID_INMUEBLE" Nullable="false" />
+    <Property Type="String" Name="NOM_ACTIVIDAD" Nullable="false" MaxLength="255" />
+    <Property Type="DateTime" Name="FEC_INICIALRESERVACION" Nullable="true" />
+    <Property Type="DateTime" Name="FEC_FINALRESERVACION" Nullable="false" />
+    <Property Type="Time" Name="HOR_INICIO" Nullable="false" />
+    <Property Type="Time" Name="HOR_FINAL" Nullable="false" />
+    <Property Type="Int32" Name="ID_TIPOACTIVIDAD" Nullable="false" />
+    <Property Type="String" Name="ID_PERSONA" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="TXT_ESTADO" Nullable="false" MaxLength="15" />
+    <Property Type="Int32" Name="CAN_AFORO" Nullable="false" />
+    <Property Type="String" Name="TXT_TELEFONO" Nullable="false" MaxLength="255" />
+    <Property Type="String" Name="TXT_EXTRA" Nullable="true" MaxLength="255" />
+  </ComplexType>
+</Schema>

@@ -1,0 +1,228 @@
+﻿@model IEnumerable<Datos.DSRIFRESERVACION>
+
+@{
+    ViewBag.Title = "Generando Reporte";
+    var lista = ViewBag.lista;
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    //Layout = null;
+}
+
+<!-- DATA TABLES -->
+@Styles.Render("~/Content/tablas")
+
+@{var iduser = @Session["NOM_USUARIO"];}
+
+<aside class="right-side">
+
+    <section class="content-header">
+        <h1>
+            Reporte de Inmuebles y Costos
+            <small>Resultados</small>
+        </h1>
+        <ol class="breadcrumb">
+            <li><a href="#"><i class="glyphicon glyphicon-list-alt"></i>Generar Reporte</a></li>
+            <li><a href="#">Mostrar Informe de Reservas</a></li>
+            <li class="active">Resultados</li>
+        </ol>
+    </section>
+
+
+    <!-- Main content -->
+    <section class="content">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="box">
+                    <div class="box-header">
+                        <h3 class="box-title">Resultados de la Busqueda</h3>
+                    </div>
+                    <div class="box-content">
+                        <div class="clearfix"></div>
+                    </div>
+
+                    <div class="modal fade" id="myModalInformacion" data-backdrop="static"
+                         data-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content" style="margin-top: 150px;width:700px">
+                                <div class="modal-header logo" style="background-color: rgb(25, 21, 71); height: 72px">
+                                    <img style="width: 34px; float: left;" src="~/Content/Images/logo.png" />
+                                    <h3 class="modal-title" style="color: white; margin-top: 10px;"><strong style="margin-left: 20px;">Costo General</strong></h3>
+                                </div>
+                                <div class="modal-body">
+                                    <div style="display: inline-block; text-align: right; color: rgb(60, 141, 188); font-weight: bold">
+                                        <div>Nombre de la Actividad: </div>
+                                        <div>Nombre del Inmueble: </div>
+                                        <div>Tipo de Actividad: </div>
+                                        <div>Cantidad de Personas General: </div>
+                                        <div>Cantidad de Personas Día: </div>
+                                        <div>Teléfono de Contacto: </div>
+                                        <div>Fecha Inicio: </div>
+                                        <div>Fecha Finalizacíón: </div>
+                                        <div>Hora Inicio: </div>
+                                        <div>Hora Finalizacíón: </div>
+                                    </div>
+                                    <div style="display: inline-block; text-align: left">
+                                        <div id="infoNombre"></div>
+                                        <div id="infoInmueble"></div>
+                                        <div id="infoTipo"></div>
+                                        <div id="infoCantidad"></div>
+                                        <div id="infoCantidaddia"></div>
+                                        <div id="infoTelefono"></div>
+                                        <div id="infoFechaInicio"></div>
+                                        <div id="infoFechaFin"></div>
+                                        <div id="infoHoraInicio"></div>
+                                        <div id="infoHoraFin"></div>
+                                    </div>
+                                </div>
+
+                                <div class="modal-footer">
+                                    <input type="button" class="btn btn-primary" data-dismiss="modal" value="Listo">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- /.box-header -->
+                    <div class="box-body table-responsive">
+                        <a style="float:right" href="@Url.Action("nuevopdf2", "Reportes", new
+                            {
+                                formcollection=ViewBag.lista  })">Descargar Documento</a>
+                        <div></div>
+                        <table id="example" class="table table-bordered table-striped">
+                            <thead>
+                                <tr>
+                                    <th>Fecha Inicio</th>
+                                    <th>Fecha Fin</th>
+                                    <th>Información General</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model)
+                                {
+                                    <tr>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.FEC_INICIALRESERVACION)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.FEC_FINALRESERVACION)
+                                        </td>
+                                        @{DateTime horaI = new DateTime();
+                                        horaI = DateTime.Today.Add(item.HOR_INICIO);
+                                        DateTime HoraF = new DateTime();
+                                        HoraF = DateTime.Today.Add(item.HOR_FINAL);
+                                        string hor_inicio = horaI.ToString("h:mm");
+                                        string hor_final = HoraF.ToString("h:mm");
+                                        if (item.HOR_INICIO.Hours <= 11)
+                                        {
+                                            hor_inicio = hor_inicio + " AM";
+                                        }
+                                        else
+                                        {
+                                            hor_inicio = hor_inicio + " PM";
+                                        }
+                                        if (item.HOR_FINAL.Hours <= 11)
+                                        {
+                                            hor_final = hor_final + " AM";
+                                        }
+                                        else
+                                        {
+                                            hor_final = hor_final + " PM";
+                                        }
+                                        }
+                                        <td>
+                                            <p>
+                                                <strong>Actividad:</strong> @item.NOM_ACTIVIDAD<br />
+                                                <strong>Inmueble:</strong> @item.DSRIFINMUEBLE.NOM_INMUEBLE<br />
+                                                <strong>Tipo de Actividad:</strong> @item.DSRIFTIPOSACTIVIDAD.NOM_TIPOACTIVIDAD<br />
+                                                <strong>Inicio:</strong> @hor_inicio<br />
+                                                <strong>Finalización:</strong> @hor_final<br />
+                                                <!--  Aplicar la formula para los costos de los inmuebles Por dias o por hora-->
+                                                @{
+
+                                        List<int> inmuebles = new List<int>();// Dejar solo un inmueble de cada clase
+                                        foreach (var i in Model)
+                                        {
+                                            inmuebles.Add(i.DSRIFINMUEBLE.ID_INMUEBLE);
+                                        }
+                                        inmuebles = inmuebles.Distinct().ToList();
+
+
+
+                                        int? costo = 0;
+                                        if (@item.DSRIFINMUEBLE.DSRIFCLASIFINMUEBLE.NOM_CLASIFINMUEBLE == "CTEC") // Aqui se cobro por hora
+                                        {
+                                            while (@item.FEC_INICIALRESERVACION <= @item.FEC_FINALRESERVACION)
+                                            {
+                                                while (@item.HOR_INICIO < @item.HOR_FINAL)
+                                                {
+                                                    TimeSpan mediaHora = TimeSpan.FromHours(1); // Agregar Media hora a la hora de inicio
+                                                    costo += @item.DSRIFINMUEBLE.COS_INMUEBLE;
+                                                    @item.HOR_INICIO = @item.HOR_INICIO.Add(mediaHora);
+                                                }
+                                                if (@item.DSRIFINMUEBLE.NOM_INMUEBLE == "Tecnoaula 1")
+                                                {
+                                                    costo += 20000;
+                                                }
+                                                DateTime nuevaFecha = @item.FEC_INICIALRESERVACION.AddDays(1);
+                                                @item.FEC_INICIALRESERVACION = nuevaFecha;
+                                            }
+
+                                            <strong>Costo Por Hora: ¢</strong> @item.DSRIFINMUEBLE.COS_INMUEBLE <br />
+                                        }
+                                        else if (@item.DSRIFINMUEBLE.DSRIFCLASIFINMUEBLE.NOM_CLASIFINMUEBLE == "ECOTEC") // Aqui se cobra por Día
+                                        {
+
+                                            while (@item.FEC_INICIALRESERVACION <= @item.FEC_FINALRESERVACION)
+                                            {
+                                                costo += @item.DSRIFINMUEBLE.COS_INMUEBLE;
+                                                DateTime nuevaFecha = @item.FEC_INICIALRESERVACION.AddDays(1);
+                                                @item.FEC_INICIALRESERVACION = nuevaFecha;
+                                            }
+                                            <strong>Costo Por Día: ¢</strong> @item.DSRIFINMUEBLE.COS_INMUEBLE <br />
+                                        }
+                                                }
+
+                                                <strong>Costo Total: ¢</strong> @costo<br />
+
+                                            </p>
+                                        </td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                    <!-- /.box-body -->
+                </div>
+                <!-- /.box -->
+            </div>
+        </div>
+
+    </section>
+    <!-- /.content -->
+
+</aside>
+
+
+@Scripts.Render("~/bundles/ListaReservas")
+
+<!-- page script -->
+<!-- page script -->
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('#example').dataTable({
+            "order": [],
+            bFilter: false, bInfo: false,
+            "dom": 'T<"clear">lfrtip',
+            "bJQueryUI": true,
+            "tableTools": {
+                "sSwfPath": "/SR_Admin/js/plugins/DataTables-1.10.4/extensions/TableTools/swf/copy_csv_xls_pdf.swf",
+                "aButtons": [
+                                   {
+                                       "sExtends": "print",
+                                       "sButtonText": "Imprimir",
+                                       "sInfo": "Vista previa impresión, presione la tecla ImprPant para imprimir. Presione Esc para salir de la vista previa"
+                                   }
+                ]
+            }
+        });
+    });
+</script>

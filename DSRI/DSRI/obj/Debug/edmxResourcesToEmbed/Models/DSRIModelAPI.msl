@@ -1,0 +1,124 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="DSRIModelStoreContainer" CdmEntityContainer="DSRIEntities">
+    <EntitySetMapping Name="DSRIFCLASIFINMUEBLE">
+      <EntityTypeMapping TypeName="DSRIModel.DSRIFCLASIFINMUEBLE">
+        <MappingFragment StoreEntitySet="DSRIFCLASIFINMUEBLE">
+          <ScalarProperty Name="ID_CLASIFINMUEBLE" ColumnName="ID_CLASIFINMUEBLE" />
+          <ScalarProperty Name="COD_CLASIFINMUEBLE" ColumnName="COD_CLASIFINMUEBLE" />
+          <ScalarProperty Name="NOM_CLASIFINMUEBLE" ColumnName="NOM_CLASIFINMUEBLE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DSRIFINMUEBLE">
+      <EntityTypeMapping TypeName="DSRIModel.DSRIFINMUEBLE">
+        <MappingFragment StoreEntitySet="DSRIFINMUEBLE">
+          <ScalarProperty Name="ID_INMUEBLE" ColumnName="ID_INMUEBLE" />
+          <ScalarProperty Name="COD_INMUEBLE" ColumnName="COD_INMUEBLE" />
+          <ScalarProperty Name="COD_CLASIFICACION" ColumnName="COD_CLASIFICACION" />
+          <ScalarProperty Name="NOM_INMUEBLE" ColumnName="NOM_INMUEBLE" />
+          <ScalarProperty Name="CAN_CAPACIDAD" ColumnName="CAN_CAPACIDAD" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DSRIFMOBILIARIO">
+      <EntityTypeMapping TypeName="DSRIModel.DSRIFMOBILIARIO">
+        <MappingFragment StoreEntitySet="DSRIFMOBILIARIO">
+          <ScalarProperty Name="ID_MOBILIARIO" ColumnName="ID_MOBILIARIO" />
+          <ScalarProperty Name="COD_TIPOMOBILIARIO" ColumnName="COD_TIPOMOBILIARIO" />
+          <ScalarProperty Name="NOM_MOBILIARIO" ColumnName="NOM_MOBILIARIO" />
+          <ScalarProperty Name="CAN_MOBILIARIO" ColumnName="CAN_MOBILIARIO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DSRIFRESERVACION">
+      <EntityTypeMapping TypeName="DSRIModel.DSRIFRESERVACION">
+        <MappingFragment StoreEntitySet="DSRIFRESERVACION">
+          <ScalarProperty Name="ORGANIZADOR" ColumnName="ORGANIZADOR" />
+          <ScalarProperty Name="CAN_AFORODIA" ColumnName="CAN_AFORODIA" />
+          <ScalarProperty Name="OBJETIVO" ColumnName="OBJETIVO" />
+          <ScalarProperty Name="TXT_EXTRA" ColumnName="TXT_EXTRA" />
+          <ScalarProperty Name="ID_RESERVACION" ColumnName="ID_RESERVACION" />
+          <ScalarProperty Name="ID_INMUEBLE" ColumnName="ID_INMUEBLE" />
+          <ScalarProperty Name="NOM_ACTIVIDAD" ColumnName="NOM_ACTIVIDAD" />
+          <ScalarProperty Name="FEC_INICIALRESERVACION" ColumnName="FEC_INICIALRESERVACION" />
+          <ScalarProperty Name="FEC_FINALRESERVACION" ColumnName="FEC_FINALRESERVACION" />
+          <ScalarProperty Name="HOR_INICIO" ColumnName="HOR_INICIO" />
+          <ScalarProperty Name="HOR_FINAL" ColumnName="HOR_FINAL" />
+          <ScalarProperty Name="ID_TIPOACTIVIDAD" ColumnName="ID_TIPOACTIVIDAD" />
+          <ScalarProperty Name="ID_PERSONA" ColumnName="ID_PERSONA" />
+          <ScalarProperty Name="TXT_ESTADO" ColumnName="TXT_ESTADO" />
+          <ScalarProperty Name="CAN_AFORO" ColumnName="CAN_AFORO" />
+          <ScalarProperty Name="TXT_TELEFONO" ColumnName="TXT_TELEFONO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DSRIFTIPOMOBILIARIO">
+      <EntityTypeMapping TypeName="DSRIModel.DSRIFTIPOMOBILIARIO">
+        <MappingFragment StoreEntitySet="DSRIFTIPOMOBILIARIO">
+          <ScalarProperty Name="COD_TIPOMOBILIARIO" ColumnName="COD_TIPOMOBILIARIO" />
+          <ScalarProperty Name="NOM_TIPOMOBILIARIO" ColumnName="NOM_TIPOMOBILIARIO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DSRIFTIPOSACTIVIDAD">
+      <EntityTypeMapping TypeName="DSRIModel.DSRIFTIPOSACTIVIDAD">
+        <MappingFragment StoreEntitySet="DSRIFTIPOSACTIVIDAD">
+          <ScalarProperty Name="ID_TIPOACTIVIDAD" ColumnName="ID_TIPOACTIVIDAD" />
+          <ScalarProperty Name="NOM_TIPOACTIVIDAD" ColumnName="NOM_TIPOACTIVIDAD" />
+          <ScalarProperty Name="TXT_DESCRIPCIONACTIVIDAD" ColumnName="TXT_DESCRIPCIONACTIVIDAD" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DSRIFUSUARIOS">
+      <EntityTypeMapping TypeName="DSRIModel.DSRIFUSUARIOS">
+        <MappingFragment StoreEntitySet="DSRIFUSUARIOS">
+          <ScalarProperty Name="FEC_EXPIRACION" ColumnName="FEC_EXPIRACION" />
+          <ScalarProperty Name="ID_USUARIO" ColumnName="ID_USUARIO" />
+          <ScalarProperty Name="NOM_USUARIO" ColumnName="NOM_USUARIO" />
+          <ScalarProperty Name="TXT_CONTRASEÑA" ColumnName="TXT_CONTRASEÑA" />
+          <ScalarProperty Name="TXT_ROL" ColumnName="TXT_ROL" />
+          <ScalarProperty Name="TXT_CORREO" ColumnName="TXT_CORREO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DSRITMOBILIARIORESERVACION">
+      <EntityTypeMapping TypeName="DSRIModel.DSRITMOBILIARIORESERVACION">
+        <MappingFragment StoreEntitySet="DSRITMOBILIARIORESERVACION">
+          <ScalarProperty Name="ID_MOBILIARIORESERVACION" ColumnName="ID_MOBILIARIORESERVACION" />
+          <ScalarProperty Name="ID_MOBILIARIO" ColumnName="ID_MOBILIARIO" />
+          <ScalarProperty Name="ID_RESERVACION" ColumnName="ID_RESERVACION" />
+          <ScalarProperty Name="CAN_DISPONIBILIDAD" ColumnName="CAN_DISPONIBILIDAD" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="inmublesDisponibles" FunctionName="DSRIModel.Store.inmublesDisponibles">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DSRIModel.inmublesDisponibles_Result">
+          <ScalarProperty Name="ID_INMUEBLE" ColumnName="ID_INMUEBLE" />
+          <ScalarProperty Name="NOM_INMUEBLE" ColumnName="NOM_INMUEBLE" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="reservasUnicas" FunctionName="DSRIModel.Store.reservasUnicas">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DSRIModel.reservasUnicas_Result">
+          <ScalarProperty Name="ID_RESERVACION" ColumnName="ID_RESERVACION" />
+          <ScalarProperty Name="ID_INMUEBLE" ColumnName="ID_INMUEBLE" />
+          <ScalarProperty Name="NOM_ACTIVIDAD" ColumnName="NOM_ACTIVIDAD" />
+          <ScalarProperty Name="FEC_INICIALRESERVACION" ColumnName="FEC_INICIALRESERVACION" />
+          <ScalarProperty Name="FEC_FINALRESERVACION" ColumnName="FEC_FINALRESERVACION" />
+          <ScalarProperty Name="HOR_INICIO" ColumnName="HOR_INICIO" />
+          <ScalarProperty Name="HOR_FINAL" ColumnName="HOR_FINAL" />
+          <ScalarProperty Name="ID_TIPOACTIVIDAD" ColumnName="ID_TIPOACTIVIDAD" />
+          <ScalarProperty Name="ID_PERSONA" ColumnName="ID_PERSONA" />
+          <ScalarProperty Name="TXT_ESTADO" ColumnName="TXT_ESTADO" />
+          <ScalarProperty Name="CAN_AFORO" ColumnName="CAN_AFORO" />
+          <ScalarProperty Name="TXT_TELEFONO" ColumnName="TXT_TELEFONO" />
+          <ScalarProperty Name="TXT_EXTRA" ColumnName="TXT_EXTRA" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="actualizarUsuarios" FunctionName="DSRIModel.Store.actualizarUsuarios" />
+  </EntityContainerMapping>
+</Mapping>

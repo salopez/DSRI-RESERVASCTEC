@@ -1,0 +1,26 @@
+﻿@model Datos.DSRIFTIPOMOBILIARIO
+
+@{
+    ViewBag.Title = "Detalles de Tipo de Mobiliario";
+    Layout = "~/Views/Shared/_Administrador.cshtml";
+}
+
+<h2>@ViewBag.Title</h2>
+
+<div>
+	<hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.NOM_TIPOMOBILIARIO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NOM_TIPOMOBILIARIO)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Editar", "Edit", new { id = Model.COD_TIPOMOBILIARIO }, new { @class = "btn btn-primary" }) |
+    @Html.ActionLink("Regresar al contenido principal", "Index", null, new { @class = "btn btn-default" })
+</p>

@@ -1,0 +1,111 @@
+﻿@model Datos.DSRIFUSUARIOS
+
+@{
+    ViewBag.Title = "Editar Usuarios";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<link href="~/Content/jquery-ui.css" rel="stylesheet" />
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <!-- Right side column. Contains the navbar and content of the page -->
+    <aside class="right-side">
+        <!-- Content Header (Page header) -->
+        <section class="content-header">
+            <h1>
+                Editar Usuario
+                <small>Edición</small>
+            </h1>
+            <ol class="breadcrumb">
+                <li><a href="#"><i class="glyphicon glyphicon-cog"></i>Configuración del Sistema</a></li>
+                <li><a href="#">Administrar Usuarios</a></li>
+                <li><a href="#">Editar Usuario</a></li>
+            </ol>
+        </section>
+
+        <section class="content">
+            <div class="row">
+                <!-- right column -->
+                <div class="col-md-6">
+                    <!-- general form elements disabled -->
+                    <div class="box box-primary">
+                        <div class="box-header">
+                            <h3 class="box-title">Datos de Usuario</h3>
+                        </div>
+                        <!-- /.box-header -->
+                        <div class="box-body">
+                            @Html.ValidationSummary(true)
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.NOM_USUARIO, htmlAttributes: new { @class = "control-label" })
+                                @Html.TextBoxFor(model => model.NOM_USUARIO, htmlAttributes: new { @class = "form-control" })
+                            </div>
+
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.TXT_CONTRASEÑA, htmlAttributes: new { @class = "control-label" })
+                                @Html.TextBoxFor(model => model.TXT_CONTRASEÑA, htmlAttributes: new { @class = "form-control" })
+                            </div>
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.TXT_CORREO, htmlAttributes: new { @class = "control-label " })
+                                @Html.TextBoxFor(model => model.TXT_CORREO, htmlAttributes: new { @class = "form-control" })
+                            </div>
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.FEC_EXPIRACION, htmlAttributes: new { @class = "control-label" })
+                                @Html.TextBoxFor(model => model.FEC_EXPIRACION, htmlAttributes: new { @class = "form-control", @readonly = "readonly" })
+                            </div>
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.TXT_ROL, htmlAttributes: new { @class = "control-label" })
+                                @Html.DropDownListFor(model => model.TXT_ROL,
+                            new[]
+                            {
+                            new SelectListItem{ Value = "Administrador", Text = "Administrador" },
+                            new SelectListItem{ Value = "Asistente", Text = "Asistente" },
+                            new SelectListItem{ Value = "Asociacion", Text = "Asociacion de Estudiantes" },
+                            new SelectListItem{ Value = "ODOO", Text = "ODOO TEC" }
+                            },
+                            "Seleccione el tipo de usuario", new { @class = "form-control" })
+                            </div>
+                            <div class="form-group">
+                                <div>
+                                    <input type="submit" value="Guardar Cambios" class="btn btn-warning" />
+                                    |
+                                    @Html.ActionLink("Regresar al Contenido Principal", "Index", null, new { @class = "btn btn-default" })
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </aside>
+
+}
+
+@*@Scripts.Render("~/bundles/endpageusuarios")*@
+
+<script src="~/Content/bootstrap-3.2.0/dist/js/jquery.min.js"></script>
+<script src="~/Content/bootstrap-3.2.0/dist/js/bootstrap.min.js"></script>
+<script src="~/Scripts/AdminLTE/app.js"></script>
+<script src="~/Scripts/jquery-ui-1.10.4.js"></script>
+<script src="~/Scripts/jquery-ui-timepicker-addon.js"></script>
+<script src="~/Scripts/Reserva/date.js"></script>
+
+<script type="text/javascript" language="javascript">
+    $(document).ready(function () {
+        $("#FEC_EXPIRACION").change(function () {
+            var value = $("#FEC_EXPIRACION").val();
+            console.log(value);
+            // var fecha = new Date.parseExact(value, "dd/MM/yyyy");
+            // console.log(fecha);
+            $('#FEC_EXPIRACION').datepicker('option',
+                                {
+                                    minDate: 0,
+                                });
+        });
+        $("#FEC_EXPIRACION").datepicker({
+            minDate: 0,
+            dateFormat: "dd/mm/yy",
+        });
+    });
+</script>

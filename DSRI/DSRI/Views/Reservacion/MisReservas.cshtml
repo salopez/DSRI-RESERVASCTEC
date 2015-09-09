@@ -1,0 +1,163 @@
+﻿@model IEnumerable<Datos.DSRIFRESERVACION>
+@{
+    ViewBag.Title = "Mis Reservas";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@{var iduser = @Session["NOM_USUARIO"];}
+
+<link href="~/Content/dataTables.bootstrap.css" rel="stylesheet" />
+
+<aside class="right-side">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+        <h1>Todas las Reservas
+                        <small>Mis Reservas</small>
+        </h1>
+        <ol class="breadcrumb">
+            <li><a href="#"><i class="glyphicon glyphicon-th-list"></i>Administrar Reservas</a></li>
+            <li><a href="#">Mis Reservas</a></li>
+            <li class="active">Resultado</li>
+        </ol>
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="box box-info">
+                    <div class="box-header">
+                        <h3 class="box-title">Mis Reservas</h3>
+                    </div>
+                    <div class="box-content">
+                        <div id="calendar"></div>
+
+                        <div class="clearfix"></div>
+                    </div>
+                    <!-- /.box-header -->
+                    <div class="box-body table-responsive">
+                        <table id="example1" class="table table-bordered table-striped">
+                            <thead>
+                                <tr>
+                                    <th style="width:25%">Actividad</th>
+                                    <th>Inmueble</th>
+                                    <th style="width:8%">Tipo</th>
+                                    <th>Fecha Inicio</th>
+                                    <th>Fecha Fin</th>
+                                    <th>Hora Inicio</th>
+                                    <th>Hora Fin</th>
+                                    @*<th>Telefono</th>*@
+                                    <th>Estado</th>
+                                    <th>Opciones</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model)
+                                {
+                                    <tr>
+                                        <td>
+                                            <a style="color:#2F869B" title="Detalles de la Reserva" href="@Url.Action("Details", "Reservacion", new { id = item.ID_RESERVACION })" >
+                                                @Html.DisplayFor(modelItem => item.NOM_ACTIVIDAD)
+                                            </a>
+                                            
+                                        </td>
+
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.DSRIFINMUEBLE.NOM_INMUEBLE)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.DSRIFTIPOSACTIVIDAD.NOM_TIPOACTIVIDAD)
+                                        </td>
+                                        @*<td>
+                                            @Html.DisplayFor(modelItem => item.ID_PERSONA)
+                                        </td>*@
+
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.FEC_INICIALRESERVACION)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.FEC_FINALRESERVACION)
+                                        </td>
+
+                                        <td>
+                                            @{DateTime horaI = new DateTime();
+                                          horaI = DateTime.Today.Add(item.HOR_INICIO);
+                                          DateTime HoraF = new DateTime();
+                                          HoraF = DateTime.Today.Add(item.HOR_FINAL);
+                                          string hor_inicio = horaI.ToString("h:mm ");
+                                          string hor_final = HoraF.ToString("h:mm ");
+                                          if (item.HOR_INICIO.Hours <= 11)
+                                          {
+                                              hor_inicio = hor_inicio + "AM";
+                                          }
+                                          else
+                                          {
+                                              hor_inicio = hor_inicio + "PM";
+                                          }
+                                          if (item.HOR_FINAL.Hours <= 11)
+                                          {
+                                              hor_final = hor_final + "AM";
+                                          }
+                                          else
+                                          {
+                                              hor_final = hor_final + "PM";
+                                          }
+                                        }
+                                            @hor_inicio
+                                        </td>
+                                        <td>
+                                            @hor_final
+                                        </td>
+                                        @*<td>
+                                            @Html.DisplayFor(modelItem => item.TXT_TELEFONO)
+                                        </td>*@
+                                        @if (item.TXT_ESTADO.Equals("Rechazada"))
+                                        {
+                                            <td style="color: red">
+                                                @Html.DisplayFor(modelItem => item.TXT_ESTADO)
+                                            </td>
+                                        }
+                                        else if (item.TXT_ESTADO.Equals("En Proceso"))
+                                        {
+                                            <td style="color: rgb(51, 122, 183)">
+                                                @Html.DisplayFor(modelItem => item.TXT_ESTADO)
+                                            </td>
+                                        }
+                                        else
+                                        {
+                                            <td style="color: rgb(20, 197, 43)">
+                                                @Html.DisplayFor(modelItem => item.TXT_ESTADO)
+                                            </td>
+                                        }
+                                        <td>
+                                            <a href="@Url.Action("EditarReserva", "Reservacion", new { id = item.ID_RESERVACION })" data-toggle="tooltip" data-placement="top" title="Editar Reserva"><span class="glyphicon glyphicon-edit text-primary"></span></a>
+                                            |
+                                <a href="@Url.Action("Details", "Reservacion", new { id = item.ID_RESERVACION })" data-toggle="tooltip" data-placement="top" title="Detalles"><span class="glyphicon glyphicon-book text-primary"></span></a>
+                                            |
+                                <a href="@Url.Action("Delete", "Reservacion", new { id = item.ID_RESERVACION })" data-toggle="tooltip" data-placement="top" title="Eliminar"><span class="glyphicon glyphicon-remove text-primary"></span></a>
+                                        </td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                    <!-- /.box-body -->
+                </div>
+                <!-- /.box -->
+            </div>
+        </div>
+
+    </section>
+    <!-- /.content -->
+</aside>
+<!-- /.right-side -->
+
+@Scripts.Render("~/bundles/ListaReservas")
+
+<!-- page script -->
+<script type="text/javascript">
+    $(function () {
+        $("#example1").dataTable({
+            "order": [],
+        });
+    });
+</script>

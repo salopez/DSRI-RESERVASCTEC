@@ -1,0 +1,446 @@
+﻿@using Datos
+@model Datos.DSRIFRESERVACION
+@using Newtonsoft.Json
+@{
+    ViewBag.Title = "Nueva Reservación";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@{var iduser = @Session["Administrador"];}
+
+
+@Styles.Render("~/Content/create")
+
+<!-- Right side column. Contains the navbar and content of the page -->
+<aside class="right-side">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+        <h1>
+            Boleta de Reserva
+            <small>Creación</small>
+        </h1>
+        <ol class="breadcrumb">
+            <li><a href="#"><i class="fa fa-edit"></i>Solicitar Inmueble </a></li>
+            <li><a href="#">>Nueva Reserva</a></li>
+            <li class="active">>Boleta de Reserva</li>
+        </ol>
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+
+        <div class="modal fade" id="myModal" data-backdrop="static"
+             data-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content" style="margin-top: 170px;">
+                    <div class="modal-header">
+                        <h4 class="modal-title"><strong>Sistema de Reservas</strong></h4>
+                    </div>
+                    <div class="modal-body">
+                        <p>
+                            Estimado usuario su solicitud se ha registrado con éxito, y se encuentra actualmente en estado : En Proceso,
+                            próximamente nuestros asistentes estarán valorando y enviando la respuesta a su solicitud vía correo electrónico
+                            a la siguiente dirección: <strong>@Session["Email"]</strong>
+
+                        <p>
+                            <strong>
+                                Por favor, esté pendiente, muchas gracias.
+                            </strong>
+                        </p>
+                        <div id="Finicio"></div>
+                        <div id="Ffin"></div>
+
+                        <div id="Hinicio"></div>
+                        <div id="Hfin"></div>
+
+                    </div>
+                    <div class="modal-footer">
+                        <form action="@Url.Action("Index", "Home")">
+                            <input class="btn btn-success" type="submit" value="Continuar">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="myModalError" data-backdrop="static"
+             data-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content" style="margin-top: 170px;">
+                    <div class="modal-header">
+                        <h4 class="modal-title" style="color: red"><strong>Lo sentimos...</strong></h4>
+                    </div>
+                    <div class="modal-body">
+                        <p>
+                            Solicitud de creación a fallado, por favor intente crear la reserva nuevamente!. Cerciórese que los datos
+                            ingresados sean correctos y que está conectado a internet. De no ser así reporte dicho problema a nuestros colaboradores.
+                        <p>
+                            <strong>
+                                Muchas gracias.
+                            </strong>
+                        </p>
+                    </div>
+                    <div class="modal-footer">
+                        <form action="@Url.Action("Create", "Reservacion")">
+                            <input class="btn btn-danger" type="submit" value="Crear Nuevamente">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="modal fade" id="myModalInformacion" data-backdrop="static"
+             data-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content" style="margin-top: 150px;width:700px">
+                    <div class="modal-header logo" style="background-color: rgb(25, 21, 71); height: 72px">
+                        <img style="width: 34px; float: left;" src="~/Content/Images/logo.png" />
+                        <h3 class="modal-title" style="color: white; margin-top: 10px;"><strong style="margin-left: 20px;">Solicitud de Reserva</strong></h3>
+                    </div>
+                    <div class="modal-body">
+                        <div style="display: inline-block; text-align: right; color: rgb(60, 141, 188); font-weight: bold">
+                            <div>Nombre de la Actividad: </div>
+                            <div>Nombre del Inmueble: </div>
+                            <div>Tipo de Actividad: </div>
+                            <div>Cantidad de Personas General: </div>
+                            <div>Cantidad de Personas Día: </div>
+                            <div>Teléfono de Contacto: </div>
+                            <div>Fecha Inicio: </div>
+                            <div>Fecha Finalizacíón: </div>
+                            <div>Hora Inicio: </div>
+                            <div>Hora Finalizacíón: </div>
+                        </div>
+                        <div style="display: inline-block; text-align: left">
+                            <div id="infoNombre"></div>
+                            <div id="infoInmueble"></div>
+                            <div id="infoTipo"></div>
+                            <div id="infoCantidad"></div>
+                            <div id="infoCantidaddia"></div>
+                            <div id="infoTelefono"></div>
+                            <div id="infoFechaInicio"></div>
+                            <div id="infoFechaFin"></div>
+                            <div id="infoHoraInicio"></div>
+                            <div id="infoHoraFin"></div>
+                        </div>
+                        @if (@Session["NOM_USUARIO"].Equals("Asistente") || @Session["NOM_USUARIO"].Equals("Administrador") || @Session["ID_USUARIO"].Equals("cbermudez"))
+                        {
+                            <div style="color: rgb(122, 180, 60); font-weight: bold">Información Adicional:</div>
+                            <textarea id="infoExtra" class="form-control" rows="2" disabled></textarea>
+                        }
+                    </div>
+                    <div class="modal-footer">
+                        <form action="@Url.Action("Create", "Reservacion")">
+                            <input type="button" class="btn btn-primary" data-dismiss="modal" value="Corregir">
+                            <input type="button" class="btn btn-success" data-dismiss="modal" id="crear" value="Crear Reserva">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="row">
+            <!-- right column -->
+            <div class="col-md-6">
+                <!-- general form elements disabled -->
+                <div class="box box-primary">
+                    <div class="box-header">
+                        <h3 class="box-title">Información General</h3>
+                    </div>
+                    <!-- /.box-header -->
+                    <div class="box-body">
+                        <!-- text input -->
+                        <div class="form-group">
+                            <label>Nombre de la Actividad:</label>
+                            <input id="NOM_ACTIVIDAD" type="text" class="form-control" maxlength="70" placeholder="Ej Congreso del Agua" required />
+                        </div>
+                        <div class="form-group">
+                            <label>Objetivo de la Actividad: </label>
+                            <input id="OBJETIVO" type="text" maxlength="250" placeholder="Transmitir conocimiento a ..." class="form-control" required />
+                        </div>
+
+                        <div class="form-group">
+                            <label>Descripción de la Actividad: </label>
+                            <input id="DESCRIPCION" type="text" maxlength="250" placeholder="En esta oportunidad ..." class="form-control" required />
+                        </div>
+
+                        @* Estos campos se agregaron a la interfaz; se deben agregar también a la Base de datos*@
+
+                        <div class="form-group">
+                            <label>Teléfono de Contacto:</label>
+                            <input id="TXT_TELEFONO" type="text" maxlength="80" class="form-control" placeholder="3012 ó 2461-3010" required />
+                        </div>
+
+
+                        <!-- select -->
+                        <div class="form-group form-inline">
+                            <label>Cantidad de Personas <strong style="color:rgb(60, 141, 188)"> General: </strong></label>
+                            <input id="CAN_AFORO" type="number" pattern="[1-9]" class="form-control" value="1" min="1" max="2000" required />
+                            <label> <strong style="color:rgb(60, 141, 188)">Por Día:</strong></label>
+                            <input id="CAN_AFORODIA" type="number" pattern="[1-9]" class="form-control" value="1" min="1" max="2000" required />
+                        </div>
+
+                        <div class="form-group form-inline">
+                            <label>Tipo de Actividad:</label>
+                            @Html.DropDownList("ID_TIPOACTIVIDAD", null, null, new { @class = "form-control" })
+                            <a class="glyphicon glyphicon-question-sign" id="popOver"></a>
+
+                            <br />
+                        </div>
+
+                        <div class="form-group form-inline">
+                            <label for="ORGANIZADOR">Organizadores:</label>
+                            <input id="ORGANIZADOR" type="text" class="form-control" maxlength="140" placeholder="Ej DEVESA" required />
+                        </div>
+
+                        <div class="form-group">
+                            <div class="">
+                                @Html.HiddenFor(model => model.TXT_ESTADO, new { @Value = "En Proceso" })
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="">
+                                @Html.HiddenFor(model => model.ID_PERSONA, new { id = "ID_PERSONA" })
+                            </div>
+                        </div>
+                        <hr />
+                        <div id="errorFaltandatos" class="alert alert-danger" hidden>
+                            <i class="fa fa-ban"></i>
+                            <b>Importante!</b> Faltan datos para realizar la reserva!. Por Favor, llene todos los campos e intente
+                            crear la reserva nuevamente.
+                        </div>
+                    </div>
+                </div>
+                <!-- /.box-body -->
+                @if (@Session["NOM_USUARIO"].Equals("Administrador") || @Session["ID_USUARIO"].Equals("cbermudez"))
+                {
+                    <div class="box box-warning">
+                        <div class="box-header">
+                            <h3 class="box-title">Opciones Extras</h3>
+                        </div>
+
+                        <div class="box-body">
+                            <!-- textarea -->
+                            <div class="form-group">
+                                <label>Observaciones</label>
+                                <textarea id="TXT_EXTRA" class="form-control" rows="3" placeholder="Para este día tomar en cuenta ..."></textarea>
+                            </div>
+                            <hr />
+                            <!-- /.box -->
+                            <div class="box-header">
+                                <h3 class="box-title">Agregar Mobiliario</h3>
+                            </div>
+                            <div class="form-group">
+                                <label>Lista de mobiliario:</label>
+                                @Html.DropDownList("ListaMobiliario", null, null, new { @class = "form-control" })
+                                <div id="errmsgrepetido" class="alert alert-danger alert-dismissable">
+                                    <i class="fa fa-ban"></i>
+                                    <b>Error!</b> El inmueble seleccionado ya se encuentra en la lista.
+                                </div>
+
+                            </div>
+                            <div class="form-group">
+                                <label>Cantidad a agregar:</label>
+                                <input type="number" id="cantidad" pattern="[1-9]" value="1" class="form-control" min="1" required />
+                                <div id="errmsg" class="alert alert-warning alert-dismissable">
+                                    <i class="fa fa-warning"></i>
+                                    <b>Warning!</b> Cantidad de Mobiliario No Disponible.
+                                </div>
+                                <div id="errmsgletra" class="alert alert-warning alert-dismissable">
+                                    <i class="fa fa-warning"></i>
+                                    <b>Warning!</b> Solo se pueden ingresar numeros!
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <input type="button" id="add" value="Agregar a la Lista" class="btn btn-success btn-large" />
+                            </div>
+                            <div class="form-group">
+                                <label>Mobiliario Seleccionado</label>
+                                <select id="lstMob" class="form-control list-group" size="5" multiple="multiple"></select>
+                                <input type="button" id="delete" class="btn btn-danger btn-sm" value="Eliminar mobiliario de la lista" />
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+
+            <!--/.col (right) -->
+
+            <div class="col-md-6">
+                <div class="box box-success">
+                    <div class="box-header">
+                        <h3 class="box-title">Tiempo y Disponibilidad</h3>
+
+                    </div>
+
+                    <div class="box-body">
+                        <!-- dias de la semana range -->
+                        <div class="form-group">
+                            <label>L</label>
+                            <input id="lun" value="Lunes" type="checkbox" data-onstyle="primary" data-toggle="toggle" data-size="mini" data-on="Si" data-off="No" />
+                            <label style="margin-left: 35px">K</label>
+                            <input id="mar" value="Martes" type="checkbox" data-onstyle="primary" data-toggle="toggle" data-size="mini" data-on="Si" data-off="No" />
+                            <label style="margin-left: 35px">M</label>
+                            <input id="mier" value="Miercoles" type="checkbox" data-onstyle="primary" data-toggle="toggle" data-size="mini" data-on="Si" data-off="No" />
+                            <label style="margin-left: 35px">J</label>
+                            <input id="jue" value="Jueves" type="checkbox" data-onstyle="primary" data-toggle="toggle" data-size="mini" data-on="Si" data-off="No" />
+                            <label style="margin-left: 35px">V</label>
+                            <input id="vier" value="Viernes" type="checkbox" data-onstyle="primary" data-toggle="toggle" data-size="mini" data-on="Si" data-off="No" />
+                            <label style="margin-left: 35px">S</label>
+                            <input id="sab" value="Sábado" type="checkbox" data-onstyle="primary" data-toggle="toggle" data-size="mini" data-on="Si" data-off="No" />
+                            <label style="margin-left: 35px">D</label>
+                            <input id="dom" value="Domingo" type="checkbox" data-onstyle="primary" data-toggle="toggle" data-size="mini" data-on="Si" data-off="No" />
+                            <a style="margin-left:40px;" class="glyphicon glyphicon-question-sign" id="infoSemana"></a>
+                        </div>
+
+                        <!-- Date range -->
+                        <div class="form-group">
+
+                            <label>Fecha de Inicio</label>
+                            <div class="input-group">
+                                <div class="input-group-addon">
+                                    <i class="fa fa-calendar"></i>
+                                </div>
+                                <input type="text" class="form-control" id="FEC_INICIALRESERVACION" readonly placeholder="Click para escoger la fecha..." />
+                            </div>
+                            <!-- /.input group -->
+                        </div>
+                        <!-- /.form group -->
+                        <!-- Date range -->
+                        <div class="form-group">
+                            <label>Fecha de Finalización</label>
+                            <div class="input-group">
+                                <div class="input-group-addon">
+                                    <i class="fa fa-calendar"></i>
+                                </div>
+                                <input type="text" class="form-control" id="FEC_FINALRESERVACION" readonly placeholder="Click para escoger la fecha..." />
+                            </div>
+                            <!-- /.input group -->
+                        </div>
+                        <!-- Date and time range -->
+                        <div class="form-group">
+                            <label>Hora de Inicio</label>
+                            <div class="input-group">
+                                <div class="input-group-addon">
+                                    <i class="fa fa-clock-o"></i>
+                                </div>
+                                <input type="text" class="form-control pull-right" id="HOR_INICIO" readonly placeholder="Click para escoger la hora..." />
+                            </div>
+                            <!-- /.input group -->
+                        </div>
+                        <!-- /.form group -->
+                        <!-- Date and time range -->
+                        <div class="form-group">
+                            <label>Hora de Finalización</label>
+                            <div class="input-group">
+                                <div class="input-group-addon">
+                                    <i class="fa fa-clock-o"></i>
+                                </div>
+                                <input type="text" class="form-control" id="HOR_FINAL" readonly placeholder="Click para escoger la hora..." />
+                            </div>
+                            <!-- /.input group -->
+                            <br />
+                            <div id="errorSpan" class="alert alert-danger" hidden>
+                                <i class="fa fa-ban"></i>
+                                <b>!</b>
+                            </div>
+                        </div>
+
+                        <!-- /.form group -->
+                        <div class="form-group" id="loadInmaux" hidden>
+                            <div>
+                                <input type="button" id="loadInm" class="btn btn-info" value="Ver Inmuebles Disponibles" />
+                                <span id="loader" class="spinner" hidden></span>
+                                
+                            </div>
+
+                        </div>
+                        <!-- /.Inmuebles Disponibles -->
+                        <div class="form-group" id="todalalista">
+                            <label id="lInmuebles1">Inmuebles Disponibles</label>
+                            <a class="glyphicon glyphicon-question-sign" id="infoInmuebles"></a>
+                            <select id="lista" data-placeholder="Inmuebles disponibles" multiple class="chosen-select" disabled style="width: 413px; " tabindex="6">
+                                <option value=""></option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            @*<label hidden id="lInmuebles">Inmuebles Disponibles</label>
+                                @Html.DropDownList("ID_INMUEBLE", null, null, new { @class = "form-control", hidden = "true" })*@
+                        </div>
+
+                        <div id="errorNohay" class="alert alert-danger" hidden>
+                            <i class="fa fa-ban"></i>
+                            <b>Importante!</b> No hay inmuebles disponibles para esta fecha!. Por favor intente con otra.
+                        </div>
+                        <div class="form-group" hidden id="crearModalaux">
+                            <input type="button" class="btn btn-success" id="crearModal" value="Continuar" />
+                        </div>
+                    </div>
+                    <!-- /.box-body -->
+                </div>
+                <!-- /.box -->
+            </div>
+            <!-- /.col (right) -->
+
+        </div>
+        <!-- /.row -->
+    </section>
+    <!-- /.content -->
+</aside>
+<!-- /.right-side -->
+
+@*<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>*@
+@*@Scripts.Render("~/bundles/endpage")*@
+<!-- AdminLTE App -->
+
+<script src="~/Scripts/jquery-2.1.3.min.js" ></script>
+<script src="~/Content/bootstrap-3.2.0/dist/js/bootstrap.min.js" ></script>
+<script src="~/Scripts/AdminLTE/app.js"></script>
+<script src="~/Scripts/jquery-ui-1.10.4.js"></script>
+<script src="~/Scripts/jquery-ui-timepicker-addon.js"></script>
+<script src="~/Scripts/Reserva/date.js"></script>
+<script src="~/Scripts/Reserva/jquery.bootstrap.wizard.min.js"></script>
+<script src="~/Scripts/bootstrap-toggle.min.js"></script>
+<script src="~/Scripts/Reserva/chosen.jquery.js"></script>
+<script src="~/Scripts/Reserva/Reserva.js"></script>
+
+<script>
+    $(document).ready(function () {
+        $("#popOver").popover({
+            html: true,
+            placement: 'top',
+            trigger: 'hover',
+            title: "Tipo de Actividad",
+            content: '<div style="font-size:12px;">' +
+                       '<div> <strong style="color:rgb(16, 14, 48);">Actividad Interna: </strong> Solicitud de instalaciones para todo tipo de actividades que no se realicen a traves del CTEC y que sean organizadas internamente. </div>' +
+                       '<div> <strong style="color:rgb(16, 14, 48);">Alquiler de Instalaciones: </strong> Solicitud de instalaciones por entes externos al TEC </div>' +
+                       '<div> <strong style="color:rgb(60, 141, 188)">Transferencia Tecnológica: </strong> Transferir de una organización a otra los descubrimientos científicos, con el fin de promover el desarrollo y la comercialización.</div>' +
+                       '<div> <strong style="color:rgb(60, 141, 188)">Educación Continua: </strong> Actividades de capacitación que contribuyen a la actividad profesional del Recurso Humano.</div>' +
+                       '<div> <strong style="color:rgb(60, 141, 188)">Vinculación Empresarial: </strong> Enlace entre las organizaciones y la universidad, propiciando el desarrollo tecnológico y la competitividad empresarial.</div>' +
+                        '</div>'
+        });
+
+        $("#infoSemana").popover({
+            html: true,
+            placement: 'bottom',
+            trigger: 'hover',
+            title: "Importante",
+            content: '<div style="font-size:12px;">' +
+                       '<div> <strong style="color:rgb(16, 14, 48);">* 1): </strong> Si ninguno de los días es seleccionado, la reserva no se creará aunque esta tenga una fecha Inicio y Fin. </div>' +
+                       '<div> <strong style="color:rgb(16, 14, 48);">* 2): </strong> Por defecto el sistema selecciona todos los días, no obstante si usted desea solo puede escojer los días que necesite el inmueble(es). </div>'  +'</div>'
+        });
+
+        var config = {
+            '.chosen-select': {},
+            '.chosen-select-deselect': { allow_single_deselect: true },
+            '.chosen-select-no-single': { disable_search_threshold: 10 },
+            '.chosen-select-no-results': { no_results_text: 'Error, No resultados!' },
+            '.chosen-select-width': { width: "95%" }
+        }
+        for (var selector in config) {
+            $(selector).chosen(config[selector]);
+        }
+    });
+
+
+</script>

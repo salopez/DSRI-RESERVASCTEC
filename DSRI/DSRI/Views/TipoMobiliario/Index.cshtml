@@ -1,0 +1,34 @@
+﻿@model IEnumerable<Datos.DSRIFTIPOMOBILIARIO>
+
+@{
+    ViewBag.Title = "Registro de Tipos de Mobiliario";
+    Layout = "~/Views/Shared/_Administrador.cshtml";
+}
+
+<h3>@ViewBag.Title</h3>
+
+<p>
+    @Html.ActionLink("Agregar Nuevo", "Create")
+</p>
+<table class="table table-bordered table-responsive table-striped">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.NOM_TIPOMOBILIARIO)
+        </th>
+        <th>Operaciones</th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.NOM_TIPOMOBILIARIO)
+        </td>
+        <td>
+            @Html.ActionLink("Editar", "Edit", new { id=item.COD_TIPOMOBILIARIO }) |
+            @Html.ActionLink("Detalles", "Details", new { id=item.COD_TIPOMOBILIARIO }) |
+            @Html.ActionLink("Eliminar", "Delete", new { id=item.COD_TIPOMOBILIARIO })
+        </td>
+    </tr>
+}
+
+</table>

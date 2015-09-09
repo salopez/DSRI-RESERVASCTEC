@@ -1,0 +1,148 @@
+﻿@model Datos.DSRIFRESERVACION
+
+@{
+    ViewBag.Title = "Eliminar Reserva";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<aside class="right-side">
+    <section class="content-header">
+        <h1>
+            Mostrando Reservas
+            <small>Eliminar</small>
+        </h1>
+        <ol class="breadcrumb">
+            <li><a href="#"><i class="glyphicon glyphicon-th-list"></i>Administrar Reservas</a></li>
+            <li><a href="#">Eliminar</a></li>
+        </ol>
+    </section>
+    <section class="content">
+        <div class="row">
+            <!-- right column -->
+            <div class="col-md-6">
+                <!-- general form elements disabled -->
+                <div class="box box-primary">
+                    <div class="box-header">
+                        <h3 class="box-title">¿Seguro que desea eliminar esta Reserva?</h3>
+                        <h5 class="box-title">Recuerde que se eliminarán todas las reserservas asociadas a esta!</h5>
+                    </div>
+                    <!-- /.box-header -->
+                    <div class="box-body">
+
+                        <hr />
+                        <dl class="dl-horizontal">
+                            <dt>
+                                @Html.DisplayNameFor(model => model.NOM_ACTIVIDAD)
+                            </dt>
+
+                            <dd>
+                                @Html.DisplayFor(model => model.NOM_ACTIVIDAD)
+                            </dd>
+
+                            <dt>
+                                @Html.DisplayNameFor(model => model.FEC_INICIALRESERVACION)
+                            </dt>
+                            @{DateTime horaI = new DateTime();
+                            horaI = DateTime.Today.Add(Model.HOR_INICIO);
+                            DateTime HoraF = new DateTime();
+                            HoraF = DateTime.Today.Add(Model.HOR_FINAL);
+                            string hor_inicio = horaI.ToString("h:mm tt");
+                            string hor_final = HoraF.ToString("h:mm tt");
+                            if (Model.HOR_INICIO.Hours <= 11)
+                            {
+                                hor_inicio = hor_inicio + "AM";
+                            }
+                            else
+                            {
+                                hor_inicio = hor_inicio + "PM";
+                            }
+                            if (Model.HOR_FINAL.Hours <= 11)
+                            {
+                                hor_final = hor_final + "AM";
+                            }
+                            else
+                            {
+                                hor_final = hor_final + "PM";
+                            }
+                            }
+                            <dd>
+                                @Html.DisplayFor(model => model.FEC_INICIALRESERVACION)
+                            </dd>
+
+                            <dt>
+                                @Html.DisplayNameFor(model => model.FEC_FINALRESERVACION)
+                            </dt>
+
+                            <dd>
+                                @Html.DisplayFor(model => model.FEC_FINALRESERVACION)
+                            </dd>
+
+                            <dt>
+                                @Html.DisplayNameFor(model => model.HOR_INICIO)
+                            </dt>
+
+                            <dd>
+                                @hor_inicio
+                            </dd>
+
+                            <dt>
+                                @Html.DisplayNameFor(model => model.HOR_FINAL)
+                            </dt>
+
+                            <dd>
+                                @hor_final
+                            </dd>
+
+                            <dt>
+                                @Html.DisplayNameFor(model => model.DSRIFTIPOSACTIVIDAD.NOM_TIPOACTIVIDAD)
+                            </dt>
+
+                            <dd>
+                                @Html.DisplayFor(model => model.DSRIFTIPOSACTIVIDAD.NOM_TIPOACTIVIDAD)
+                            </dd>
+
+                            <dt>
+                                @Html.DisplayNameFor(model => model.ID_INMUEBLE)
+                            </dt>
+
+                            <dd>
+                                @Html.DisplayFor(model => model.DSRIFINMUEBLE.NOM_INMUEBLE)
+                            </dd>
+
+                            <dt>
+                                @Html.DisplayNameFor(model => model.ID_PERSONA)
+                            </dt>
+
+                            <dd>
+                                @Html.DisplayFor(model => model.ID_PERSONA)
+                            </dd>
+                            @*Código para agregar el estado*@
+
+                            <dt>
+                                @Html.DisplayNameFor(model => model.TXT_ESTADO)
+                            </dt>
+
+                            <dd>
+                                @Html.DisplayFor(model => model.TXT_ESTADO)
+                            </dd>
+
+                        </dl>
+
+                        @using (Html.BeginForm())
+                        {
+                            @Html.AntiForgeryToken()
+
+                            <div class="form-actions no-color">
+                                <input type="submit" value="Eliminar" class="btn btn-danger" />
+                                |
+                                @Html.ActionLink("Regresar al Contenido Principal", @Session["funcion"].ToString(), "Reservacion", new { estado = @Session["estado"].ToString() }, new { @class = "btn btn-default" })
+                            </div>
+                        }
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+</aside>
+@Scripts.Render("~/bundles/endpage")

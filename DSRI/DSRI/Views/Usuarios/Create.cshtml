@@ -1,0 +1,140 @@
+﻿@model Datos.DSRIFUSUARIOS
+
+@{
+    ViewBag.Title = "Agregar Usuario";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<link href="~/Content/bootstrap-3.2.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+<link href="~/Content/font-awesome-4.2.0/css/font-awesome.min.css" rel="stylesheet" />
+
+<link href="~/SR_Admin/css/daterangepicker/daterangepicker-bs3.css" rel="stylesheet" />
+<!-- iCheck for checkboxes and radio inputs -->
+<link href="~/SR_Admin/css/iCheck/all.css" rel="stylesheet" />
+<!-- Bootstrap Color Picker -->
+<link href="~/SR_Admin/css/colorpicker/bootstrap-colorpicker.min.css" rel="stylesheet" />
+<!-- Bootstrap time Picker -->
+<link href="~/SR_Admin/css/timepicker/bootstrap-timepicker.min.css" rel="stylesheet" />
+<link rel="stylesheet" media="all" type="text/css" href="~/Content/jquery-ui-timepicker-addon.css" />
+
+<!-- Theme style -->
+<link href="~/SR_Admin/css/AdminLTE.css" rel="stylesheet" />
+
+@using (Html.BeginForm()) 
+{
+    @Html.AntiForgeryToken()
+    
+<!-- Right side column. Contains the navbar and content of the page -->
+<aside class="right-side">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+        <h1>Nuevo Usuario
+                        <small>Creación</small>
+        </h1>
+        <ol class="breadcrumb">
+            <li><a href="#"><i class="glyphicon glyphicon-cog"></i>Configuración del Sistema</a></li>
+            <li><a href="#">Administrar Usuarios</a></li>
+            <li><a href="#">Nuevo Usuario</a></li>
+        </ol>
+    </section>
+
+    <section class="content">
+        <div class="row">
+            <!-- right column -->
+            <div class="col-md-6">
+                <!-- general form elements disabled -->
+                <div class="box box-primary">
+                    <div class="box-header">
+                        <h3 class="box-title">Datos de Usuario</h3>
+                    </div>
+                    <!-- /.box-header -->
+                    <div class="box-body">
+                         @Html.ValidationSummary(true)
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.NOM_USUARIO, htmlAttributes: new { @class = "control-label" })
+
+                            @Html.TextBoxFor(model => model.NOM_USUARIO, htmlAttributes: new { @class = "form-control" })
+                        </div>
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.TXT_CONTRASEÑA, htmlAttributes: new { @class = "control-label" })
+                            @Html.PasswordFor(model => model.TXT_CONTRASEÑA, htmlAttributes: new { @class = "form-control" })
+                        </div>
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.TXT_CORREO, htmlAttributes: new { @class = "control-label" })
+                            @Html.TextBoxFor(model => model.TXT_CORREO, htmlAttributes: new { @class = "form-control" })
+                        </div>
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.FEC_EXPIRACION, new { @class = "control-label" })
+                            @Html.TextBoxFor(model => model.FEC_EXPIRACION, DateTime.Now.ToShortDateString(), new { @class = "form-control" })
+                        </div>
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.TXT_ROL, htmlAttributes: new { @class = "control-label" })
+                            @Html.DropDownListFor(model => model.TXT_ROL,
+                            new[]
+                            {
+                            new SelectListItem{ Value = "Administrador", Text = "Administrador" },
+                            new SelectListItem{ Value = "Asistente", Text = "Asistente" },
+                            new SelectListItem{ Value = "Asociacion", Text = "Asociacion de Estudiantes" },
+                            new SelectListItem{ Value = "ODOO", Text = "ODOO TEC" }
+                            },
+                            "Seleccione el tipo de usuario", new { @class = "form-control" })
+                            @Html.ValidationMessageFor(model => model.TXT_ROL)
+                        </div>
+
+                        <div class="form-group">
+                            <div>
+                                <input type="submit" value="Agregar" class="btn btn-primary" />
+                                |
+                @Html.ActionLink("Regresar al Contenido Principal", "Index", null, htmlAttributes: new { @class = "btn btn-default" })
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+        </div>
+    </section>
+
+
+</aside>
+}
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+<script src="~/Content/bootstrap-3.2.0/dist/js/jquery.min.js"></script>
+<script src="~/Content/bootstrap-3.2.0/dist/js/bootstrap.min.js"></script>
+<!-- AdminLTE App -->
+<script src="~/SR_Admin/js/AdminLTE/app.js"></script>
+
+<link type="text/css" rel="stylesheet" href="//code.jquery.com/ui/1.10.4/themes/flick/jquery-ui.css" />
+
+<script src="~/Scripts/jquery-ui-1.10.4.js"></script>
+<script src="~/Scripts/jquery-ui-1.10.4.min.js"></script>
+<script src="~/Scripts/jquery-ui-timepicker-addon.js"></script>
+
+<script src="~/Scripts/Reserva/date.js"></script>
+
+<script type="text/javascript" language="javascript">
+    $(document).ready(function () {
+        $("#FEC_EXPIRACION").change(function () {
+            var value = $("#FEC_EXPIRACION").val();
+            console.log(value);
+           // var fecha = new Date.parseExact(value, "dd/MM/yyyy");
+           // console.log(fecha);
+            $('#FEC_EXPIRACION').datepicker('option',
+                                {
+                                    minDate: 0,
+                                });
+        });
+        $("#FEC_EXPIRACION").datepicker({
+            minDate: 0,
+            dateFormat: "dd/mm/yy",
+        });
+    });
+</script>
+

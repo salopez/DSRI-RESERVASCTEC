@@ -1,0 +1,134 @@
+﻿@model IEnumerable<Datos.DSRIFRESERVACION>
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+}
+<link href="~/Content/fullcalendar-2.0.2/fullcalendar.css" rel="stylesheet" />
+
+<aside class="right-side">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+        <h1>
+            Calendario de Reservas
+
+            <small>DSRI</small>
+
+        </h1>
+        <ol class="breadcrumb">
+
+            <li><a href="#"><i class="glyphicon glyphicon-calendar"></i>Calendario Reservas</a></li>
+            <li class="active">Calendario</li>
+
+        </ol>
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+        <div class="modal fade" id="myModal" data-backdrop="static"
+             data-keyboard="false" tabindex="0" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content" style="margin-top: 120px;">
+                    <div class="modal-header logo" style="background-color: rgb(25, 21, 71); height: 72px">
+                        <img style="width: 34px; float: left;" src="~/Content/Images/logo.png" />
+                        <h3 class="modal-title" style="color: white; margin-top: 10px;"><strong style="margin-left: 20px;">Información de la Reserva</strong></h3>
+                    </div>
+                    <div class="modal-body">
+                        <div style="color:rgb(45, 38, 129);text-align:center;font-weight: bold;margin-bottom:15px" id="infoNombre"></div>
+                        <div style="display: inline-block;font-size:12px; text-align: right; color: rgb(60, 141, 188); font-weight: bold">
+
+                            <div>Tipo de Actividad: </div>
+                            <div>Cantidad de Personas: </div>
+                            <div>Teléfono de Contacto: </div>
+                            <div>Fecha Inicio: </div>
+                            <div>Fecha Finalizacíón: </div>
+                            <div>Hora Inicio: </div>
+                            <div>Hora Finalizacíón: </div>
+                            <div>Estado: </div>
+                        </div>
+                        <div style="display: inline-block; text-align: left;font-size:12px">
+
+                            <div id="infoTipo"></div>
+                            <div id="infoCantidad"></div>
+                            <div id="infoTelefono"></div>
+                            <div id="infoFechaInicio"></div>
+                            <div id="infoFechaFin"></div>
+                            <div id="infoHoraInicio"></div>
+                            <div id="infoHoraFin"></div>
+                            <div id="infoEstado"></div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <form action="">
+                            <input type="button" class="btn btn-primary" data-dismiss="modal" value="Cancelar">
+                            <input type="button" class="btn btn-warning" data-dismiss="modal" id="editarR" value="Editar Reserva">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <!-- right column -->
+            <div class="col-md-12">
+                <!-- general form elements disabled -->
+                <div class="box box-primary">
+                    <div class="box-body">
+                        <!-- text input -->
+                        <div class="form-group">
+                            <div id="calendar"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <div id="eventContent" title="Event Details" style="display: none;">
+        Start: <span id="startTime"></span>
+        <br>
+        End: <span id="endTime"></span>
+        <br>
+        <br>
+        <p id="eventInfo"></p>
+        <p><strong><a id="eventLink" href="" target="_blank">Read More</a></strong></p>
+    </div>
+    <!-- /.content -->
+</aside>
+<!-- /.right-side -->
+
+@foreach (var item in Model)
+{
+    DateTime feI = new DateTime();
+    feI = item.FEC_INICIALRESERVACION + item.HOR_INICIO;
+    DateTime feF = new DateTime();
+    feF = item.FEC_FINALRESERVACION + item.HOR_FINAL;
+
+    var fi = feI.ToString("yyyy-MM-ddTHH:mm:ss");
+
+    var ff = feF.ToString("yyyy-MM-ddTHH:mm:ss");
+
+    string titulo = Convert.ToString(item.NOM_ACTIVIDAD.ToString());
+    <script>
+        $(document).ready(function () {
+            var randomColor = 'rgb(13, 68, 112);'
+            if ('@item.TXT_ESTADO' == "En Proceso") {
+                randomColor = 'rgb(154, 205, 155)'
+            }
+            $('#calendar').fullCalendar('renderEvent', {
+                id: '@item.ID_RESERVACION',
+                img: '/Content/Images/logo.png',
+                title: '@Html.Raw(HttpUtility.JavaScriptStringEncode(titulo))',
+                start: '@fi',
+                end: '@ff',
+                color: randomColor,
+                description: '@item.DSRIFINMUEBLE.NOM_INMUEBLE',
+                media: ""
+            }, true);
+        });
+
+    </script>
+}
+@Scripts.Render("~/bundles/calendar")
+
+

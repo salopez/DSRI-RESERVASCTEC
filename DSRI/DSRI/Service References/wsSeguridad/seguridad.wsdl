@@ -1,0 +1,1258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:tns="http://www.itcr.ac.cr" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" targetNamespace="http://www.itcr.ac.cr" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://www.itcr.ac.cr">
+      <s:import namespace="http://www.w3.org/2001/XMLSchema" />
+      <s:element name="ValidarUsuario">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="login" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pass" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ValidarUsuarioResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ValidarUsuarioResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ValidarEstudiante">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="carne" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pin" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ValidarEstudianteResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ValidarEstudianteResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ValidarEstudianteBit">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="carne" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pin" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="codAplicacion" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="codSede" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ValidarEstudianteBitResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ValidarEstudianteBitResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EsEstudianteActivo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="carne" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EsEstudianteActivoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="EsEstudianteActivoResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EsEstudiante">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="carne" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EsEstudianteResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="EsEstudianteResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ValidarFuncionario">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="usuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ValidarFuncionarioResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ValidarFuncionarioResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ValidarFuncionarioBit">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="usuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="codAplicacion" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="codSede" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ValidarFuncionarioBitResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ValidarFuncionarioBitResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ValidarFuncionarioBitSinCedula">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="usuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="codAplicacion" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="codSede" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ValidarFuncionarioBitSinCedulaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ValidarFuncionarioBitSinCedulaResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ComprobarUsuarioAD">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="usuario" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ComprobarUsuarioADResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ComprobarUsuarioADResult" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="nombre" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ComprobarEstudiante">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="carne" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ComprobarEstudianteResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ComprobarEstudianteResult" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="nombre" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ValidarUsuarioSistema">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="usuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="codAplicacion" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="codSede" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ValidarUsuarioSistemaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ValidarUsuarioSistemaResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TienePermisoFuncionalidad">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="pCOD_APLICACION" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="pCOD_FUNCIONALIDAD" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="pID_USUARIO" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pCOD_SEDE" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TienePermisoFuncionalidadResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="TienePermisoFuncionalidadResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TieneAccesoAplicacion">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="pCOD_APLICACION" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="pID_USUARIO" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pCOD_SEDE" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TieneAccesoAplicacionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="TieneAccesoAplicacionResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenerMenuUsuario">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="pCod_Aplicacion" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="pId_Usuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pCod_Sede" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenerMenuUsuarioResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ObtenerMenuUsuarioResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenerCedula">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pID_USUARIO" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenerCedulaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ObtenerCedulaResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenerDepartamento">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pID_USUARIO" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenerDepartamentoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ObtenerDepartamentoResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenerNombreUsuario">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pID_USUARIO" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenerNombreUsuarioResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ObtenerNombreUsuarioResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenerSedeUsuario">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pID_USUARIO" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenerSedeUsuarioResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ObtenerSedeUsuarioResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenerListaSedes">
+        <s:complexType />
+      </s:element>
+      <s:element name="ObtenerListaSedesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ObtenerListaSedesResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BuscarUsuario">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="txtBusqueda" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BuscarUsuarioResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="BuscarUsuarioResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BuscarUsuarioXCedula">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="cedula" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BuscarUsuarioXCedulaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="BuscarUsuarioXCedulaResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BitacoraRegistrarUso">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="pCod_Aplicacion" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="pCod_Funcionalidad" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="pCod_Sede" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="pTipo_Evento" type="tns:eTipoEventoBitacora" />
+            <s:element minOccurs="0" maxOccurs="1" name="pId_Usuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pDatosEspecificos" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:simpleType name="eTipoEventoBitacora">
+        <s:restriction base="s:string">
+          <s:enumeration value="Acceso" />
+          <s:enumeration value="UsoFuncionalidad" />
+          <s:enumeration value="Error" />
+        </s:restriction>
+      </s:simpleType>
+      <s:element name="BitacoraRegistrarUsoResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="CambiarPassword">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="usuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="passwordActual" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="passwordNuevo" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CambiarPasswordResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="ObtenerUsuariosDeRol">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="pCOD_ROL" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenerUsuariosDeRolResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ObtenerUsuariosDeRolResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenerRolesDeUsuario">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pID_USUARIO" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenerRolesDeUsuarioResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ObtenerRolesDeUsuarioResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultaBitacora">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="pCOD_APLICACION" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="pID_USUARIO" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="pFHO_INICIO" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="pFHO_FIN" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultaBitacoraResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ConsultaBitacoraResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getUser">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pID_USUARIO" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getUserResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getUserResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getUserByMail">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="correo" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getUserByMailResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getUserByMailResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="findUserByName">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="texto" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="findUserByNameResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="findUserByNameResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="findUserByEmail">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="texto" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="findUserByEmailResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="findUserByEmailResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TipoUsuario">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="usuario" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TipoUsuarioResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="TipoUsuarioResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TDInformacionUsuario">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="cedula" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TDInformacionUsuarioResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="TDInformacionUsuarioResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TDProfesores">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ano" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="modalidad" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="periodo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="departamento" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sede" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TDProfesoresResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="TDProfesoresResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="ValidarUsuarioSoapIn">
+    <wsdl:part name="parameters" element="tns:ValidarUsuario" />
+  </wsdl:message>
+  <wsdl:message name="ValidarUsuarioSoapOut">
+    <wsdl:part name="parameters" element="tns:ValidarUsuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="ValidarEstudianteSoapIn">
+    <wsdl:part name="parameters" element="tns:ValidarEstudiante" />
+  </wsdl:message>
+  <wsdl:message name="ValidarEstudianteSoapOut">
+    <wsdl:part name="parameters" element="tns:ValidarEstudianteResponse" />
+  </wsdl:message>
+  <wsdl:message name="ValidarEstudianteBitSoapIn">
+    <wsdl:part name="parameters" element="tns:ValidarEstudianteBit" />
+  </wsdl:message>
+  <wsdl:message name="ValidarEstudianteBitSoapOut">
+    <wsdl:part name="parameters" element="tns:ValidarEstudianteBitResponse" />
+  </wsdl:message>
+  <wsdl:message name="EsEstudianteActivoSoapIn">
+    <wsdl:part name="parameters" element="tns:EsEstudianteActivo" />
+  </wsdl:message>
+  <wsdl:message name="EsEstudianteActivoSoapOut">
+    <wsdl:part name="parameters" element="tns:EsEstudianteActivoResponse" />
+  </wsdl:message>
+  <wsdl:message name="EsEstudianteSoapIn">
+    <wsdl:part name="parameters" element="tns:EsEstudiante" />
+  </wsdl:message>
+  <wsdl:message name="EsEstudianteSoapOut">
+    <wsdl:part name="parameters" element="tns:EsEstudianteResponse" />
+  </wsdl:message>
+  <wsdl:message name="ValidarFuncionarioSoapIn">
+    <wsdl:part name="parameters" element="tns:ValidarFuncionario" />
+  </wsdl:message>
+  <wsdl:message name="ValidarFuncionarioSoapOut">
+    <wsdl:part name="parameters" element="tns:ValidarFuncionarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="ValidarFuncionarioBitSoapIn">
+    <wsdl:part name="parameters" element="tns:ValidarFuncionarioBit" />
+  </wsdl:message>
+  <wsdl:message name="ValidarFuncionarioBitSoapOut">
+    <wsdl:part name="parameters" element="tns:ValidarFuncionarioBitResponse" />
+  </wsdl:message>
+  <wsdl:message name="ValidarFuncionarioBitSinCedulaSoapIn">
+    <wsdl:part name="parameters" element="tns:ValidarFuncionarioBitSinCedula" />
+  </wsdl:message>
+  <wsdl:message name="ValidarFuncionarioBitSinCedulaSoapOut">
+    <wsdl:part name="parameters" element="tns:ValidarFuncionarioBitSinCedulaResponse" />
+  </wsdl:message>
+  <wsdl:message name="ComprobarUsuarioADSoapIn">
+    <wsdl:part name="parameters" element="tns:ComprobarUsuarioAD" />
+  </wsdl:message>
+  <wsdl:message name="ComprobarUsuarioADSoapOut">
+    <wsdl:part name="parameters" element="tns:ComprobarUsuarioADResponse" />
+  </wsdl:message>
+  <wsdl:message name="ComprobarEstudianteSoapIn">
+    <wsdl:part name="parameters" element="tns:ComprobarEstudiante" />
+  </wsdl:message>
+  <wsdl:message name="ComprobarEstudianteSoapOut">
+    <wsdl:part name="parameters" element="tns:ComprobarEstudianteResponse" />
+  </wsdl:message>
+  <wsdl:message name="ValidarUsuarioSistemaSoapIn">
+    <wsdl:part name="parameters" element="tns:ValidarUsuarioSistema" />
+  </wsdl:message>
+  <wsdl:message name="ValidarUsuarioSistemaSoapOut">
+    <wsdl:part name="parameters" element="tns:ValidarUsuarioSistemaResponse" />
+  </wsdl:message>
+  <wsdl:message name="TienePermisoFuncionalidadSoapIn">
+    <wsdl:part name="parameters" element="tns:TienePermisoFuncionalidad" />
+  </wsdl:message>
+  <wsdl:message name="TienePermisoFuncionalidadSoapOut">
+    <wsdl:part name="parameters" element="tns:TienePermisoFuncionalidadResponse" />
+  </wsdl:message>
+  <wsdl:message name="TieneAccesoAplicacionSoapIn">
+    <wsdl:part name="parameters" element="tns:TieneAccesoAplicacion" />
+  </wsdl:message>
+  <wsdl:message name="TieneAccesoAplicacionSoapOut">
+    <wsdl:part name="parameters" element="tns:TieneAccesoAplicacionResponse" />
+  </wsdl:message>
+  <wsdl:message name="ObtenerMenuUsuarioSoapIn">
+    <wsdl:part name="parameters" element="tns:ObtenerMenuUsuario" />
+  </wsdl:message>
+  <wsdl:message name="ObtenerMenuUsuarioSoapOut">
+    <wsdl:part name="parameters" element="tns:ObtenerMenuUsuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="ObtenerCedulaSoapIn">
+    <wsdl:part name="parameters" element="tns:ObtenerCedula" />
+  </wsdl:message>
+  <wsdl:message name="ObtenerCedulaSoapOut">
+    <wsdl:part name="parameters" element="tns:ObtenerCedulaResponse" />
+  </wsdl:message>
+  <wsdl:message name="ObtenerDepartamentoSoapIn">
+    <wsdl:part name="parameters" element="tns:ObtenerDepartamento" />
+  </wsdl:message>
+  <wsdl:message name="ObtenerDepartamentoSoapOut">
+    <wsdl:part name="parameters" element="tns:ObtenerDepartamentoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ObtenerNombreUsuarioSoapIn">
+    <wsdl:part name="parameters" element="tns:ObtenerNombreUsuario" />
+  </wsdl:message>
+  <wsdl:message name="ObtenerNombreUsuarioSoapOut">
+    <wsdl:part name="parameters" element="tns:ObtenerNombreUsuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="ObtenerSedeUsuarioSoapIn">
+    <wsdl:part name="parameters" element="tns:ObtenerSedeUsuario" />
+  </wsdl:message>
+  <wsdl:message name="ObtenerSedeUsuarioSoapOut">
+    <wsdl:part name="parameters" element="tns:ObtenerSedeUsuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="ObtenerListaSedesSoapIn">
+    <wsdl:part name="parameters" element="tns:ObtenerListaSedes" />
+  </wsdl:message>
+  <wsdl:message name="ObtenerListaSedesSoapOut">
+    <wsdl:part name="parameters" element="tns:ObtenerListaSedesResponse" />
+  </wsdl:message>
+  <wsdl:message name="BuscarUsuarioSoapIn">
+    <wsdl:part name="parameters" element="tns:BuscarUsuario" />
+  </wsdl:message>
+  <wsdl:message name="BuscarUsuarioSoapOut">
+    <wsdl:part name="parameters" element="tns:BuscarUsuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="BuscarUsuarioXCedulaSoapIn">
+    <wsdl:part name="parameters" element="tns:BuscarUsuarioXCedula" />
+  </wsdl:message>
+  <wsdl:message name="BuscarUsuarioXCedulaSoapOut">
+    <wsdl:part name="parameters" element="tns:BuscarUsuarioXCedulaResponse" />
+  </wsdl:message>
+  <wsdl:message name="BitacoraRegistrarUsoSoapIn">
+    <wsdl:part name="parameters" element="tns:BitacoraRegistrarUso" />
+  </wsdl:message>
+  <wsdl:message name="BitacoraRegistrarUsoSoapOut">
+    <wsdl:part name="parameters" element="tns:BitacoraRegistrarUsoResponse" />
+  </wsdl:message>
+  <wsdl:message name="CambiarPasswordSoapIn">
+    <wsdl:part name="parameters" element="tns:CambiarPassword" />
+  </wsdl:message>
+  <wsdl:message name="CambiarPasswordSoapOut">
+    <wsdl:part name="parameters" element="tns:CambiarPasswordResponse" />
+  </wsdl:message>
+  <wsdl:message name="ObtenerUsuariosDeRolSoapIn">
+    <wsdl:part name="parameters" element="tns:ObtenerUsuariosDeRol" />
+  </wsdl:message>
+  <wsdl:message name="ObtenerUsuariosDeRolSoapOut">
+    <wsdl:part name="parameters" element="tns:ObtenerUsuariosDeRolResponse" />
+  </wsdl:message>
+  <wsdl:message name="ObtenerRolesDeUsuarioSoapIn">
+    <wsdl:part name="parameters" element="tns:ObtenerRolesDeUsuario" />
+  </wsdl:message>
+  <wsdl:message name="ObtenerRolesDeUsuarioSoapOut">
+    <wsdl:part name="parameters" element="tns:ObtenerRolesDeUsuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="ConsultaBitacoraSoapIn">
+    <wsdl:part name="parameters" element="tns:ConsultaBitacora" />
+  </wsdl:message>
+  <wsdl:message name="ConsultaBitacoraSoapOut">
+    <wsdl:part name="parameters" element="tns:ConsultaBitacoraResponse" />
+  </wsdl:message>
+  <wsdl:message name="getUserSoapIn">
+    <wsdl:part name="parameters" element="tns:getUser" />
+  </wsdl:message>
+  <wsdl:message name="getUserSoapOut">
+    <wsdl:part name="parameters" element="tns:getUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="getUserByMailSoapIn">
+    <wsdl:part name="parameters" element="tns:getUserByMail" />
+  </wsdl:message>
+  <wsdl:message name="getUserByMailSoapOut">
+    <wsdl:part name="parameters" element="tns:getUserByMailResponse" />
+  </wsdl:message>
+  <wsdl:message name="findUserByNameSoapIn">
+    <wsdl:part name="parameters" element="tns:findUserByName" />
+  </wsdl:message>
+  <wsdl:message name="findUserByNameSoapOut">
+    <wsdl:part name="parameters" element="tns:findUserByNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="findUserByEmailSoapIn">
+    <wsdl:part name="parameters" element="tns:findUserByEmail" />
+  </wsdl:message>
+  <wsdl:message name="findUserByEmailSoapOut">
+    <wsdl:part name="parameters" element="tns:findUserByEmailResponse" />
+  </wsdl:message>
+  <wsdl:message name="TipoUsuarioSoapIn">
+    <wsdl:part name="parameters" element="tns:TipoUsuario" />
+  </wsdl:message>
+  <wsdl:message name="TipoUsuarioSoapOut">
+    <wsdl:part name="parameters" element="tns:TipoUsuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="TDInformacionUsuarioSoapIn">
+    <wsdl:part name="parameters" element="tns:TDInformacionUsuario" />
+  </wsdl:message>
+  <wsdl:message name="TDInformacionUsuarioSoapOut">
+    <wsdl:part name="parameters" element="tns:TDInformacionUsuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="TDProfesoresSoapIn">
+    <wsdl:part name="parameters" element="tns:TDProfesores" />
+  </wsdl:message>
+  <wsdl:message name="TDProfesoresSoapOut">
+    <wsdl:part name="parameters" element="tns:TDProfesoresResponse" />
+  </wsdl:message>
+  <wsdl:portType name="SeguridadSoap">
+    <wsdl:operation name="ValidarUsuario">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Valida a un estudiante o a un funcionario. Utilzado por Sharepoint</documentation>
+      <wsdl:input message="tns:ValidarUsuarioSoapIn" />
+      <wsdl:output message="tns:ValidarUsuarioSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidarEstudiante">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Valida carné y pin de estudiante.  Verdadero si es correcto, levanta excepción si no.</documentation>
+      <wsdl:input message="tns:ValidarEstudianteSoapIn" />
+      <wsdl:output message="tns:ValidarEstudianteSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidarEstudianteBit">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Valida carné y pin de estudiante guardando la operación en la bitácora de seguridad.  Verdadero si es correcto, levanta excepción si no.</documentation>
+      <wsdl:input message="tns:ValidarEstudianteBitSoapIn" />
+      <wsdl:output message="tns:ValidarEstudianteBitSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EsEstudianteActivo">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Dice si un estudiante se encuentra activo.</documentation>
+      <wsdl:input message="tns:EsEstudianteActivoSoapIn" />
+      <wsdl:output message="tns:EsEstudianteActivoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EsEstudiante">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Dice si un ID es estudiante.</documentation>
+      <wsdl:input message="tns:EsEstudianteSoapIn" />
+      <wsdl:output message="tns:EsEstudianteSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidarFuncionario">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Valida usuario y password de Active Directory en el dominio ITCR.</documentation>
+      <wsdl:input message="tns:ValidarFuncionarioSoapIn" />
+      <wsdl:output message="tns:ValidarFuncionarioSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidarFuncionarioBit">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Valida usuario y password de Active Directory en el dominio ITCR guardando el resultado en la bitácora de seguridad.</documentation>
+      <wsdl:input message="tns:ValidarFuncionarioBitSoapIn" />
+      <wsdl:output message="tns:ValidarFuncionarioBitSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidarFuncionarioBitSinCedula">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Valida usuario y password de Active Directory en el dominio ITCR guardando el resultado en la bitácora de seguridad. Omite la restricción de que usuarios sin cédula en el AD no pueden logearse.</documentation>
+      <wsdl:input message="tns:ValidarFuncionarioBitSinCedulaSoapIn" />
+      <wsdl:output message="tns:ValidarFuncionarioBitSinCedulaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ComprobarUsuarioAD">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Comprueba que un usuario exista en el Active Directory del dominio ITCR.</documentation>
+      <wsdl:input message="tns:ComprobarUsuarioADSoapIn" />
+      <wsdl:output message="tns:ComprobarUsuarioADSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ComprobarEstudiante">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Comprueba que un estudiante estudiante exista en la BD de registro.</documentation>
+      <wsdl:input message="tns:ComprobarEstudianteSoapIn" />
+      <wsdl:output message="tns:ComprobarEstudianteSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidarUsuarioSistema">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Valida un usuario y password de un usuario tipo 'de sistema' en el framework de seguridad.</documentation>
+      <wsdl:input message="tns:ValidarUsuarioSistemaSoapIn" />
+      <wsdl:output message="tns:ValidarUsuarioSistemaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="TienePermisoFuncionalidad">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Verifica que un usuario tenga permiso sobre una funcionalidad de una aplicación en la sede especificada.</documentation>
+      <wsdl:input message="tns:TienePermisoFuncionalidadSoapIn" />
+      <wsdl:output message="tns:TienePermisoFuncionalidadSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="TieneAccesoAplicacion">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Verifica que un usuario exista y tenga permiso de ingresar a una aplicación.</documentation>
+      <wsdl:input message="tns:TieneAccesoAplicacionSoapIn" />
+      <wsdl:output message="tns:TieneAccesoAplicacionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerMenuUsuario">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Retorna las opciones de menu disponibles para un usuario.</documentation>
+      <wsdl:input message="tns:ObtenerMenuUsuarioSoapIn" />
+      <wsdl:output message="tns:ObtenerMenuUsuarioSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerCedula">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Obtiene el número de cédula de un usuario de tipo funcionario.</documentation>
+      <wsdl:input message="tns:ObtenerCedulaSoapIn" />
+      <wsdl:output message="tns:ObtenerCedulaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerDepartamento">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Obtiene el departamento de un usuario de tipo funcionario.</documentation>
+      <wsdl:input message="tns:ObtenerDepartamentoSoapIn" />
+      <wsdl:output message="tns:ObtenerDepartamentoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerNombreUsuario">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Obtiene el nombre completo de un usuario.</documentation>
+      <wsdl:input message="tns:ObtenerNombreUsuarioSoapIn" />
+      <wsdl:output message="tns:ObtenerNombreUsuarioSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerSedeUsuario">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Obtiene el código de la sede a la que pertenece un usuario.</documentation>
+      <wsdl:input message="tns:ObtenerSedeUsuarioSoapIn" />
+      <wsdl:output message="tns:ObtenerSedeUsuarioSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerListaSedes">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Obtiene la lista de sedes disponibles en el sistema.</documentation>
+      <wsdl:input message="tns:ObtenerListaSedesSoapIn" />
+      <wsdl:output message="tns:ObtenerListaSedesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="BuscarUsuario">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Realiza una búsqueda en los usuarios del framework de seguridad según el criterio.</documentation>
+      <wsdl:input message="tns:BuscarUsuarioSoapIn" />
+      <wsdl:output message="tns:BuscarUsuarioSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="BuscarUsuarioXCedula">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Busca un usuario en el Active Directory por cédula.</documentation>
+      <wsdl:input message="tns:BuscarUsuarioXCedulaSoapIn" />
+      <wsdl:output message="tns:BuscarUsuarioXCedulaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="BitacoraRegistrarUso">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Registra en la bitácora de seguridad el uso de una funcionalidad.</documentation>
+      <wsdl:input message="tns:BitacoraRegistrarUsoSoapIn" />
+      <wsdl:output message="tns:BitacoraRegistrarUsoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CambiarPassword">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Cambia el password del usuario especificado.  Puede ser de Active Directory o Usuario de sistema.</documentation>
+      <wsdl:input message="tns:CambiarPasswordSoapIn" />
+      <wsdl:output message="tns:CambiarPasswordSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerUsuariosDeRol">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Retorna la lista de usuarios que pertenecen a un rol del Framework de Seguridad</documentation>
+      <wsdl:input message="tns:ObtenerUsuariosDeRolSoapIn" />
+      <wsdl:output message="tns:ObtenerUsuariosDeRolSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerRolesDeUsuario">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Retorna la lista de roles a los que pertenece un usuario del Framework de Seguridad.</documentation>
+      <wsdl:input message="tns:ObtenerRolesDeUsuarioSoapIn" />
+      <wsdl:output message="tns:ObtenerRolesDeUsuarioSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaBitacora">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Consulta en la bitácora de seguridad según los criterios especificados.</documentation>
+      <wsdl:input message="tns:ConsultaBitacoraSoapIn" />
+      <wsdl:output message="tns:ConsultaBitacoraSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getUser">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Búsqueda exacta de un usuario en el active directory por login o en la BD de registro por carnet.</documentation>
+      <wsdl:input message="tns:getUserSoapIn" />
+      <wsdl:output message="tns:getUserSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getUserByMail">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Búsqueda exacta de usuario en el active directory por email.</documentation>
+      <wsdl:input message="tns:getUserByMailSoapIn" />
+      <wsdl:output message="tns:getUserByMailSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="findUserByName">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Búsqueda aproximada de usuario en el Active Directory y Registro por nombre.</documentation>
+      <wsdl:input message="tns:findUserByNameSoapIn" />
+      <wsdl:output message="tns:findUserByNameSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="findUserByEmail">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Búsqueda aproximada de usuario en el Active Directory por email.</documentation>
+      <wsdl:input message="tns:findUserByEmailSoapIn" />
+      <wsdl:output message="tns:findUserByEmailSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="TipoUsuario">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Método que dice si un usuario es estudiante, funcionario, o ninguno.</documentation>
+      <wsdl:input message="tns:TipoUsuarioSoapIn" />
+      <wsdl:output message="tns:TipoUsuarioSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="TDInformacionUsuario">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Método utilizado por Tec-digital.  Recibe un número de cédula y retorna login, nombre, apellidos y correo.</documentation>
+      <wsdl:input message="tns:TDInformacionUsuarioSoapIn" />
+      <wsdl:output message="tns:TDInformacionUsuarioSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="TDProfesores">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Método utilizado por Tec-digital.  Retornas los datos de profesores activos en un periodo, sede y escuela determinados.</documentation>
+      <wsdl:input message="tns:TDProfesoresSoapIn" />
+      <wsdl:output message="tns:TDProfesoresSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="SeguridadSoap" type="tns:SeguridadSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ValidarUsuario">
+      <soap:operation soapAction="http://www.itcr.ac.cr/ValidarUsuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidarEstudiante">
+      <soap:operation soapAction="http://www.itcr.ac.cr/ValidarEstudiante" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidarEstudianteBit">
+      <soap:operation soapAction="http://www.itcr.ac.cr/ValidarEstudianteBit" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EsEstudianteActivo">
+      <soap:operation soapAction="http://www.itcr.ac.cr/EsEstudianteActivo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EsEstudiante">
+      <soap:operation soapAction="http://www.itcr.ac.cr/EsEstudiante" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidarFuncionario">
+      <soap:operation soapAction="http://www.itcr.ac.cr/ValidarFuncionario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidarFuncionarioBit">
+      <soap:operation soapAction="http://www.itcr.ac.cr/ValidarFuncionarioBit" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidarFuncionarioBitSinCedula">
+      <soap:operation soapAction="http://www.itcr.ac.cr/ValidarFuncionarioBitSinCedula" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ComprobarUsuarioAD">
+      <soap:operation soapAction="http://www.itcr.ac.cr/ComprobarUsuarioAD" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ComprobarEstudiante">
+      <soap:operation soapAction="http://www.itcr.ac.cr/ComprobarEstudiante" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidarUsuarioSistema">
+      <soap:operation soapAction="http://www.itcr.ac.cr/ValidarUsuarioSistema" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TienePermisoFuncionalidad">
+      <soap:operation soapAction="http://www.itcr.ac.cr/TienePermisoFuncionalidad" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TieneAccesoAplicacion">
+      <soap:operation soapAction="http://www.itcr.ac.cr/TieneAccesoAplicacion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerMenuUsuario">
+      <soap:operation soapAction="http://www.itcr.ac.cr/ObtenerMenuUsuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerCedula">
+      <soap:operation soapAction="http://www.itcr.ac.cr/ObtenerCedula" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerDepartamento">
+      <soap:operation soapAction="http://www.itcr.ac.cr/ObtenerDepartamento" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerNombreUsuario">
+      <soap:operation soapAction="http://www.itcr.ac.cr/ObtenerNombreUsuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerSedeUsuario">
+      <soap:operation soapAction="http://www.itcr.ac.cr/ObtenerSedeUsuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerListaSedes">
+      <soap:operation soapAction="http://www.itcr.ac.cr/ObtenerListaSedes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BuscarUsuario">
+      <soap:operation soapAction="http://www.itcr.ac.cr/BuscarUsuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BuscarUsuarioXCedula">
+      <soap:operation soapAction="http://www.itcr.ac.cr/BuscarUsuarioXCedula" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BitacoraRegistrarUso">
+      <soap:operation soapAction="http://www.itcr.ac.cr/BitacoraRegistrarUso" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CambiarPassword">
+      <soap:operation soapAction="http://www.itcr.ac.cr/CambiarPassword" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerUsuariosDeRol">
+      <soap:operation soapAction="http://www.itcr.ac.cr/ObtenerUsuariosDeRol" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerRolesDeUsuario">
+      <soap:operation soapAction="http://www.itcr.ac.cr/ObtenerRolesDeUsuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaBitacora">
+      <soap:operation soapAction="http://www.itcr.ac.cr/ConsultaBitacora" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getUser">
+      <soap:operation soapAction="http://www.itcr.ac.cr/getUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getUserByMail">
+      <soap:operation soapAction="http://www.itcr.ac.cr/getUserByMail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="findUserByName">
+      <soap:operation soapAction="http://www.itcr.ac.cr/findUserByName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="findUserByEmail">
+      <soap:operation soapAction="http://www.itcr.ac.cr/findUserByEmail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TipoUsuario">
+      <soap:operation soapAction="http://www.itcr.ac.cr/TipoUsuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TDInformacionUsuario">
+      <soap:operation soapAction="http://www.itcr.ac.cr/TDInformacionUsuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TDProfesores">
+      <soap:operation soapAction="http://www.itcr.ac.cr/TDProfesores" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Seguridad">
+    <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Web Service de Seguridad del ITCR.</documentation>
+    <wsdl:port name="SeguridadSoap" binding="tns:SeguridadSoap">
+      <soap:address location="http://tec-dev.itcr.ac.cr/wsseguridad/seguridad.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

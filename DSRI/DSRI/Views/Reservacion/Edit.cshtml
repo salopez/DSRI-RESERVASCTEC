@@ -1,0 +1,205 @@
+﻿@model Datos.DSRIFRESERVACION
+
+@{
+    ViewBag.Title = "";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<link href="~/Content/bootstrap-toggle.min.css" rel="stylesheet" />
+@{
+    var ListaDias = ViewBag.DiasEditar;
+    var ListaInmuebles = ViewBag.ListaInmuebles;
+}
+<aside class="right-side">
+    <section class="content-header">
+        <h1>
+            Cambiar Estado
+            <small>Reserva</small>
+        </h1>
+        <ol class="breadcrumb">
+            <li><a href="#"><i class="glyphicon glyphicon-th-list"></i>Administrar Reservas </a></li>
+            <li><a href="#">Editar Estado</a></li>
+            <li class="active">Editar</li>
+        </ol>
+    </section>
+    <!-- Main content -->
+    <section class="content">
+        <div class="row">
+            <div class="col-md-8">
+                <!-- general form elements disabled -->
+                <div class="box box-primary">
+                    <div class="box-header">
+                        <h3 class="box-title">Cambio de estado de la Reserva</h3>
+                    </div>
+                    <!-- /.box-header -->
+                    <div class="box-body" style="display: inline-block;">
+                        <label style="color: #3c8dbc">Días Semanales: </label>
+                        <!-- dias de la semana range -->
+                        <div class="form-group">
+                            <label>L</label>
+                            <input id="lun" value="Lunes" type="checkbox" data-onstyle="primary" data-toggle="toggle" data-size="mini" data-on="Si" data-off="No" />
+                            <label style="margin-left: 35px">K</label>
+                            <input id="mar" value="Martes" type="checkbox" data-onstyle="primary" data-toggle="toggle" data-size="mini" data-on="Si" data-off="No" />
+                            <label style="margin-left: 35px">M</label>
+                            <input id="mier" value="Miercoles" type="checkbox" data-onstyle="primary" data-toggle="toggle" data-size="mini" data-on="Si" data-off="No" />
+                            <label style="margin-left: 35px">J</label>
+                            <input id="jue" value="Jueves" type="checkbox" data-onstyle="primary" data-toggle="toggle" data-size="mini" data-on="Si" data-off="No" />
+                            <label style="margin-left: 35px">V</label>
+                            <input id="vier" value="Viernes" type="checkbox" data-onstyle="primary" data-toggle="toggle" data-size="mini" data-on="Si" data-off="No" />
+                            <label style="margin-left: 35px">S</label>
+                            <input id="sab" value="Sábado" type="checkbox" data-onstyle="primary" data-toggle="toggle" data-size="mini" data-on="Si" data-off="No" />
+                            <label style="margin-left: 35px">D</label>
+                            <input id="dom" value="Domingo" type="checkbox" data-onstyle="primary" data-toggle="toggle" data-size="mini" data-on="Si" data-off="No" />
+                            
+                        </div>
+
+                        @using (Html.BeginForm(null, null, new { id = "form" }))
+                        {
+                            @Html.AntiForgeryToken()
+
+                            @Html.ValidationSummary(true)
+                            @Html.HiddenFor(model => model.ID_RESERVACION)
+                            <div class="form-group" style="display: inline-block;text-align: right;">
+                                <label style="color: #3c8dbc">Inmuble Solicitado(s): </label>
+                                @Html.DropDownList("ID_INMUEBLE", null, null, new { @class = "form-control", id = "INMUEBLE" })
+                                @*@@Html.DisplayFor(model => model.DSRIFINMUEBLE.NOM_INMUEBLE, new { @class = "form-control", id = "INMUEBLE" })*@
+                            </div>
+                            <div class="form-group">
+                                <label style="color: #3c8dbc">Nombre de la Actividad: </label>
+                                @Html.DisplayFor(model => model.NOM_ACTIVIDAD, new { @class = "form-control" })
+                            </div>
+
+                            <div class="form-group">
+                                <label style="color: #3c8dbc">Descripción de la Actividad: </label>
+                                @Html.DisplayFor(model => model.DESCRIPCION, new { @class = "form-control" })
+                            </div>
+
+                            <div class="form-group">
+                                <label style="color: #3c8dbc">Tipo de Actividad: </label>
+                                @Html.DisplayFor(model => model.DSRIFTIPOSACTIVIDAD.NOM_TIPOACTIVIDAD, new { @class = "form-control" })
+                            </div>
+
+                            <div class="form-group">
+                                <label style="color: #3c8dbc">Objetivo de la Actividad: </label>
+                                @Html.DisplayFor(model => model.OBJETIVO, new { @class = "form-control" })
+                            </div>
+
+                            <div class="form-group">
+                                <label style="color: #3c8dbc">Fecha de Inicio: </label>
+                                @Html.DisplayFor(model => model.FEC_INICIALRESERVACION, new { @class = "form-control" })
+                            </div>
+
+                            <div class="form-group">
+                                <label style="color: #3c8dbc">Fecha de Finalización: </label>
+                                @Html.DisplayFor(model => model.FEC_FINALRESERVACION, new { @class = "form-control" })
+                            </div>
+                            <div class="form-group">
+                                <label style="color: #3c8dbc">Cantidad de Personas en General: </label>
+                                @Html.DisplayFor(model => model.CAN_AFORO, new { @class = "form-control col-md-02" })
+                                <label style="color: #3c8dbc">Por Día: </label>
+                                @Html.DisplayFor(model => model.CAN_AFORODIA, new { @class = "form-control col-md-02" })
+                            </div>
+
+
+                            <div class="form-group">
+                                <label style="color: #3c8dbc">Estado Actual de la Reserva: </label>
+                                @Html.DropDownList("TXT_ESTADO", new[]
+                            {
+                            new SelectListItem{ Value = "En Proceso", Text = "En Proceso"},
+                            new SelectListItem{ Value = "Confirmada", Text = "Confirmada" },
+                            new SelectListItem{ Value = "Rechazada", Text = "Rechazada" }
+                            },
+                            "....", new { @class = "form-control" })
+                            </div>
+                            <div class="form-group">
+                                <label style="color: #3c8dbc" id="labelMotivos" class="control-label">Motivos de Rechazo:</label>
+                                <a  hidden style="margin-left:40px;" class="glyphicon glyphicon-question-sign" id="infoRechazo"></a>
+                                @Html.TextArea("Motivo", new { @class = "form-control", hidden = "true" })
+                            </div>
+                            <div class="form-group">
+                                <input type="submit" id="editar" value="Guardar Cambios" class="btn btn-warning" />
+                                |
+                                @Html.ActionLink("Regresar al contenido principal", @Session["funcion"].ToString(), "Reservacion", new { estado = @Session["estado"].ToString() }, new { @class = "btn btn-default" })
+                            </div>
+
+
+                        }
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+</aside>
+
+@Scripts.Render("~/bundles/endpage")
+<script src="~/Scripts/bootstrap-toggle.min.js"></script>
+<script>
+    $(document).ready(function () {
+        var listaDias = [];
+        var lista_de_inmuebles = '@ListaInmuebles'.split(',');
+        var lista_de_dias = '@ListaDias'.split(',');
+        for (i = 0; i <= lista_de_dias.length; i++) {
+            if (lista_de_dias[i] == "0") {
+                listaDias.push(0);
+                $("#dom").bootstrapToggle('on');
+            }
+            else if (lista_de_dias[i] == "1") {
+                listaDias.push(1);
+                $("#lun").bootstrapToggle('on');
+            }
+            else if (lista_de_dias[i] == "2") {
+                listaDias.push(2);
+                $("#mar").bootstrapToggle('on');
+            }
+            else if (lista_de_dias[i] == "3") {
+                listaDias.push(3);
+                $("#mier").bootstrapToggle('on');
+            }
+            else if (lista_de_dias[i] == "4") {
+                listaDias.push(4);
+                $("#jue").bootstrapToggle('on');
+            }
+            else if (lista_de_dias[i] == "5") {
+                listaDias.push(5);
+                $("#vier").bootstrapToggle('on');
+            }
+            else if (lista_de_dias[i] == "6") {
+                listaDias.push(6);
+                $("#sab").bootstrapToggle('on');
+            }
+
+        }
+        $("#infoRechazo").popover({
+            html: true,
+            placement: 'top',
+            trigger: 'hover',
+            title: "Información de Rechazo",
+            content: '<div style="font-size:12px;">' +
+                       '<div> <strong style="color:rgb(16, 14, 48);">Motivo: </strong> Sea claro a la hora de escribir el motivo de rechazo. Tenga en cuenta que este es el mensaje que él usuario leerá cuando abra el correo. </div>'
+                        +'</div>'
+        });
+        $(function () {
+            $("select#ID_INMUEBLE").prop('selectedIndex', 0);
+            $('#Motivo').css('visibility', 'hidden');
+            $('#infoRechazo').css('visibility', 'hidden');
+            $('#labelMotivos').css('visibility', 'hidden');
+            $('#TXT_ESTADO').change(function () {
+                var val = $('#TXT_ESTADO').val();
+                if (val == "Rechazada") {
+                    $('#Motivo').css('visibility', 'visible');
+                    $('#labelMotivos').css('visibility', 'visible');
+                    $('#labelMotivos').show();
+                    $('#infoRechazo').css('visibility', 'visible');
+                }
+                else {
+                    $('#Motivo').css('visibility', 'hidden');
+                    $('#infoRechazo').css('visibility', 'hidden');
+                    $('#labelMotivos').css('visibility', 'hidden');
+                    $('#labelMotivos').hide();
+                }
+            });
+            var textoSeleccionado = "";
+        });
+    });
+</script>

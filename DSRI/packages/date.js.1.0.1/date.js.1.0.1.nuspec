@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>date.js</id>
+    <version>1.0.1</version>
+    <title />
+    <authors>chenxizhang</authors>
+    <owners>chenxizhang</owners>
+    <projectUrl>http://sandbox.kendsnyder.com/date</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>date.js</description>
+    <dependencies>
+      <dependency id="jquery" />
+    </dependencies>
+  </metadata>
+</package>

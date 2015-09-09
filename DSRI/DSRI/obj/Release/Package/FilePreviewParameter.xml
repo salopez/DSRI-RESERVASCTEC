@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="IIS Web Application Name" description="" value="DSRI" tags="IisApp">
+    <parameterEntry kind="ProviderPath" scope="IisApp" match="^C:\\Users\\Administrador\\Desktop\\ACTUALIZACIONMARZO18\\DSRI\\DSRI\\obj\\Release\\Package\\PackageTmp$" />
+    <parameterEntry kind="ProviderPath" scope="setAcl" match="^C:\\Users\\Administrador\\Desktop\\ACTUALIZACIONMARZO18\\DSRI\\DSRI\\obj\\Release\\Package\\PackageTmp$" />
+  </parameter>
+  <parameter name="DSRIConnectionString-Web.config Connection String" description="" value="data source=172.24.20.93;initial catalog=DSRI;user id=sa;password=Sa123456;application name=EntityFramework;MultipleActiveResultSets=True" tags="">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\Administrador\\Desktop\\ACTUALIZACIONMARZO18\\DSRI\\DSRI\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='DSRIConnectionString']/@connectionString" />
+  </parameter>
+  <parameter name="DSRIEntities-Web.config Connection String" description="" value="metadata=res://*/Models.DSRIModelAPI.csdl|res://*/Models.DSRIModelAPI.ssdl|res://*/Models.DSRIModelAPI.msl;provider=System.Data.SqlClient;provider connection string=&quot;Data Source=172.24.20.93;Initial Catalog=DSRI;User ID=sa;Password=Sa123456;Application Name=EntityFramework&quot;" tags="">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\Administrador\\Desktop\\ACTUALIZACIONMARZO18\\DSRI\\DSRI\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='DSRIEntities']/@connectionString" />
+  </parameter>
+</parameters>

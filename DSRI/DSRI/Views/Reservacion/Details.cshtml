@@ -1,0 +1,134 @@
+﻿@model Datos.DSRIFRESERVACION
+
+
+@{
+    ViewBag.Title = "Detalles de Reserva";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<link href="//code.ionicframework.com/ionicons/1.5.2/css/ionicons.min.css" rel="stylesheet" type="text/css" />
+
+
+@{var iduser = @Session["NOM_USUARIO"];}
+<aside class="right-side">
+    <section class="content-header">
+        <h1>Detalles de la Reserva
+                        <small>Descripción</small>
+        </h1>
+        <ol class="breadcrumb">
+            <li><a href="#"><i class="glyphicon glyphicon-th-list"></i>Administrar Reservas </a></li>
+            <li><a href="#">Reserva</a></li>
+            <li class="active">Detalle</li>
+        </ol>
+    </section>
+    <!-- Main content -->
+    <section class="content">
+        <div class="row">
+            <div class="col-md-8">
+                <!-- general form elements disabled -->
+                <div class="box box-primary" data-animation="hinge">
+                    <div class="box-header">
+                        <h3 class="box-title">Información General</h3>
+                    </div>
+                    <hr />
+                    <!-- /.box-header -->
+                    <div class="box-body">
+                        <div style="color:rgb(45, 38, 129);text-align:center;font-weight: bold;margin-bottom:15px;font-size:16px">@Model.NOM_ACTIVIDAD</div>
+                        <div style="display: inline-block; text-align: right; color: rgb(60, 141, 188)">
+                            <div><strong>Solicitante: </strong></div>
+                            <div><strong>Tipo de Actividad:</strong></div>
+                            <div><strong>Cantidad de Personas: </strong></div>
+                            <div><strong>Teléfono de Contacto:</strong> </div>
+                            <div><strong>Inmueble Solicitado:  </strong></div>
+                            <div><strong>Estado de la Reserva: </strong></div>
+                        </div>
+                        <div style="display: inline-block; text-align: left">
+                            <div>@Model.ID_PERSONA </div>
+                            <div>@Model.DSRIFTIPOSACTIVIDAD.NOM_TIPOACTIVIDAD</div>
+                            <div>@Model.CAN_AFORO</div>
+                            <div>@Model.TXT_TELEFONO</div>
+                            <div>@Model.DSRIFINMUEBLE.NOM_INMUEBLE</div>
+                            <div>@Model.TXT_ESTADO</div>
+                        </div>
+                        <hr />
+                        @if (iduser.Equals("Administrador") || @Session["ID_USUARIO"].Equals("cbermudez") || (iduser.Equals("Asistente")))
+                        {
+                            <div><strong>Descripciones Extras:</strong></div>
+                            <textarea id="infoExtra" class="form-control" rows="2" disabled>@Model.TXT_EXTRA</textarea>
+                        }
+                        <hr />
+                        @if (Model.TXT_ESTADO.Equals("En Proceso") && (iduser.Equals(Model.ID_PERSONA) || (iduser.Equals("Administrador") || @Session["ID_USUARIO"].Equals("cbermudez") || (iduser.Equals("Asistente")))))
+                        {
+                            <p>
+                                @Html.ActionLink("Editar Reserva", "EditarReserva", new { id = Model.ID_RESERVACION }, new { @class = "btn btn-primary" }) |
+           @Html.ActionLink("Regresar al contenido principal", @Session["funcion"].ToString(), "Reservacion", new { @class = "btn btn-default"})
+                            </p>
+                        }
+                        else if (Model.TXT_ESTADO.Equals("Confirmada") && (iduser.Equals("Administrador") || @Session["ID_USUARIO"].Equals("cbermudez") || (iduser.Equals("Asistente"))))
+                        {
+                            <p>
+                                @Html.ActionLink("Editar Reserva", "EditarReserva", new { id = Model.ID_RESERVACION }, new { @class = "btn btn-primary" }) |
+           @Html.ActionLink("Regresar al contenido principal", @Session["funcion"].ToString(), "Reservacion", new { @class = "btn btn-default" })
+                            </p>
+                        }
+                        else
+                        {
+                            @Html.ActionLink("Regresar al contenido principal", "MieREservas", "Reservacion", new { estado = @Session["estado"].ToString() }, new { @class = "btn btn-default" })       
+                        }
+
+                    </div>
+                </div>
+            </div>
+            @{DateTime horaI = new DateTime();
+              horaI = DateTime.Today.Add(Model.HOR_INICIO);
+              DateTime HoraF = new DateTime();
+              HoraF = DateTime.Today.Add(Model.HOR_FINAL);
+              string hor_inicio = horaI.ToString("h:mm ");
+              string hor_final = HoraF.ToString("h:mm ");
+              if (Model.HOR_INICIO.Hours <= 11)
+              {
+                  hor_inicio = hor_inicio + "AM";
+              }
+              else
+              {
+                  hor_inicio = hor_inicio + "PM";
+              }
+              if (Model.HOR_FINAL.Hours <= 11)
+              {
+                  hor_final = hor_final + "AM";
+              }
+              else
+              {
+                  hor_final = hor_final + "PM";
+              }
+            }
+            <div class="col-md-4">
+                <div class="box box-success">
+                    <div class="box-header">
+                        <h3 class="box-title">Fecha y Hora:</h3>
+                    </div>
+                    <hr />
+                    <div class="box-body">
+                        <div style="display: inline-block; text-align: right; color: rgb(0, 166, 90)">
+                            <div><strong>Fecha de Inicio:</strong></div>
+                            <div><strong>Fecha de Finalización:</strong></div>
+                            <div><strong>Hora de Inicio:</strong></div>
+                            <div><strong>Hora de Finalización:</strong></div>
+                        </div>
+
+                        <div style="display: inline-block; text-align: left">
+                            <div>@Model.FEC_INICIALRESERVACION.ToShortDateString()</div>
+                            <div>@Model.FEC_FINALRESERVACION.ToShortDateString()</div>
+                            <div>@hor_inicio</div>
+                            <div>@hor_final</div>
+                        </div>
+                        <hr />
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+</aside>
+@Scripts.Render("~/bundles/endpage")

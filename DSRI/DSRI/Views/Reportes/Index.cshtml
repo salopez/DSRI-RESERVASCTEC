@@ -1,0 +1,171 @@
+﻿@model IEnumerable<Datos.DSRIFINMUEBLE>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<link href="~/Content/jquery-ui.css" rel="stylesheet" />
+<link href="~/Content/bootstrap-toggle.min.css" rel="stylesheet" />
+
+@using (Html.BeginForm("GetActividadesPorFecha", "Reportes", FormMethod.Post, new { id = "formAct" }))
+{
+    <aside class="right-side">
+        <!-- Content Header (Page header) -->
+        <section class="content-header">
+            <h1>
+                Generacion Reportes
+                <small>Nuevo reporte</small>
+            </h1>
+            <ol class="breadcrumb">
+                <li><a href="#"><i class="glyphicon glyphicon-list-alt"></i>Generar Reporte </a></li>
+                <li><a href="#">Cargar Reporte</a></li>
+            </ol>
+        </section>
+        <section class="content">
+            <div class="row">
+                <!-- right column -->
+                <div class="col-md-12">
+                    <!-- general form elements disabled -->
+                    <div class="box box-primary">
+                        <div class="box-header">
+                            <h3 class="box-title">Buscar Reservaciones Confirmadas</h3>
+                        </div>
+                        <div class="box-body">
+                            <div class="row">
+                                <!-- left column -->
+                                <div class="col-md-6">
+
+                                    <div class="box box-success">
+                                        <div class="box-header">
+
+                                            <h3 class="box-title">Elija el inmueble a Buscar</h3>
+                                        </div>
+                                        <div class="well" style="max-height: 450px;overflow: auto;margin:10px">
+                                            <input id="all" value="all" type="checkbox" data-onstyle="success" data-toggle="toggle" data-size="btn-xs" data-on="Todos" data-off="Todos" />
+                                            <br /><br />
+                                            <ul class="list-group checked-list-box">
+                                                @*<li id="seleccionar_todo" class="list-group-item"> Seleccionar Todos </li>*@
+                                                @foreach (var item in Model)
+                                                {
+                                                    @Html.CheckBox(@item.ID_INMUEBLE.ToString(), new Dictionary<string, object> { { "class", "form-control check" }, { " data-toggle", "toggle" }, { "data-onstyle", "primary" }, { "data-size", "mini" }, { "data-on", "Si" }, { "data-off", "No" }, { "id", @item.ID_INMUEBLE } })
+                                                    <label style="margin-left: 18px;" for="@item.ID_INMUEBLE">@item.NOM_INMUEBLE</label>
+                                                    <br />
+                                                }
+                                            </ul>
+                                            <br />
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                                <!-- right column -->
+                                <div class="col-md-6">
+                                    <div class="box box-success">
+                                        <div class="box-header">
+                                            <h3 class="box-title">Rango de Fecha a Buscar:</h3>
+                                        </div>
+                                        <!-- /.box-header -->
+                                        <div class="box-body">
+                                            <!-- text input -->
+                                            <div class="form-group">
+                                                <label>Fecha de Inicio:</label>
+                                                @Html.TextBox("fechaI", @DateTime.Now.ToShortDateString(), new { @class = "form-control", @placeholder = "Click para escoger la fecha...", @readonly = "readonly" })
+                                            </div>
+                                            <div class="form-group">
+                                                <label>Fecha de Finalización:</label>
+                                                @Html.TextBox("fechaF", @DateTime.Now.ToShortDateString(), new { @class = "form-control", @placeholder = "Click para escoger la fecha...", @readonly = "readonly" })
+                                            </div>
+                                            <div class="form-group">
+                                                <input type="submit" id="getInm" class="btn-success btn-sm" value="Generar Informe de Reservas" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </aside>
+
+}
+
+
+
+<script src="~/Content/bootstrap-3.2.0/dist/js/jquery.min.js"></script>
+<script src="~/Content/bootstrap-3.2.0/dist/js/bootstrap.min.js"></script>
+<script src="~/Scripts/jquery-2.1.3.min.js"></script>
+
+
+<!-- AdminLTE App -->
+<script src="~/Scripts/AdminLTE/app.js"></script>
+<!-- AdminLTE for demo purposes -->
+
+<script src="~/Scripts/bootstrap-toggle.min.js"></script>
+<script src="~/Scripts/jquery-ui-1.10.4.js"></script>
+<script src="~/Scripts/jquery-ui-timepicker-addon.js"></script>
+
+<script src="~/Scripts/Reserva/date.js"></script>
+
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        
+        $('#all').change(function () {
+            if ($("#all").is(':checked')) {
+                $(".check").bootstrapToggle('on');
+            }
+            else {
+                $(".check").bootstrapToggle('off');
+            }
+        });
+        $(function ($) {
+            $.datepicker.regional['es'] = {
+                closeText: 'Cerrar',
+                prevText: '<Ant',
+                nextText: 'Sig>',
+                currentText: 'Hoy',
+                monthNames: ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'],
+                monthNamesShort: ['Ene', 'Feb', 'Mar', 'Abr', 'May', 'Jun', 'Jul', 'Ago', 'Sep', 'Oct', 'Nov', 'Dic'],
+                dayNames: ['Domingo', 'Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado'],
+                dayNamesShort: ['Dom', 'Lun', 'Mar', 'Mié', 'Juv', 'Vie', 'Sáb'],
+                dayNamesMin: ['Do', 'Lu', 'Ma', 'Mi', 'Ju', 'Vi', 'Sá'],
+                weekHeader: 'Sm',
+                dateFormat: 'dd/mm/yy',
+                firstDay: 1,
+                isRTL: false,
+                showMonthAfterYear: false,
+                yearSuffix: ''
+            };
+            $.datepicker.setDefaults($.datepicker.regional['es']);
+        });
+
+
+        $("#fechaI").change(function () {
+            var value = $("#fechaI").val();
+            console.log(value);
+            var fecha = new Date.parseExact(value, "dd/MM/yyyy");
+            console.log(fecha);
+            $('#fechaF').datepicker('option',
+                                {
+                                    minDate: fecha,
+                                });
+        });
+
+        $("#fechaI").datepicker({
+            minDate: new Date(1999, 10 - 1, 25),
+            dateFormat: "dd/mm/yy",
+        });
+        $("#fechaF").datepicker({
+            minDate: new Date(1999, 10 - 1, 25),
+            dateFormat: "dd/mm/yy",
+        });
+
+
+
+    });
+</script>

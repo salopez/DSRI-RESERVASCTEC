@@ -1,0 +1,209 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Sistema Reservas · CTEC</title>
+
+    <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
+    <meta name="Reservas CTEC" />
+
+    <link rel="icon" type="image/x-icon" href="~/Content/Images/favicon.ico" />
+
+    @Styles.Render("~/Content/shared")
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/modernizr")
+    @RenderSection("header", required: false)
+</head>
+@{var iduser = @Session["NOM_USUARIO"];}
+<body class="skin-blue">
+    <!-- header logo: style can be found in header.less -->
+    <header class="header">
+        <a href='@Url.Action("Index", "Home")' class="logo">
+            <!-- Add the class icon to your logo image or logo icon to add the margining -->
+            Sistema de Reservas
+        </a>
+        <!-- Header Navbar: style can be found in header.less -->
+        <nav class="navbar navbar-static-top" role="navigation">
+            <!-- Sidebar toggle button-->
+            <a href="#" class="navbar-btn sidebar-toggle" data-toggle="offcanvas" role="button">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </a>
+            <div class="navbar-right">
+                <ul class="nav navbar-nav">
+                    <!-- User Account: style can be found in dropdown.less -->
+                    <li class="dropdown user user-menu">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            <i class="glyphicon glyphicon-user"></i>
+
+                            <span>@Session["NOM_USUARIO"] <i class="caret"></i></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <!-- User image -->
+                            <li class="user-header bg-light-blue">
+                                <img src="~/Content/Images/user.png" class="img-circle" alt="User Image" />
+                                <p>
+                                    @Session["NOM_USUARIO"]
+                                    <small>Sistema de Reservas</small>
+                                </p>
+                            </li>
+                            <!-- Menu Body -->
+                            <li class="user-body">
+                                <div class="col-xs-4 text-center">
+                                    <a href="@Url.Action("MisReservas", "Reservacion")">Reservas</a>
+                                </div>
+                                <div class="col-xs-4 text-center">
+                                    @* <a href="@Url.Action("Create", "Reservacion")">Nueva</a>*@
+                                </div>
+                                <div class="col-xs-4 text-center">
+                                    <a href="@Url.Action("Calendario", "Reservacion")">Calendario</a>
+                                </div>
+                            </li>
+                            <!-- Menu Footer-->
+                            <li class="user-footer">
+                                @*<div class="pull-left">
+                                        <a href="#" class="btn btn-default btn-flat">Perfil</a>
+                                    </div>*@
+                                <div class="pull-right">
+                                    <a id="cerrarSession" class="btn btn-info btn-flat">Cerrar Sesión</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+
+    <div class="wrapper row-offcanvas row-offcanvas-left">
+        <!-- Left side column. contains the logo and sidebar -->
+        <aside class="left-side sidebar-offcanvas" style="background-color: rgba(249, 249, 249, 0.71);">
+            <!-- sidebar: style can be found in sidebar.less -->
+            <section class="sidebar">
+                <!-- Sidebar user panel -->
+                <div class="user-panel">
+                    <div class="pull-left image">
+                        <img src="~/Content/Images/user.png" class="img-circle" alt="User Image" />
+                    </div>
+                    <div class="pull-left info">
+                        <p>Bienvenido(a), @Session["ID_USUARIO"]</p>
+                        @* @Session["NOM_USUARIO"]*@
+
+                        <a href="#"><i class="fa fa-circle text-success"></i>En línea</a>
+                        <br />
+
+                        @*<a href="#">@DateTime.Now</a>*@
+                    </div>
+                </div>
+                <!-- /.search form -->
+                <!-- sidebar menu: : style can be found in sidebar.less -->
+                <ul class="sidebar-menu">
+                    <li class="active">
+                        <a href="@Url.Action("Index", "Home")">
+                            <i class="glyphicon glyphicon-home"></i><span>Inicio</span>
+                        </a>
+                    </li>
+                    <li class="treeview">
+                        <a href="#">
+                            <i class="fa fa-edit"></i><span>Solicitar Inmueble</span>
+                            <i class="fa fa-angle-left pull-right"></i>
+                        </a>
+                        <ul class="treeview-menu">
+                            <li><a href="@Url.Action("Create", "Reservacion")"><i class="fa fa-angle-double-right"></i>Nueva Reserva</a></li>
+                        </ul>
+                    </li>
+
+
+                    <li class="treeview">
+                        <a href="#">
+                            <i class="glyphicon glyphicon-th-list"></i><span>Administrar Reservas</span>
+                            <i class="fa fa-angle-left pull-right"></i>
+                        </a>
+                        <ul class="treeview-menu">
+                            @*<li><a href="pages/tables/simple.html"><i class="fa fa-angle-double-right"></i> Simple tables</a></li>*@
+                            <li><a href="@Url.Action("MisReservas", "Reservacion")"><i class="fa fa-angle-double-right"></i>Mis Reservas</a></li>
+                            @if (iduser.Equals("Administrador") || @Session["ID_USUARIO"].Equals("cbermudez") || iduser.Equals("Asistente"))
+                            {
+                                <li><a href="@Url.Action("Index", "Reservacion", new { estado = "En Proceso" })"><i class="fa fa-angle-double-right"></i>En Proceso</a></li>
+                                <li><a href="@Url.Action("Index", "Reservacion", new { estado = "Confirmada" })"><i class="fa fa-angle-double-right"></i>Confirmadas</a></li>
+                                <li><a href="@Url.Action("Index", "Reservacion", new { estado = "Rechazada" })"><i class="fa fa-angle-double-right"></i>Rechazadas</a></li>
+                            }
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="@Url.Action("Calendario", "Reservacion")">
+                            <i class="glyphicon glyphicon-calendar"></i><span>Calendario Reservas</span>
+                            @*<small class="badge pull-right bg-red">3</small>*@
+                        </a>
+                    </li>
+                    @if (@Session["NOM_USUARIO"].Equals("Administrador") || @Session["ID_USUARIO"].Equals("cbermudez"))
+                    {
+                        <li class="treeview">
+                            <a href="#">
+                                <i class="glyphicon glyphicon-cog"></i>
+                                <span>Configuración de Sistema</span>
+                                <i class="fa fa-angle-left pull-right"></i>
+                            </a>
+                            <ul class="treeview-menu">
+                                <li><a href="@Url.Action("Index", "Mobiliario")"><i class="fa fa-angle-double-right"></i>Administrar Mobiliario</a></li>
+                                <li><a href="@Url.Action("Index", "Inmueble")"><i class="fa fa-angle-double-right"></i>Administrar Inmuebles</a></li>
+
+
+                                <li class="treeview">
+                                    <a href="#">
+                                        <i class="fa fa-angle-double-right"></i>
+                                        <span>Administrar Usuarios</span>
+                                        <i class="fa fa-angle-double-down pull-right"></i>
+                                    </a>
+                                    <ul class="treeview-menu">
+                                        <li><a style="color:rgb(0, 166, 90)" href="@Url.Action("Index", "Usuarios")"><i class="fa fa-angle-double-right"></i>Usuarios Activos</a></li>
+                                        <li><a style="color:red" href="@Url.Action("Inactivos", "Usuarios")"><i class="fa fa-angle-double-right"></i>Usuarios Inactivos</a></li>
+                                    </ul>
+
+                            </ul>
+                        </li>
+                    }
+
+
+                    <li class="treeview">
+                        <a href="#">
+                            <i class="glyphicon glyphicon-list-alt"></i>
+                            <span>Reportes</span>
+                            <i class="fa fa-angle-left pull-right"></i>
+                        </a>
+                        <ul class="treeview-menu">
+                            <li><a href="@Url.Action("Index", "Reportes")"><i class="fa fa-angle-double-right"></i>Reporte Reservas</a></li>
+                            <li><a href="@Url.Action("General", "Reportes")"><i class="fa fa-angle-double-right"></i>Reporte Costos</a></li>
+                        </ul>
+                    </li>
+
+                </ul>
+
+            </section>
+
+            <!-- /.sidebar -->
+        </aside>
+
+        @Scripts.Render("~/bundles/shared")
+        <!-- Main content -->
+        @RenderBody()
+        <hr />
+        <aside class="right-side">
+            <footer>
+                <p style="margin-left: 20px">&copy; @DateTime.Now.Year - DSRI-Tecnológico de Costa Rica</p>
+            </footer>
+        </aside>
+    </div>
+</body>
+</html>
+
+<script>
+    $('#cerrarSession').on("click", function () {
+        window.location.href = '@Url.Action("Login", "Home")'
+    });
+
+
+</script>

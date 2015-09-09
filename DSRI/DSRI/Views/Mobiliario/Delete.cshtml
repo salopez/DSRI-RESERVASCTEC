@@ -1,0 +1,81 @@
+﻿@model Datos.DSRIFMOBILIARIO
+
+@{
+    ViewBag.Title = "";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!-- Right side column. Contains the navbar and content of the page -->
+<aside class="right-side">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+        <h1>Eliminar Mobiliario
+                        <small>Eliminar</small>
+        </h1>
+        <ol class="breadcrumb">
+            <li><a href="#"><i class="glyphicon glyphicon-cog"></i>Configuración del Sistema</a></li>
+            <li><a href="#">Administrar Mobiliarios</a></li>
+            <li><a href="#">Eliminar Mobiliario</a></li>
+        </ol>
+    </section>
+
+    <section class="content">
+        <div class="row">
+            <!-- right column -->
+            <div class="col-md-6">
+                <!-- general form elements disabled -->
+                <div class="box box-primary">
+                    <div class="box-header">
+                        <h3 class="box-title">Datos de Mobiliario</h3>
+                    </div>
+                    <!-- /.box-header -->
+                    <div class="box-body">
+
+                        <h3>¿Está seguro que desea borrar el Mobiliario?</h3>
+                        <div>
+                            <hr />
+                            <dl class="dl-horizontal">
+                                <dt>
+                                    @Html.DisplayNameFor(model => model.NOM_MOBILIARIO)
+                                </dt>
+
+                                <dd>
+                                    @Html.DisplayFor(model => model.NOM_MOBILIARIO)
+                                </dd>
+
+                                <dt>
+                                    @Html.DisplayNameFor(model => model.CAN_MOBILIARIO)
+                                </dt>
+
+                                <dd>
+                                    @Html.DisplayFor(model => model.CAN_MOBILIARIO)
+                                </dd>
+
+                                <dt>
+                                    @Html.DisplayNameFor(model => model.DSRIFTIPOMOBILIARIO.NOM_TIPOMOBILIARIO)
+                                </dt>
+
+                                <dd>
+                                    @Html.DisplayFor(model => model.DSRIFTIPOMOBILIARIO.NOM_TIPOMOBILIARIO)
+                                </dd>
+
+                            </dl>
+
+                            @using (Html.BeginForm())
+                            {
+                                @Html.AntiForgeryToken()
+
+                                <div class="form-actions no-color">
+                                    <input type="submit" value="Eliminar" class="btn btn-danger" />
+                                    |
+            @Html.ActionLink("Regresar al contenido principal", "Index", null, new { @class = "btn btn-default" })
+                                </div>
+                            }
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</aside>
+@Scripts.Render("~/bundles/endpage")

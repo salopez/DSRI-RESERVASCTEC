@@ -1,0 +1,522 @@
+﻿@using Datos
+@{
+    ViewBag.Title = "Iniciar sesión";
+    <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
+}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Sistema de Reservas</title>
+    <link href="~/Content/messages.css" rel="stylesheet" />
+    <link href="~/Content/loader.css" rel="stylesheet" />
+    <link href="~/Content/shym/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/shym/css/owl.carousel.css" rel="stylesheet" />
+    <link href="~/Content/shym/css/style.css" rel="stylesheet" />
+    
+    <link href="~/Content/font-awesome.min.css" rel="stylesheet" />
+    <link href="~/Content/login.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap-3.2.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/Reserva/loadings.css" rel="stylesheet" />
+    <!-- Bootstrap Core CSS -->
+    <link href="~/Content/startbootstrap-grayscale-1.0.0/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- Custom CSS -->
+    <link href="~/Content/startbootstrap-grayscale-1.0.0/css/grayscale.css" rel="stylesheet" />
+
+    <link href="http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+
+</head>
+
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+                    <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand page-scroll" href="#page-top">
+                    <img style="margin-top: -10px" src="~/Content/Images/logoTEC.png" alt="Tecnológico de Costa Rica" />
+                </a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+                <ul class="nav navbar-nav">
+                    <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#sesion">Ingresar</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#about">Acerca</a>
+                    </li>
+
+                    <li>
+                        <a class="page-scroll" href="#ctec">CTEC</a>
+                    </li>
+                    @*<li>
+                            <a class="page-scroll" href="#ecotec">ECOTEC</a>
+                        </li>*@
+                    <li>
+                        <a class="page-scroll" href="#contact">Contáctenos</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Intro Header -->
+    <header class="intro">
+        <div class="intro-body" data-scroll-reveal="wait 0.25s, then enter top and move 140px over 2s">
+            <div class="container">
+                <div class="row" style="height: 750px">
+                    <div class="col-md-8 col-md-offset-2">
+                        <h4 style="margin-top: 230px; font-size: 50px" class="brand-heading">Sistema de Reservas</h4>
+                        <p class="intro-text">
+                            Centro de Transferencia Tecnológica<br>
+                            y Educación Continua.
+                        </p>
+                        <a href="#sesion" class="btn btn-circle page-scroll">
+                            <i class="glyphicon glyphicon-lock"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="container content-section text-center">
+
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2" data-scroll-reveal="wait 0.25s, then enter right and move 40px over 2s">
+                <h2>Sistema de Reservas</h2>
+                <p>
+                    Este sistema de reservas en línea se ha creado con el fin de facilitar y agilizar las reservas de nuestros inmuebles.
+                    Además de dar una más rápida respuesta a las personas que soliciten alguno de ellos.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Download Section -->
+    <section id="sesion" class="content-section text-center">
+        <div class="container" style="margin-top: 30px">
+            <div class="row">
+                <div class="col-sm-offset-3 col-md-6" style="margin-top: -85px;">
+                    <h3 style="margin-left: 40px; font-family: -webkit-pictograph">Inicio de Sesión</h3>
+
+                    <img src="~/Content/Images/logo.png" style="width: 35px; height: 34px; float: right; margin-top: 8px; margin-right: 26px;" data-scroll-reveal="wait 1.25s, then enter left and move 100px over 2s" />
+
+                    <div id="loginbox" style="margin-left: 35px" class="mainbox" data-scroll-reveal="wait 0.25s, then enter right and move 100px over 2s">
+                        <div class="panel panel-info" style="border-color: lavender;border-top-left-radius:50px; border-bottom-left-radius: 20px; border-bottom-right-radius: 100px;">
+                            <div class="panel-heading" style="padding: 12px 66px; height: 50px; border-top-left-radius: 62px; color: white; background: -webkit-gradient(linear, left top, left bottom, from(#0A619F), to(#B1ACA7)); ">
+                                <div class="panel-title" style="font-size: 20px; color: black; margin-left: 20px;">
+                                    Ingrese sus credenciales
+                                </div>
+                            </div>
+                            <div style="padding-top: 45px; border-bottom-left-radius: 20px; border-bottom-right-radius: 100px; padding-left: 70px; padding-right: 50px; background-image: url(/Content/Images/linea.jpg); background-repeat: repeat-y; background-repeat: repeat-x;" class="panel-body">
+                                <div style="display: none" id="login-alert" class="alert alert-danger col-sm-12"></div>
+
+                                <form id="loginform" class="form-horizontal" role="form">
+
+                                    <div style="margin-bottom: 15px" class="input-group">
+                                        <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                                        <input id="user" type="text" class="form-control" name="username" value="" placeholder="Nombre de Usuario">
+                                    </div>
+
+                                    <div style="margin-bottom: 15px; margin-top: 10px" class="input-group">
+                                        <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                                        <input id="pass" type="password" class="form-control" name="password" placeholder="Contraseña">
+                                    </div>
+                                    <div style="display:none; font-family: Lora,Helvetica Neue,Helvetica,Arial,sans-serif;" id="idpasserror" class="error">Usuario ó Contraseña Incorrecta! </div>
+                                    <div class="input-group">
+                                    </div>
+
+
+                                    <div style="margin-top: 10px" class="form-group">
+                                        <!-- Button -->
+
+                                        <div class="col-sm-6 controls">
+                                            <input type="button" value="Iniciar Sesión" class="btn btn-primary" id="ingresar" style="float: left; background: rgba(16, 14, 48, 0.91);" />
+                                            <div hidden id="cargando" class="spinner icon-spinner-2" style="color: white; float: right; " aria-hidden="true"></div>
+                                        </div>
+
+
+                                    </div>
+                                </form>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <!--/SHYM -USER ENDS HERE -->
+    <!--PICTURE INFORMATION STARTS HERE-->
+    <section id="ctec" class='picture-information' style="background-color: #0B1727; margin-top: 50px">
+        <div class='container' style="background-color: #0B1727;">
+            <div class='row'>
+                <div class='col-md-12 shym-text-center'>
+                    <h3 style="color: white" class='shym-text-uppercase'>Inmuebles CTEC</h3>
+                </div>
+
+
+                <div class='gap'>
+                </div>
+                <div class='col-md-12 col-sm-12 col-xs-12'>
+                    <div class='col-sm-3 '>
+
+                        <div class='picture-info' data-scroll-reveal="wait 0.25s, then enter right and move 40px over 1s">
+                            <img src="~/Content/Images/imSlider/Auditorio.jpg" style="border-radius: 10px;" />
+                            <p style="color: white">
+                                Capacidad para 335 personas sentadas en butacas.
+                                Espacio para personas con discapacidad (rampa al escenario, espacio al frente).
+                                Aire acondicionado.
+                            </p>
+                            <div class="shym-overlay" style="border-radius: 4px;">
+                                <div class="shym-picture-detail-inner">
+                                    <h3><a href="#">Auditorio CTEC</a> </h3>
+                                    <p style="color: white; margin-top: -15px">
+                                        Alquiler: 77 000 colones por hora. Sistema de video digital (8 pantallas LCD).
+                                        Sonido analógico.
+                                        Podio en vidrio.
+                                        Acceso a Internet inalámbrico.
+                                        4 micrófonos de mano y uno de podio.Cabinas para traducción simultánea.
+                                        Cabinas de mando.Mesa principal para 8 personas.
+                                    </p>
+                                    <a href="#sesion"> Solicitar </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class='col-sm-3'>
+                        <div class='picture-info' data-scroll-reveal="wait 0.25s, then enter top and move 40px over 1s">
+                            <img src="~/Content/Images/imSlider/Vestibulo.jpg" style="border-radius: 10px;" />
+                            <p style="color: white">Capacidad para aproximadamente 300 personas. Espacio abierto. Especial para ferias y stands, entre otros. Espacio de 200 metros cuadrados. Acceso a Internet inalámbrico.</p>
+                            <div class="shym-overlay" style="border-radius: 4px;">
+                                <div class="shym-picture-detail-inner">
+                                    <h3><a href="#sesion">Vestíbulo</a> </h3>
+                                    <p>Alquiler: 80 000 colones por hora</p>
+                                    <a href="#sesion"> Solicitar </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class='col-sm-3 '>
+                        <div class='picture-info' data-scroll-reveal="wait 0.25s, then enter left and move 40px over 1s">
+                            <img src="~/Content/Images/imSlider/SalaReuniones.jpg" style="border-radius: 10px;" />
+                            <p style="color: white">Capacidad para 10 personas, mesa ejecutiva con tomas eléctricos, acceso a Internet inalámbrico. Sistema de video conferencia. Pantalla Interactiva. Aire acondicionado.</p>
+                            <div class="shym-overlay" style="border-radius: 4px;">
+                                <div class="shym-picture-detail-inner">
+                                    <h3><a href="#sesion">Sala de Reuniones 1</a> </h3>
+                                    <p>Alquiler: 3500 colones por hora</p>
+                                    <a href="#sesion"> Solicitar </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class='col-sm-3'>
+                        <div class='picture-info' data-scroll-reveal="wait 0.25s, then enter bottom and move 40px over 1s">
+                            <img src="~/Content/Images/imSlider/SalaReuniones.jpg" style="border-radius: 10px;" />
+                            <p style="color: white">Capacidad para 10 personas, mesa ejecutiva con tomas eléctricos,acceso a Internet inalámbrico. Sistema de video conferencia. Pantalla Interactiva. Aire acondicionado.</p>
+                            <div class="shym-overlay" style="border-radius: 4px;">
+                                <div class="shym-picture-detail-inner">
+                                    <h3><a href="#sesion">Sala de Reuniones 2</a> </h3>
+                                    <p>Alquiler: 3500 colones por hora</p>
+                                    <a href="#sesion"> Solicitar </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class='col-sm-3'>
+                        <div class='picture-info' data-scroll-reveal="wait 0.25s, then enter top and move 40px over 1s">
+                            <img src="~/Content/Images/imSlider/TecnoAula1.jpg" style="border-radius: 10px;" />
+                            <p style="color: white">Capacidad para 21 personas, incluyendo al profesor).Pizarra inteligente.Acceso a Internet inalámbrico.Aire acondicionado.</p>
+                            <div class="shym-overlay" style="border-radius: 4px;">
+                                <div class="shym-picture-detail-inner">
+                                    <h3><a href="#sesion">Aula Tenológica 1</a> </h3>
+                                    <p>Alquiler: 5500 colones por hora</p>
+                                    <a href="#sesion"> Solicitar </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class='col-sm-3'>
+                        <div class='picture-info' data-scroll-reveal="wait 0.25s, then enter top and move 40px over 1s">
+                            <img src="~/Content/Images/imSlider/TecnoAula2.jpg" style="border-radius: 10px;" />
+                            <p style="color: white">Capacidad para 25 personas, incluyendo al profesor.Aire acondicionado.</p>
+                            <div class="shym-overlay" style="border-radius: 4px;">
+                                <div class="shym-picture-detail-inner">
+                                    <h3><a href="#sesion">Aula Tenológica 2</a> </h3>
+                                    <p>Alquiler: 5500 colones por hora</p>
+                                    <a href="#sesion"> Solicitar </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!--/PICTURE INFORMATION ENDS HERE -->
+
+    <section id="ecotec" class='picture-information' style="background-color: #0B1727; margin-top: 20px">
+        <div class='container' style="background-color: #0B1727;">
+            <div class='row'>
+                <div class='col-md-12 shym-text-center'>
+                    <h3 style="color: white" class='shym-text-uppercase'></h3>@*ECOTEC INMUEBLES*@
+                </div>
+
+
+                <div class='gap'>
+                </div>
+
+
+                <div class='col-md-12 col-sm-12 col-xs-12'>
+                    <div class='col-sm-3'>
+                        <div class='picture-info' data-scroll-reveal="wait 0.25s, then enter top and move 40px over 1s">
+                            <img src="~/Content/Images/imSlider/Jacaranda.jpg" style="border-radius: 10px;" />
+                            <p style="color: white">
+                                Capacidad para 115 personas sentadas en butacas.
+                                Servicios sanitarios unisex dentro del auditorio.
+                                Sonido estéreo y dos micrófonos de mano.
+                                Proyección en pantalla gigante.
+                                Sistema de videoconferencia.
+                                Cocina para colocar alimentos a servir.
+                                Acceso a Internet inalámbrico.
+                                Aire acondicionado.
+                            </p>
+                            <div class="shym-overlay" style="border-radius: 4px;">
+                                <div class="shym-picture-detail-inner">
+                                    <h3><a href="#sesion">Auditorio Jacaranda</a> </h3>
+                                    <p>Alquiler: 70 000 colones por día</p>
+                                    <a href="#sesion"> Solicitar </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class='col-sm-3 '>
+                        <div class='picture-info' data-scroll-reveal="wait 0.25s, then enter right and move 40px over 1s">
+                            <img src="~/Content/Images/imSlider/Bromelia.jpg" style="border-radius: 10px;" />
+                            <p style="color: white">
+                                Conformado por la unión entre el salón Bromelia 1 y el salón Bromelia 2.
+                                Área de 326 m2.
+                                Espacio para 195 personas sentadas.
+                                Equipo de sonido.
+                                2 micrófonos inalámbricos.
+                                Aire acondicionado.
+                                Acceso a Internet inalámbrico.
+                                Pizarra acrílica.
+                                Consola para sonido ambiente.
+                            </p>
+                            <div class="shym-overlay" style="border-radius: 4px;">
+                                <div class="shym-picture-detail-inner">
+                                    <h3><a href="#sesion">Salón Bromelia</a> </h3>
+                                    <p>Alquiler: 85 000 colones por día</p>
+                                    <a href="#sesion"> Solicitar </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class='col-sm-3 '>
+                        <div class='picture-info' data-scroll-reveal="wait 0.25s, then enter left and move 40px over 1s">
+                            <img src="~/Content/Images/imSlider/Bromelia1.png" style="border-radius: 10px;" />
+                            <p style="color: white">
+                                Área de 218 m2.
+                                Espacio para 145 personas sentadas.
+                                Acceso a Internet inalámbrico.
+                                Consola para sonido ambiente.
+                                Aire acondicionado.
+                            </p>
+                            <div class="shym-overlay" style="border-radius: 4px;">
+                                <div class="shym-picture-detail-inner">
+                                    <h3><a href="#sesion">Bromelia 1</a> </h3>
+                                    <p>Alquiler: 50 000 colones por día</p>
+                                    <a href="#sesion"> Solicitar </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class='col-sm-3'>
+                        <div class='picture-info' data-scroll-reveal="wait 0.25s, then enter bottom and move 40px over 1s">
+                            <img src="~/Content/Images/imSlider/Bromelia2.png" style="border-radius: 10px;" />
+                            <p style="color: white">
+                                Área de 108 m2.
+                                Pizarra acrílica.
+                                Espacio para 50 personas sentadas.
+                                Acceso a Internet inalámbrico.
+                                Aire acondicionado.
+                            </p>
+                            <div class="shym-overlay" style="border-radius: 4px;">
+                                <div class="shym-picture-detail-inner">
+                                    <h3><a href="#sesion">Bromelia 2</a> </h3>
+                                    <p>Alquiler: 35 000 colones por día</p>
+                                    <a href="#sesion"> Solicitar </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="container content-section text-center" data-scroll-reveal="wait 0.25s, then enter right and move 40px over 2s">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+                <h2>Contáctenos</h2>
+                <p>
+                    Para cualquier consulta o duda acerca de nuestro inmobiliario disponible, puede hacerlo a <a href="">infoctec@itcr.ac.cr</a> y con gusto
+                    le responderemos.
+                </p>
+                <p>
+                    También puede llamar a nuestro teléfono de oficina: <a href="">(506) 2401-3002</a> | San Carlos Santa Clara
+                </p>
+
+            </div>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer>
+
+        <div class="container text-center" data-scroll-reveal="wait 0.25s, then enter left and move 60px over 2s">
+            <p>&copy; @DateTime.Now.Year - DSRI-Tecnológico de Costa Rica</p>
+        </div>
+    </footer>
+
+    <script src="~/Content/shym/js/jquery.js"></script>
+    <script src="~/Content/shym/js/bootstrap.min.js"></script>
+    <script src="~/Content/shym/js/jquerybackstretch.js"></script>
+    <script src="~/Content/shym/js/owl.carousel.min.js"></script>
+    <script src="~/Content/shym/js/jquery_002.js"></script>
+    <script src="~/Content/shym/js/scrollReveal.js"></script>
+    <script src="~/Content/shym/js/function.js"></script>
+    <script src="~/Content/shym/js/jquery_003.js"></script>
+    <script src="~/Content/shym/js/jquery_004.js"></script>
+    <script src="~/Content/shym/js/jasm-template.js"></script>
+    <script src="~/Content/shym/js/jquery-1.js"></script>
+
+    <!-- jQuery -->
+    <script src="~/Content/startbootstrap-grayscale-1.0.0/js/jquery.js"></script>
+    <!-- Bootstrap Core JavaScript -->
+    <script src="~/Content/startbootstrap-grayscale-1.0.0/js/bootstrap.min.js"></script>
+    <!-- Plugin JavaScript -->
+    <script src="~/Content/startbootstrap-grayscale-1.0.0/js/jquery.easing.min.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="~/Content/startbootstrap-grayscale-1.0.0/js/grayscale.js"></script>
+
+
+</body>
+
+</html>
+
+<script>
+    $(document).ready(function () {
+        $('#idusererror').hide();
+        $('#idpasserror').hide();
+
+
+        $('#pass').keypress(function (e) {
+            if (e.which == 13) {
+                $('#cargando').show();
+                $('#idusererror').hide();
+                //$('#ingresar').fadeOut(1000);
+                $('#idpasserror').hide();
+
+                var user = $('#user').val();
+                var pass = $('#pass').val();
+                var select = "";
+                var URL = '/Home/Ingresar';
+                var datos = [user, pass, select];
+                $.ajax({
+                    type: "POST",
+                    url: URL,
+                    contentType: "application/json; charset=utf-8",
+                    data: JSON.stringify(datos),
+                    dataType: "json",
+                    success: successFunc,
+                    error: errorFunc
+                });
+
+            }
+            function successFunc() {
+                $('#ingresar').val("Iniciando Sesion ...");
+                $('#cargando').hide();
+                $('#idusererror').hide();
+                $('#idpasserror').hide();
+                window.location.href = '@Url.Action("Index", "Home")';
+            }
+            function errorFunc() {
+                $('#cargando').hide();
+                $('#idusererror').show(700);
+                $('#idpasserror').show(700);
+                //alert('error');
+            }
+        });
+        $('#ingresar').on("click", function () {
+            $('#idusererror').hide();
+            $('#cargando').show();
+            //$('#ingresar').fadeOut(1000);
+            $('#idpasserror').hide();
+            //$('#circularG').show();
+            var user = $('#user').val();
+            var pass = $('#pass').val();
+            var select = "";
+            var URL = '/Home/Ingresar';
+            var datos = [user, pass, select];
+            $.ajax({
+                type: "POST",
+                url: URL,
+                contentType: "application/json; charset=utf-8",
+                data: JSON.stringify(datos),
+                dataType: "json",
+                success: successFunc,
+                error: errorFunc
+            });
+            function successFunc() {
+                $('#ingresar').val("Iniciando Sesion ...");
+                $('#cargando').hide();
+                $('#idusererror').hide();
+                $('#idpasserror').hide();
+                window.location.href = '@Url.Action("Index", "Home")';
+            }
+            function errorFunc() {
+                //$('#circularG').hide();
+                $('#cargando').hide();
+                $('#idusererror').show(300);
+                $('#idpasserror').show(300);
+                //alert('error');
+            }
+
+        });
+
+    });
+
+</script>

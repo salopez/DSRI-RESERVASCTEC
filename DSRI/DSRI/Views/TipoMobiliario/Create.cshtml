@@ -1,0 +1,49 @@
+﻿@model Datos.DSRIFTIPOMOBILIARIO
+
+@{
+    ViewBag.Title = "Agregar Nuevo Tipo de Mobiliario";
+    Layout = "~/Views/Shared/_Administrador.cshtml";
+}
+
+<h3>@ViewBag.Title</h3>
+
+
+@using (Html.BeginForm()) 
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+
+        <hr />
+        @Html.ValidationSummary(true)
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.COD_TIPOMOBILIARIO, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.TextBoxFor(model => model.COD_TIPOMOBILIARIO, new {@class="form-control" })
+                @Html.ValidationMessageFor(model => model.COD_TIPOMOBILIARIO)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.NOM_TIPOMOBILIARIO, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.TextBoxFor(model => model.NOM_TIPOMOBILIARIO, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.NOM_TIPOMOBILIARIO)
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Agregar" class="btn btn-primary" /> |
+                @Html.ActionLink("Regresar al contenido principal", "Index",null,new { @class = "btn btn-default" })
+            </div>
+            </div>
+        </div>
+}
+
+
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

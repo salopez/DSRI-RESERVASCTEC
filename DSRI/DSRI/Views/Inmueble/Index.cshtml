@@ -1,0 +1,103 @@
+﻿@model IEnumerable<Datos.DSRIFINMUEBLE>
+
+@{
+    ViewBag.Title = "Registro de Inmueble";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<link href="~/Content/dataTables.bootstrap.css" rel="stylesheet" />
+
+<!-- Right side column. Contains the navbar and content of the page -->
+<aside class="right-side">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+        <h1>Mostrando Inmuebles
+                        <small>Actuales</small>
+        </h1>
+        <ol class="breadcrumb">
+            <li><a href="#"><i class="glyphicon glyphicon-cog"></i>Configuración del Sistema</a></li>
+            <li><a href="#">Administrar Inmuebles</a></li>
+        </ol>
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="box">
+                    <div class="box-header">
+                        <h3 class="box-title">Mostrando activos</h3>
+                    </div>
+                    <!-- /.box-header -->
+                    <div class="box-body table-responsive">
+                        <table id="example1" class="table table-bordered table-striped">
+                            <thead>
+                                <tr>
+                                    <th>Nombre Inmueble</th>
+                                    <th>Capacidad</th>
+                                    <th>Clasificación</th>
+                                    <th>Costa Por Hora</th>
+                                    <th>Opciones</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model)
+                                {
+                                    <tr>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.NOM_INMUEBLE)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.CAN_CAPACIDAD)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.DSRIFCLASIFINMUEBLE.NOM_CLASIFINMUEBLE)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.COS_INMUEBLE)
+                                        </td>
+                                        <td>
+                                            @Html.ActionLink("Editar", "Edit", new { id = item.ID_INMUEBLE }) |
+                    @Html.ActionLink("Detalles", "Details", new { id = item.ID_INMUEBLE }) |
+                    @Html.ActionLink("Eliminar", "Delete", new { id = item.ID_INMUEBLE })
+                                        </td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                        <div class="form-group">
+                            <form action="@Url.Action("Create", "Inmueble")">
+                                <input class="btn btn-primary" type="submit" value="Nuevo Inmueble">
+                            </form>
+                        </div>
+
+                    </div>
+                    <!-- /.box-body -->
+                </div>
+                <!-- /.box -->
+            </div>
+        </div>
+
+    </section>
+    <!-- /.content -->
+</aside>
+<!-- /.right-side -->
+
+@Scripts.Render("~/bundles/ListaReservas")
+
+<!-- page script -->
+<script type="text/javascript">
+    $(function () {
+        $("#example1").dataTable();
+        $('#example2').dataTable({
+            "bPaginate": true,
+            "bLengthChange": false,
+            "bFilter": false,
+            "bSort": true,
+            "bInfo": true,
+            "bAutoWidth": false
+        });
+    });
+</script>
+
